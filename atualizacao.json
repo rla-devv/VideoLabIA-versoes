@@ -1,19 +1,19 @@
 {
-  "versao": "1.12.0",
-  "arquivo": "Enxuto-1.12.0.html",
-  "sha256": "533b848a1a51262e9aeb5695e75bb1543795156d165a64ac4f9415dd13a6660f",
-  "tamanho": 1237433,
+  "versao": "1.13.0",
+  "arquivo": "Enxuto-1.13.0.html",
+  "sha256": "32856d1947903dde67e2fe61d8560136f8ae4c9bbcc8962cede1a21234c4cbee",
+  "tamanho": 1240573,
   "novidades": [
-    "Pacote de instalação com um arquivo só, o instalar.bat. Ele baixa e confere todo o resto e instala sempre a versão mais nova."
+    "Os selos do topo viraram um aviso só: clique nele para ver como seus arquivos ficam no seu computador e para que a internet é usada."
   ],
   "data": "2026-10-19",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.12.0.html",
-        "sha256": "533b848a1a51262e9aeb5695e75bb1543795156d165a64ac4f9415dd13a6660f",
-        "tamanho": 1237433
+        "origem": "versoes/Enxuto-1.13.0.html",
+        "sha256": "32856d1947903dde67e2fe61d8560136f8ae4c9bbcc8962cede1a21234c4cbee",
+        "tamanho": 1240573
       },
       {
         "caminho": "LEIA-ME.txt",
