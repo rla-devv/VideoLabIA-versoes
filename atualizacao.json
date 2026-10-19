@@ -1,68 +1,44 @@
 {
-  "versao": "1.9.0",
-  "arquivo": "Enxuto-1.9.0.html",
-  "sha256": "7906a7c54a315be7f69f1a129b8591c6550c7548a04645627db7b91bf074ff9b",
-  "tamanho": 1237094,
+  "versao": "1.10.0",
+  "arquivo": "Enxuto-1.10.0.html",
+  "sha256": "2479c83d2948cc09fdc2c8ac10e1f2e330b66f5316a33341bbd76a675b3bbacf",
+  "tamanho": 1237323,
   "novidades": [
-    "Visual mais enxuto: textos, botões e cartões menores, com as mesmas informações.",
-    "“Apoie o projeto” e “Buscar atualização” abrem numa janela por cima da página. Quando há versão nova, o botão de atualização avisa com um ponto laranja."
+    "Pacote de instalação bem menor: de 10,7 MB para menos de 0,5 MB, com 5 arquivos em vez de 13.",
+    "O conversor para formatos antigos agora fica num arquivo só e é baixado e conferido durante a instalação. Quem já tem o Enxuto instalado não precisa baixar nada de novo."
   ],
   "data": "2026-10-19",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.9.0.html",
-        "sha256": "7906a7c54a315be7f69f1a129b8591c6550c7548a04645627db7b91bf074ff9b",
-        "tamanho": 1237094
-      },
-      {
-        "caminho": "Enxuto.bat",
-        "origem": "programa/1.8.2/Enxuto.bat",
-        "sha256": "d7c523fe2f3ee0ca1ecf90807a03c1eaab64dbafcfd17c8385f6f2355a051154",
-        "tamanho": 118
+        "origem": "versoes/Enxuto-1.10.0.html",
+        "sha256": "2479c83d2948cc09fdc2c8ac10e1f2e330b66f5316a33341bbd76a675b3bbacf",
+        "tamanho": 1237323
       },
       {
         "caminho": "LEIA-ME.txt",
-        "origem": "programa/1.8.2/LEIA-ME.txt",
-        "sha256": "93d282c35ab8b78eb1a48575b3056c39a8a49fa2d282c11b27703cc98a246828",
-        "tamanho": 1029
+        "origem": "programa/1.10.0/LEIA-ME.txt",
+        "sha256": "11402b63747fe5a3a070a2bbb377c2498a7bedd543e92a9273a41483d3c050d7",
+        "tamanho": 1116
       },
       {
-        "caminho": "assets/enxuto-v2.ico",
+        "caminho": "enxuto.ico",
         "origem": "janela/1.8.0/assets/enxuto-v2.ico",
         "sha256": "69d88b580e67e1092300441300934dbec1c32537dc09dac7de66ba7c7ac3ba92",
         "tamanho": 78047
       },
       {
-        "caminho": "atualizacao.py",
-        "origem": "programa/1.8.2/atualizacao.py",
-        "sha256": "37ad8447d257603294a7169499d569e4e4ef906865cb7bd449ca5b906d54049c",
-        "tamanho": 9569
-      },
-      {
-        "caminho": "criar-atalhos.ps1",
-        "origem": "janela/1.8.0/criar-atalhos.ps1",
-        "sha256": "170cfab89c1280a0288992fd274e802d79e590089cb50938fcd4bc5c91f6e034",
-        "tamanho": 1190
-      },
-      {
         "caminho": "enxuto.pyw",
-        "origem": "programa/1.8.2/enxuto.pyw",
-        "sha256": "13a0ce89081edcfe0b7ad80113ef0103d4ec157113023abad932ca8e323e50aa",
-        "tamanho": 10881
+        "origem": "programa/1.10.0/enxuto.pyw",
+        "sha256": "cca9d7c606054ccc6e18ae1ca4963975e5c3789af0b56182761f6bc6bc3cc41d",
+        "tamanho": 27279
       },
       {
         "caminho": "instalar.bat",
-        "origem": "programa/1.8.2/instalar.bat",
-        "sha256": "dd96b644f682ff11f51e9e9c7d435b46ccfe9aefec450df38c2e764e33a93ab6",
-        "tamanho": 933
-      },
-      {
-        "caminho": "requirements.txt",
-        "origem": "janela/1.8.0/requirements.txt",
-        "sha256": "27ecc87d7bb55d79f4ac1254711bae3431c7ff10e92caef108530f6f36584cb1",
-        "tamanho": 19
+        "origem": "programa/1.10.0/instalar.bat",
+        "sha256": "62b40aba3469b1aabf1a986d4fdc4ebe0c56e22f4e994f9d53a6a1a72fef35fb",
+        "tamanho": 761
       }
     ]
   }
