@@ -1,19 +1,19 @@
 {
-  "versao": "1.13.0",
-  "arquivo": "Enxuto-1.13.0.html",
-  "sha256": "32856d1947903dde67e2fe61d8560136f8ae4c9bbcc8962cede1a21234c4cbee",
-  "tamanho": 1240573,
+  "versao": "1.13.1",
+  "arquivo": "Enxuto-1.13.1.html",
+  "sha256": "d58ba5fa9520785e8f2177d69bf1cdf3bc4a34183591732ead3d137dbfabf11d",
+  "tamanho": 1240804,
   "novidades": [
-    "Os selos do topo viraram um aviso só: clique nele para ver como seus arquivos ficam no seu computador e para que a internet é usada."
+    "Cabeçalho mais claro: o Enxuto IA converte, comprime e otimiza vídeos diretamente no seu computador."
   ],
   "data": "2026-10-19",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.13.0.html",
-        "sha256": "32856d1947903dde67e2fe61d8560136f8ae4c9bbcc8962cede1a21234c4cbee",
-        "tamanho": 1240573
+        "origem": "versoes/Enxuto-1.13.1.html",
+        "sha256": "d58ba5fa9520785e8f2177d69bf1cdf3bc4a34183591732ead3d137dbfabf11d",
+        "tamanho": 1240804
       },
       {
         "caminho": "LEIA-ME.txt",
