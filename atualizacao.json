@@ -1,18 +1,18 @@
 {
-  "versao": "1.13.3",
-  "arquivo": "Enxuto-1.13.3.html",
-  "sha256": "7d2819ab8d8bf5da92846360a7a77ce2bd18e0e2d567393ed60127a17d4ebf6b",
+  "versao": "1.13.4",
+  "arquivo": "Enxuto-1.13.4.html",
+  "sha256": "2a612071d9bdd92c2a89fce5ca6ec4f9b87f422d8a88220da3df4ffd524b3493",
   "tamanho": 1240804,
   "novidades": [
-    "Novo atalho “Abrir o Enxuto IA” dentro da pasta do programa, para quem abrir a pasta saber em que clicar. Quem já tem o Enxuto IA instalado ganha esse atalho ao abrir."
+    "A instalação agora avisa que cria também o atalho “Abrir o Enxuto IA” na pasta do programa."
   ],
   "data": "2026-10-19",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.13.3.html",
-        "sha256": "7d2819ab8d8bf5da92846360a7a77ce2bd18e0e2d567393ed60127a17d4ebf6b",
+        "origem": "versoes/Enxuto-1.13.4.html",
+        "sha256": "2a612071d9bdd92c2a89fce5ca6ec4f9b87f422d8a88220da3df4ffd524b3493",
         "tamanho": 1240804
       },
       {
@@ -29,9 +29,9 @@
       },
       {
         "caminho": "enxuto.pyw",
-        "origem": "programa/1.13.3/enxuto.pyw",
-        "sha256": "118be4459c540b2f69102da732d7747efe2d4eccddf6ec67d98cc7e20972a8ce",
-        "tamanho": 34846
+        "origem": "programa/1.13.4/enxuto.pyw",
+        "sha256": "18e5589a851d3176b9e99f9dd140b1f72738138d8e632c7bb6a3f58f37fb1666",
+        "tamanho": 34895
       },
       {
         "caminho": "instalar.bat",
