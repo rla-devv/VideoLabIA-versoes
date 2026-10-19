@@ -1,19 +1,19 @@
 {
-  "versao": "1.15.0",
-  "arquivo": "Enxuto-1.15.0.html",
-  "sha256": "ee9c528954be01cc15fe831c52debbfcacbd79ee8cf6c049bcd7ee69f180367b",
-  "tamanho": 1252589,
+  "versao": "1.16.0",
+  "arquivo": "Enxuto-1.16.0.html",
+  "sha256": "fdeda4e96580bd62aba63fe21214d9bf7aa2a1f4d6f604bdfb52f9799ba7bae8",
+  "tamanho": 1263095,
   "novidades": [
-    "Novo: Cortar silêncios. No editor, em “Trechos”, o Enxuto IA encontra as pausas sem fala e as remove sozinho. Você escolhe a pausa mínima, confere na prévia e pode desfazer. Ótimo para reuniões e aulas."
+    "Novo: Legendas automáticas. No editor, em “Imagem”, o Enxuto IA escuta o vídeo e escreve as legendas sozinho, no seu computador: o som não sai dele. Você confere e corrige o texto, grava as legendas no vídeo e pode baixar o arquivo .srt. Na primeira vez, baixa o modelo de reconhecimento de voz (uma vez só)."
   ],
   "data": "2026-10-19",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.15.0.html",
-        "sha256": "ee9c528954be01cc15fe831c52debbfcacbd79ee8cf6c049bcd7ee69f180367b",
-        "tamanho": 1252589
+        "origem": "versoes/Enxuto-1.16.0.html",
+        "sha256": "fdeda4e96580bd62aba63fe21214d9bf7aa2a1f4d6f604bdfb52f9799ba7bae8",
+        "tamanho": 1263095
       },
       {
         "caminho": "Instalar Enxuto IA.bat",
