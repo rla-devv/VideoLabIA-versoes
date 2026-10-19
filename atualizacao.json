@@ -1,19 +1,21 @@
 {
-  "versao": "1.18.0",
-  "arquivo": "Enxuto-1.18.0.html",
-  "sha256": "a7a7496f82ce1b152b3697fdbb92d7642ff861e2fc518da88393da7c0d0e07fc",
-  "tamanho": 1277853,
+  "versao": "1.19.0",
+  "arquivo": "Enxuto-1.19.0.html",
+  "sha256": "05d703817611c1d19cb52a42bd023f7392479505d358f74ed90ed94adba04cdf",
+  "tamanho": 1285456,
   "novidades": [
-    "Novo: Junção rápida. Quando os vídeos foram gravados do mesmo jeito (por exemplo, partes da mesma gravação ou do mesmo celular) e não foram editados, o Enxuto IA emenda os arquivos sem recomprimir: fica pronto em segundos e sem perder qualidade. Se não der, ele explica o motivo e junta do jeito normal."
+    "Novo: “Para onde vai o vídeo?” no topo dos ajustes: WhatsApp, E-mail, YouTube, Reels e TikTok ou Guardar. Um clique e o Enxuto IA acerta formato, tamanho e qualidade.",
+    "Seus ajustes agora ficam guardados para a próxima vez (e há um botão para voltar ao padrão).",
+    "Aviso ao terminar: o Enxuto IA toca um som e mostra uma notificação quando os vídeos ficam prontos."
   ],
   "data": "2026-10-19",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.18.0.html",
-        "sha256": "a7a7496f82ce1b152b3697fdbb92d7642ff861e2fc518da88393da7c0d0e07fc",
-        "tamanho": 1277853
+        "origem": "versoes/Enxuto-1.19.0.html",
+        "sha256": "05d703817611c1d19cb52a42bd023f7392479505d358f74ed90ed94adba04cdf",
+        "tamanho": 1285456
       },
       {
         "caminho": "Instalar Enxuto IA.bat",
