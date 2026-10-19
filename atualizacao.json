@@ -1,18 +1,18 @@
 {
-  "versao": "1.11.0",
-  "arquivo": "Enxuto-1.11.0.html",
-  "sha256": "1d5dc4dad03b5901b865067a9e63a51123c19de8209d7bca983f06efde026b6a",
+  "versao": "1.12.0",
+  "arquivo": "Enxuto-1.12.0.html",
+  "sha256": "533b848a1a51262e9aeb5695e75bb1543795156d165a64ac4f9415dd13a6660f",
   "tamanho": 1237433,
   "novidades": [
-    "O app agora se chama Enxuto IA, no mesmo padrão dos outros apps da RLA.dev. O atalho passa a se chamar “Enxuto IA”."
+    "Pacote de instalação com um arquivo só, o instalar.bat. Ele baixa e confere todo o resto e instala sempre a versão mais nova."
   ],
   "data": "2026-10-19",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.11.0.html",
-        "sha256": "1d5dc4dad03b5901b865067a9e63a51123c19de8209d7bca983f06efde026b6a",
+        "origem": "versoes/Enxuto-1.12.0.html",
+        "sha256": "533b848a1a51262e9aeb5695e75bb1543795156d165a64ac4f9415dd13a6660f",
         "tamanho": 1237433
       },
       {
@@ -29,15 +29,15 @@
       },
       {
         "caminho": "enxuto.pyw",
-        "origem": "programa/1.11.0/enxuto.pyw",
-        "sha256": "5bfcd3d4b45856231a729b7cfd9bbf653e197bada3633929c713510d475bf295",
-        "tamanho": 32822
+        "origem": "programa/1.12.0/enxuto.pyw",
+        "sha256": "7ec1a1644c40a00794564b0dc306660c558071097e674298109cfec4a9d6eff7",
+        "tamanho": 33560
       },
       {
         "caminho": "instalar.bat",
-        "origem": "programa/1.11.0/instalar.bat",
-        "sha256": "e10c0eac0f97f6ca477d17ad2c7eaa3cba64c8207a5de87336fe1581ca509fb7",
-        "tamanho": 1862
+        "origem": "programa/1.12.0/instalar.bat",
+        "sha256": "086f1497e63c9c62fce78fe5a03aebd81be5bffa6be0e95ab1d073891b740413",
+        "tamanho": 3293
       }
     ]
   }
