@@ -1,15 +1,14 @@
 # Enxuto — versões
 
-Páginas prontas do [Enxuto](https://rla-devv.github.io/enxuto/) (conversão, compressão e otimização de vídeos
-que roda no navegador). Desenvolvido por RLA.dev.
+Versões prontas do [Enxuto](https://github.com/rla-devv/enxuto-versoes/raw/main/Enxuto.zip) — conversão, compressão e
+otimização de vídeos no seu computador. Desenvolvido por RLA.dev.
 
-- `atualizacao.json` — a versão mais recente: número, arquivo, SHA-256, tamanho e novidades. É o que o
+- `atualizacao.json` — a versão mais recente: número, novidades e cada arquivo com SHA-256 e tamanho. É o que o
   botão “Buscar atualização” do Enxuto consulta.
-- `Enxuto-janela.zip` — o Enxuto em janela própria no Windows, para instalar pela primeira vez:
-  descompacte e dê dois cliques em `instalar.bat` (precisa do Python 3.10+). As atualizações chegam
-  depois pelo aviso dentro do app.
-- `versoes/Enxuto-X.Y.Z.html` — cada versão publicada. Para usar, baixe o arquivo e abra no Google Chrome
-  ou no Microsoft Edge. Para voltar a uma versão anterior, é só abrir o arquivo dela.
+- `Enxuto.zip` — o Enxuto para instalar no Windows: descompacte e dê dois cliques em `instalar.bat`
+  (precisa do Python 3.10+). As atualizações chegam depois pelo aviso dentro do app.
+- `versoes/Enxuto-X.Y.Z.html` — a página de cada versão publicada (também funciona sozinha: abra no Google
+  Chrome ou no Microsoft Edge). Para voltar a uma versão anterior, é só abrir o arquivo dela.
 
 Nenhum vídeo é enviado para a internet: tudo roda no seu computador.
 
