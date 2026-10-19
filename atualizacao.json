@@ -1,19 +1,19 @@
 {
-  "versao": "1.17.0",
-  "arquivo": "Enxuto-1.17.0.html",
-  "sha256": "88cd1e0fd5a6361b7dd0807308eb30e284aa826294233d0c56c9423b9bbc3a5c",
-  "tamanho": 1269244,
+  "versao": "1.18.0",
+  "arquivo": "Enxuto-1.18.0.html",
+  "sha256": "a7a7496f82ce1b152b3697fdbb92d7642ff861e2fc518da88393da7c0d0e07fc",
+  "tamanho": 1277853,
   "novidades": [
-    "Novo: Salvar direto numa pasta. Marque a opção acima do botão “Processar” e escolha uma pasta: os vídeos prontos vão direto para ela, sem precisar baixar um por um. O vídeo é gravado no disco enquanto converte, então vídeos muito grandes (vários GB) não esgotam a memória do computador. A pasta fica lembrada."
+    "Novo: Junção rápida. Quando os vídeos foram gravados do mesmo jeito (por exemplo, partes da mesma gravação ou do mesmo celular) e não foram editados, o Enxuto IA emenda os arquivos sem recomprimir: fica pronto em segundos e sem perder qualidade. Se não der, ele explica o motivo e junta do jeito normal."
   ],
   "data": "2026-10-19",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.17.0.html",
-        "sha256": "88cd1e0fd5a6361b7dd0807308eb30e284aa826294233d0c56c9423b9bbc3a5c",
-        "tamanho": 1269244
+        "origem": "versoes/Enxuto-1.18.0.html",
+        "sha256": "a7a7496f82ce1b152b3697fdbb92d7642ff861e2fc518da88393da7c0d0e07fc",
+        "tamanho": 1277853
       },
       {
         "caminho": "Instalar Enxuto IA.bat",
