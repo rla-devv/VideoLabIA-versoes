@@ -1,19 +1,19 @@
 {
-  "versao": "1.13.4",
-  "arquivo": "Enxuto-1.13.4.html",
-  "sha256": "2a612071d9bdd92c2a89fce5ca6ec4f9b87f422d8a88220da3df4ffd524b3493",
-  "tamanho": 1240804,
+  "versao": "1.13.5",
+  "arquivo": "Enxuto-1.13.5.html",
+  "sha256": "e0067b23e4680033041f98338eae4b3ec1d7442bd9cb73fe11207e1396a06845",
+  "tamanho": 1240809,
   "novidades": [
-    "A instalação agora avisa que cria também o atalho “Abrir o Enxuto IA” na pasta do programa."
+    "O pacote de instalação agora se chama “Enxuto IA.zip” e descompacta numa pasta “Enxuto IA”, sem número de versão no nome."
   ],
   "data": "2026-10-19",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.13.4.html",
-        "sha256": "2a612071d9bdd92c2a89fce5ca6ec4f9b87f422d8a88220da3df4ffd524b3493",
-        "tamanho": 1240804
+        "origem": "versoes/Enxuto-1.13.5.html",
+        "sha256": "e0067b23e4680033041f98338eae4b3ec1d7442bd9cb73fe11207e1396a06845",
+        "tamanho": 1240809
       },
       {
         "caminho": "LEIA-ME.txt",
