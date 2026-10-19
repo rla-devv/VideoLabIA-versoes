@@ -1,11 +1,10 @@
 {
-  "versao": "1.7.0",
-  "arquivo": "Enxuto-1.7.0.html",
-  "sha256": "d7cf773954d8ec9b2e3b3a1625ca3ea9b6802b62c8e2940d8c4d723b8360bf01",
-  "tamanho": 1209785,
+  "versao": "1.7.1",
+  "arquivo": "Enxuto-1.7.1.html",
+  "sha256": "af1798ff8b4b4c4ea875a62d9dd416ffa0d09ecc192df6d0bd60001a6c127920",
+  "tamanho": 1227061,
   "novidades": [
-    "Novo: Enxuto em janela própria no Windows, igual aos outros apps da RLA.dev. Abre pelo atalho, sem navegador, e funciona sem internet.",
-    "Na janela, a atualização é instalada pelo próprio app depois que você confirma, e a versão anterior fica guardada."
+    "Ícone novo, no mesmo padrão dos outros apps da RLA.dev: no topo da página, na aba do navegador e no atalho da janela."
   ],
   "data": "2026-10-19"
 }
