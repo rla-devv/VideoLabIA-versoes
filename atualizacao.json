@@ -1,25 +1,31 @@
 {
-  "versao": "1.13.6",
-  "arquivo": "Enxuto-1.13.6.html",
-  "sha256": "35153da8d382294ad7abef9b776ee0de57ebfc5ae301d1821d86cc1fd8eeb8f7",
-  "tamanho": 1240809,
+  "versao": "1.13.7",
+  "arquivo": "Enxuto-1.13.7.html",
+  "sha256": "3594bf2dfb6fde267fc57b9e0d9482de51227f413e92946e3ca74c2824c1cd53",
+  "tamanho": 1240815,
   "novidades": [
-    "Ao descompactar o pacote de instalação, fica uma pasta só, “Enxuto IA”. Se o instalador for aberto solto em outra pasta, ele cria a pasta “Enxuto IA” sozinho."
+    "Nomes mais claros na pasta do programa: o instalador agora se chama “Instalar Enxuto IA” e o atalho, “Abrir Enxuto IA”."
   ],
   "data": "2026-10-19",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.13.6.html",
-        "sha256": "35153da8d382294ad7abef9b776ee0de57ebfc5ae301d1821d86cc1fd8eeb8f7",
-        "tamanho": 1240809
+        "origem": "versoes/Enxuto-1.13.7.html",
+        "sha256": "3594bf2dfb6fde267fc57b9e0d9482de51227f413e92946e3ca74c2824c1cd53",
+        "tamanho": 1240815
+      },
+      {
+        "caminho": "Instalar Enxuto IA.bat",
+        "origem": "programa/1.13.7/Instalar-Enxuto-IA.bat",
+        "sha256": "a9dca722fa9138dc3076a7a7ef6383b2c3f3dfc53da7a9f468521630ece9e53e",
+        "tamanho": 5517
       },
       {
         "caminho": "LEIA-ME.txt",
-        "origem": "programa/1.13.3/LEIA-ME.txt",
-        "sha256": "ea7dcb353f11385487b72ab53dab0a44368b3fb7c6623dc390de24022dc39e6c",
-        "tamanho": 1456
+        "origem": "programa/1.13.7/LEIA-ME.txt",
+        "sha256": "cf372a7fccf8b4f69b159b2e54efd7b254ee0c6f181cf04b10a097a4ae0b035f",
+        "tamanho": 1470
       },
       {
         "caminho": "enxuto.ico",
@@ -29,15 +35,9 @@
       },
       {
         "caminho": "enxuto.pyw",
-        "origem": "programa/1.13.4/enxuto.pyw",
-        "sha256": "18e5589a851d3176b9e99f9dd140b1f72738138d8e632c7bb6a3f58f37fb1666",
-        "tamanho": 34895
-      },
-      {
-        "caminho": "instalar.bat",
-        "origem": "programa/1.13.6/instalar.bat",
-        "sha256": "661d8613dd4098aeac603c70581b121fee219a26a3b3ec6f6c953834caf97658",
-        "tamanho": 5525
+        "origem": "programa/1.13.7/enxuto.pyw",
+        "sha256": "87ac4a83b6dd353b1878b3d23dc2646933b7b08cc68f32e8b70ed9ef2bbadc62",
+        "tamanho": 35300
       }
     ]
   }

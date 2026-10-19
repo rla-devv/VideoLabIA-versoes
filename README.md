@@ -5,8 +5,8 @@ otimização de vídeos no seu computador. Desenvolvido por RLA.dev.
 
 - `atualizacao.json` — a versão mais recente: número, novidades e cada arquivo com SHA-256 e tamanho. É o que o
   botão “Buscar atualização” do Enxuto IA consulta.
-- `Enxuto IA.zip` — o Enxuto IA para instalar no Windows (`Enxuto.zip` é a mesma coisa, do link antigo): descompacte e dê dois cliques em `instalar.bat`
-  (precisa do Python 3.10+). As atualizações chegam depois pelo aviso dentro do app.
+- `Enxuto IA.zip` — o Enxuto IA para instalar no Windows (`Enxuto.zip` é a mesma coisa, do link antigo): descompacte e dê dois cliques em "Instalar Enxuto IA"
+  (não precisa ter o Python: ele baixa um só para o app). As atualizações chegam depois pelo aviso dentro do app.
 - `versoes/Enxuto-X.Y.Z.html` — a página de cada versão publicada (também funciona sozinha: abra no Google
   Chrome ou no Microsoft Edge). Para voltar a uma versão anterior, é só abrir o arquivo dela.
 
