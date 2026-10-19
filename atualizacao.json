@@ -1,26 +1,25 @@
 {
-  "versao": "1.10.0",
-  "arquivo": "Enxuto-1.10.0.html",
-  "sha256": "2479c83d2948cc09fdc2c8ac10e1f2e330b66f5316a33341bbd76a675b3bbacf",
+  "versao": "1.10.1",
+  "arquivo": "Enxuto-1.10.1.html",
+  "sha256": "6a7b0e3da2bf45a6417a09132a723088c4c9aefab238e448135b59887e82baaf",
   "tamanho": 1237323,
   "novidades": [
-    "Pacote de instalação bem menor: de 10,7 MB para menos de 0,5 MB, com 5 arquivos em vez de 13.",
-    "O conversor para formatos antigos agora fica num arquivo só e é baixado e conferido durante a instalação. Quem já tem o Enxuto instalado não precisa baixar nada de novo."
+    "As atualizações agora também apagam os arquivos do programa que deixaram de ser usados. Eles ficam guardados em versoes-anteriores, caso precise voltar."
   ],
   "data": "2026-10-19",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.10.0.html",
-        "sha256": "2479c83d2948cc09fdc2c8ac10e1f2e330b66f5316a33341bbd76a675b3bbacf",
+        "origem": "versoes/Enxuto-1.10.1.html",
+        "sha256": "6a7b0e3da2bf45a6417a09132a723088c4c9aefab238e448135b59887e82baaf",
         "tamanho": 1237323
       },
       {
         "caminho": "LEIA-ME.txt",
-        "origem": "programa/1.10.0/LEIA-ME.txt",
-        "sha256": "11402b63747fe5a3a070a2bbb377c2498a7bedd543e92a9273a41483d3c050d7",
-        "tamanho": 1116
+        "origem": "programa/1.10.1/LEIA-ME.txt",
+        "sha256": "a752aba42e87dd67ebfbe804e824faf7da57f04fbf2d6bfa0714b203daf25417",
+        "tamanho": 1233
       },
       {
         "caminho": "enxuto.ico",
@@ -30,9 +29,9 @@
       },
       {
         "caminho": "enxuto.pyw",
-        "origem": "programa/1.10.0/enxuto.pyw",
-        "sha256": "cca9d7c606054ccc6e18ae1ca4963975e5c3789af0b56182761f6bc6bc3cc41d",
-        "tamanho": 27279
+        "origem": "programa/1.10.1/enxuto.pyw",
+        "sha256": "2e45f825cd4f83f81a6dd3917fb742d4f6b454ee4ee41952ab8653949f66cfe5",
+        "tamanho": 30080
       },
       {
         "caminho": "instalar.bat",

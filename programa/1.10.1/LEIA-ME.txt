@@ -1,0 +1,24 @@
+Enxuto (Windows)
+================
+
+Instalar (só na primeira vez)
+1. Precisa do Python 3.10 ou mais novo (python.org; marque "Add python.exe to PATH").
+2. Dê dois cliques em instalar.bat. Ele prepara o app, baixa o conversor para formatos
+   antigos (cerca de 10 MB, conferido antes de gravar) e cria o atalho "Enxuto" na
+   Área de Trabalho e no Menu Iniciar.
+
+Usar
+- Abra pelo atalho. O Enxuto abre como um programa, sem navegador.
+- Se o atalho sumir, rode o instalar.bat de novo: é rápido e não apaga nada.
+
+Como funciona
+- O Enxuto usa o WebView2, o mesmo motor do Microsoft Edge, que já vem no Windows 10 e 11.
+- Um servidor só deste computador (127.0.0.1) entrega a página. Nada fica acessível pela
+  rede e nenhum vídeo é enviado para a internet.
+- Atualizações: o app avisa quando há versão nova e só instala quando você confirma.
+  Ele confere os arquivos baixados antes de trocar; a versão anterior fica guardada
+  em versoes-anteriores/. O arquivo arquivos-do-app.txt lista os arquivos do programa:
+  a atualização só troca ou apaga o que está nele.
+- Mensagens de erro ficam em logs\enxuto.log.
+
+Desenvolvido por RLA.dev · Apoie: https://link.mercadopago.com.br/rladevapps
