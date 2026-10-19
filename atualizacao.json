@@ -1,10 +1,70 @@
 {
-  "versao": "1.7.2",
-  "arquivo": "Enxuto-1.7.2.html",
-  "sha256": "caae4f3b1a0b2fd0ab6044d826f46075bae1e96b8c65bde4fbcb896ddca129a8",
-  "tamanho": 1229077,
+  "versao": "1.8.0",
+  "arquivo": "Enxuto-1.8.0.html",
+  "sha256": "403430ed29307ead3790bc5bab80639f4f5226c00cda8a3281a665505c7f27ed",
+  "tamanho": 1234445,
   "novidades": [
-    "Ícone novo: uma tela de vídeo com o botão de play, no padrão dos outros apps da RLA.dev."
+    "Ícone novo também no atalho e na barra de tarefas do Enxuto em janela (antes aparecia o ícone do Python).",
+    "A atualização da janela agora troca também os arquivos do programa, conferindo cada um, e reabre o Enxuto sozinha quando precisa.",
+    "Quem já tinha instalado a janela: depois de atualizar, clique em “Concluir agora” e escolha a pasta do Enxuto para terminar."
   ],
-  "data": "2026-10-19"
+  "data": "2026-10-19",
+  "janela": {
+    "arquivos": [
+      {
+        "caminho": "index.html",
+        "origem": "versoes/Enxuto-1.8.0.html",
+        "sha256": "403430ed29307ead3790bc5bab80639f4f5226c00cda8a3281a665505c7f27ed",
+        "tamanho": 1234445
+      },
+      {
+        "caminho": "Enxuto.bat",
+        "origem": "janela/1.8.0/Enxuto.bat",
+        "sha256": "2688b77ce219e6f178eb4862900010561b6513996c4827c746d379bcffacdef2",
+        "tamanho": 136
+      },
+      {
+        "caminho": "LEIA-ME.txt",
+        "origem": "janela/1.8.0/LEIA-ME.txt",
+        "sha256": "eb33c37e6589ea029f6e0e7ebb7b21a8f63ab862c2798034b5d5f5597f94c19a",
+        "tamanho": 1070
+      },
+      {
+        "caminho": "assets/enxuto-v2.ico",
+        "origem": "janela/1.8.0/assets/enxuto-v2.ico",
+        "sha256": "69d88b580e67e1092300441300934dbec1c32537dc09dac7de66ba7c7ac3ba92",
+        "tamanho": 78047
+      },
+      {
+        "caminho": "atualizacao.py",
+        "origem": "janela/1.8.0/atualizacao.py",
+        "sha256": "b700314727bd21e602e9f83173595385bb41c7b971056a12090e17b12f4c0df9",
+        "tamanho": 9411
+      },
+      {
+        "caminho": "criar-atalhos.ps1",
+        "origem": "janela/1.8.0/criar-atalhos.ps1",
+        "sha256": "170cfab89c1280a0288992fd274e802d79e590089cb50938fcd4bc5c91f6e034",
+        "tamanho": 1190
+      },
+      {
+        "caminho": "enxuto.pyw",
+        "origem": "janela/1.8.0/enxuto.pyw",
+        "sha256": "c146b28afdc0a97b513d31aac655c6a36c8cf3377463aa28ca303902528021ca",
+        "tamanho": 10888
+      },
+      {
+        "caminho": "instalar.bat",
+        "origem": "janela/1.8.0/instalar.bat",
+        "sha256": "4bcbd7d5c7287026a89a00578bccc39d9fa8b51810df6d84d0b1dc258b003607",
+        "tamanho": 950
+      },
+      {
+        "caminho": "requirements.txt",
+        "origem": "janela/1.8.0/requirements.txt",
+        "sha256": "27ecc87d7bb55d79f4ac1254711bae3431c7ff10e92caef108530f6f36584cb1",
+        "tamanho": 19
+      }
+    ]
+  }
 }
