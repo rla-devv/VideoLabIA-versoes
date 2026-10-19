@@ -1,19 +1,20 @@
 {
-  "versao": "1.13.8",
-  "arquivo": "Enxuto-1.13.8.html",
-  "sha256": "105104ea3f95c3947b899a05ca922077e13a025a0e518b8b57e1c74d600c7e04",
-  "tamanho": 1240879,
+  "versao": "1.14.0",
+  "arquivo": "Enxuto-1.14.0.html",
+  "sha256": "7ddeda945e1d215e83cb5956204968eaddf4c73b8c09d0790f04285a01754db7",
+  "tamanho": 1247056,
   "novidades": [
-    "Botões do topo no novo padrão dos apps da RLA.dev: um pouco maiores, com ícones mais discretos."
+    "Juntar vídeos ficou mais completo: escolha a ordem com as setas de cada vídeo, use o botão “Juntar os vídeos” e cada vídeo entra com toda a sua edição (texto, áreas escondidas, cor, legenda, volume, velocidade e mais).",
+    "Formatos antigos (AVI, WMV…) também podem ser juntados, sem converter antes."
   ],
   "data": "2026-10-19",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.13.8.html",
-        "sha256": "105104ea3f95c3947b899a05ca922077e13a025a0e518b8b57e1c74d600c7e04",
-        "tamanho": 1240879
+        "origem": "versoes/Enxuto-1.14.0.html",
+        "sha256": "7ddeda945e1d215e83cb5956204968eaddf4c73b8c09d0790f04285a01754db7",
+        "tamanho": 1247056
       },
       {
         "caminho": "Instalar Enxuto IA.bat",
