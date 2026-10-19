@@ -1,18 +1,18 @@
 {
-  "versao": "1.13.5",
-  "arquivo": "Enxuto-1.13.5.html",
-  "sha256": "e0067b23e4680033041f98338eae4b3ec1d7442bd9cb73fe11207e1396a06845",
+  "versao": "1.13.6",
+  "arquivo": "Enxuto-1.13.6.html",
+  "sha256": "35153da8d382294ad7abef9b776ee0de57ebfc5ae301d1821d86cc1fd8eeb8f7",
   "tamanho": 1240809,
   "novidades": [
-    "O pacote de instalação agora se chama “Enxuto IA.zip” e descompacta numa pasta “Enxuto IA”, sem número de versão no nome."
+    "Ao descompactar o pacote de instalação, fica uma pasta só, “Enxuto IA”. Se o instalador for aberto solto em outra pasta, ele cria a pasta “Enxuto IA” sozinho."
   ],
   "data": "2026-10-19",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.13.5.html",
-        "sha256": "e0067b23e4680033041f98338eae4b3ec1d7442bd9cb73fe11207e1396a06845",
+        "origem": "versoes/Enxuto-1.13.6.html",
+        "sha256": "35153da8d382294ad7abef9b776ee0de57ebfc5ae301d1821d86cc1fd8eeb8f7",
         "tamanho": 1240809
       },
       {
@@ -35,9 +35,9 @@
       },
       {
         "caminho": "instalar.bat",
-        "origem": "programa/1.13.3/instalar.bat",
-        "sha256": "d062a0b68cdc4385bc865d4dc5c48bf14193399ae8a55bd0d9d2c9c03ffc6d1b",
-        "tamanho": 4483
+        "origem": "programa/1.13.6/instalar.bat",
+        "sha256": "661d8613dd4098aeac603c70581b121fee219a26a3b3ec6f6c953834caf97658",
+        "tamanho": 5525
       }
     ]
   }
