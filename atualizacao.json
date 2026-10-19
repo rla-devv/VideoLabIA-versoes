@@ -1,25 +1,25 @@
 {
-  "versao": "1.10.2",
-  "arquivo": "Enxuto-1.10.2.html",
-  "sha256": "80872bf7d484c533cb288ceab2adc11a89f860c18129f316b7c86458994b30de",
+  "versao": "1.10.3",
+  "arquivo": "Enxuto-1.10.3.html",
+  "sha256": "a300e6873325c74cc6fe4ad118d060e5801dcaf482a57b2a7aee3eb2606c8f50",
   "tamanho": 1237343,
   "novidades": [
-    "A instalação não precisa mais do Python no computador: o instalar.bat baixa um Python só para o Enxuto (oficial do python.org, conferido antes de usar)."
+    "Ao terminar a instalação, o Enxuto já abre sozinho."
   ],
   "data": "2026-10-19",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.10.2.html",
-        "sha256": "80872bf7d484c533cb288ceab2adc11a89f860c18129f316b7c86458994b30de",
+        "origem": "versoes/Enxuto-1.10.3.html",
+        "sha256": "a300e6873325c74cc6fe4ad118d060e5801dcaf482a57b2a7aee3eb2606c8f50",
         "tamanho": 1237343
       },
       {
         "caminho": "LEIA-ME.txt",
-        "origem": "programa/1.10.2/LEIA-ME.txt",
-        "sha256": "a71f5f6cfe42ff34d66ded5f72f240d1ddd54ed7065ec690d8ed9a9d102cce49",
-        "tamanho": 1291
+        "origem": "programa/1.10.3/LEIA-ME.txt",
+        "sha256": "a4889996f07330ed11249a1dea1ccfa6e5b53ff65716b8ca8c070ebfe17102c2",
+        "tamanho": 1330
       },
       {
         "caminho": "enxuto.ico",
@@ -35,9 +35,9 @@
       },
       {
         "caminho": "instalar.bat",
-        "origem": "programa/1.10.2/instalar.bat",
-        "sha256": "7d701a0e10eb447dd9994ea9259372bf3d284001de15d2583efa67a5b40a8341",
-        "tamanho": 1667
+        "origem": "programa/1.10.3/instalar.bat",
+        "sha256": "f3a394b8ac1ed807d1f711a1d8db89467e3a9fdf66889989469029c10ebe1728",
+        "tamanho": 1847
       }
     ]
   }
