@@ -1,19 +1,19 @@
 {
-  "versao": "1.20.0",
-  "arquivo": "Enxuto-1.20.0.html",
-  "sha256": "ae3405abc40b2165074258c144067c4abc0d1ae7c3b745e83fdec64e4712671d",
-  "tamanho": 1292824,
+  "versao": "1.21.0",
+  "arquivo": "Enxuto-1.21.0.html",
+  "sha256": "64e4cc9e17db850a854c30f7331acb72076b9513ebbcfb7889693502cc883621",
+  "tamanho": 1301144,
   "novidades": [
-    "Novo: Reduzir ruído. No editor, em “Som e tempo”, o Enxuto IA diminui chiado, ventilador, ar-condicionado e zumbido de fundo, deixando a voz mais limpa. Escolha Leve ou Forte e ouça 8 segundos antes de converter. Quase não muda o tempo da conversão."
+    "Novo: Esconder rostos automaticamente. No editor, em “Imagem”, o Enxuto IA encontra os rostos no vídeo e os cobre com mosaico ou tarja, acompanhando quem se mexe. A busca é feita no seu computador; na primeira vez, baixa o detector de rostos (uma vez só). Confira na prévia antes de enviar."
   ],
   "data": "2026-10-19",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.20.0.html",
-        "sha256": "ae3405abc40b2165074258c144067c4abc0d1ae7c3b745e83fdec64e4712671d",
-        "tamanho": 1292824
+        "origem": "versoes/Enxuto-1.21.0.html",
+        "sha256": "64e4cc9e17db850a854c30f7331acb72076b9513ebbcfb7889693502cc883621",
+        "tamanho": 1301144
       },
       {
         "caminho": "Instalar Enxuto IA.bat",
