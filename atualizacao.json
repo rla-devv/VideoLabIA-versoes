@@ -1,19 +1,19 @@
 {
-  "versao": "1.16.0",
-  "arquivo": "Enxuto-1.16.0.html",
-  "sha256": "fdeda4e96580bd62aba63fe21214d9bf7aa2a1f4d6f604bdfb52f9799ba7bae8",
-  "tamanho": 1263095,
+  "versao": "1.17.0",
+  "arquivo": "Enxuto-1.17.0.html",
+  "sha256": "88cd1e0fd5a6361b7dd0807308eb30e284aa826294233d0c56c9423b9bbc3a5c",
+  "tamanho": 1269244,
   "novidades": [
-    "Novo: Legendas automáticas. No editor, em “Imagem”, o Enxuto IA escuta o vídeo e escreve as legendas sozinho, no seu computador: o som não sai dele. Você confere e corrige o texto, grava as legendas no vídeo e pode baixar o arquivo .srt. Na primeira vez, baixa o modelo de reconhecimento de voz (uma vez só)."
+    "Novo: Salvar direto numa pasta. Marque a opção acima do botão “Processar” e escolha uma pasta: os vídeos prontos vão direto para ela, sem precisar baixar um por um. O vídeo é gravado no disco enquanto converte, então vídeos muito grandes (vários GB) não esgotam a memória do computador. A pasta fica lembrada."
   ],
   "data": "2026-10-19",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.16.0.html",
-        "sha256": "fdeda4e96580bd62aba63fe21214d9bf7aa2a1f4d6f604bdfb52f9799ba7bae8",
-        "tamanho": 1263095
+        "origem": "versoes/Enxuto-1.17.0.html",
+        "sha256": "88cd1e0fd5a6361b7dd0807308eb30e284aa826294233d0c56c9423b9bbc3a5c",
+        "tamanho": 1269244
       },
       {
         "caminho": "Instalar Enxuto IA.bat",
