@@ -1,19 +1,19 @@
 {
-  "versao": "1.13.7",
-  "arquivo": "Enxuto-1.13.7.html",
-  "sha256": "3594bf2dfb6fde267fc57b9e0d9482de51227f413e92946e3ca74c2824c1cd53",
-  "tamanho": 1240815,
+  "versao": "1.13.8",
+  "arquivo": "Enxuto-1.13.8.html",
+  "sha256": "105104ea3f95c3947b899a05ca922077e13a025a0e518b8b57e1c74d600c7e04",
+  "tamanho": 1240879,
   "novidades": [
-    "Nomes mais claros na pasta do programa: o instalador agora se chama “Instalar Enxuto IA” e o atalho, “Abrir Enxuto IA”."
+    "Botões do topo no novo padrão dos apps da RLA.dev: um pouco maiores, com ícones mais discretos."
   ],
   "data": "2026-10-19",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.13.7.html",
-        "sha256": "3594bf2dfb6fde267fc57b9e0d9482de51227f413e92946e3ca74c2824c1cd53",
-        "tamanho": 1240815
+        "origem": "versoes/Enxuto-1.13.8.html",
+        "sha256": "105104ea3f95c3947b899a05ca922077e13a025a0e518b8b57e1c74d600c7e04",
+        "tamanho": 1240879
       },
       {
         "caminho": "Instalar Enxuto IA.bat",
