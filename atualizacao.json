@@ -1,25 +1,25 @@
 {
-  "versao": "1.10.3",
-  "arquivo": "Enxuto-1.10.3.html",
-  "sha256": "a300e6873325c74cc6fe4ad118d060e5801dcaf482a57b2a7aee3eb2606c8f50",
-  "tamanho": 1237343,
+  "versao": "1.11.0",
+  "arquivo": "Enxuto-1.11.0.html",
+  "sha256": "1d5dc4dad03b5901b865067a9e63a51123c19de8209d7bca983f06efde026b6a",
+  "tamanho": 1237433,
   "novidades": [
-    "Ao terminar a instalação, o Enxuto já abre sozinho."
+    "O app agora se chama Enxuto IA, no mesmo padrão dos outros apps da RLA.dev. O atalho passa a se chamar “Enxuto IA”."
   ],
   "data": "2026-10-19",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.10.3.html",
-        "sha256": "a300e6873325c74cc6fe4ad118d060e5801dcaf482a57b2a7aee3eb2606c8f50",
-        "tamanho": 1237343
+        "origem": "versoes/Enxuto-1.11.0.html",
+        "sha256": "1d5dc4dad03b5901b865067a9e63a51123c19de8209d7bca983f06efde026b6a",
+        "tamanho": 1237433
       },
       {
         "caminho": "LEIA-ME.txt",
-        "origem": "programa/1.10.3/LEIA-ME.txt",
-        "sha256": "a4889996f07330ed11249a1dea1ccfa6e5b53ff65716b8ca8c070ebfe17102c2",
-        "tamanho": 1330
+        "origem": "programa/1.11.0/LEIA-ME.txt",
+        "sha256": "58d0f768a89b2f87cb04f76ba9674ffc679d1801d1fc66e61ed1267b976d4330",
+        "tamanho": 1348
       },
       {
         "caminho": "enxuto.ico",
@@ -29,15 +29,15 @@
       },
       {
         "caminho": "enxuto.pyw",
-        "origem": "programa/1.10.2/enxuto.pyw",
-        "sha256": "b00024ebeb41e2a7f38f046e1d30139c9ed3da9b9afde75cd5d561fbe483f162",
-        "tamanho": 32516
+        "origem": "programa/1.11.0/enxuto.pyw",
+        "sha256": "5bfcd3d4b45856231a729b7cfd9bbf653e197bada3633929c713510d475bf295",
+        "tamanho": 32822
       },
       {
         "caminho": "instalar.bat",
-        "origem": "programa/1.10.3/instalar.bat",
-        "sha256": "f3a394b8ac1ed807d1f711a1d8db89467e3a9fdf66889989469029c10ebe1728",
-        "tamanho": 1847
+        "origem": "programa/1.11.0/instalar.bat",
+        "sha256": "e10c0eac0f97f6ca477d17ad2c7eaa3cba64c8207a5de87336fe1581ca509fb7",
+        "tamanho": 1862
       }
     ]
   }

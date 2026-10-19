@@ -1,0 +1,25 @@
+Enxuto IA (Windows)
+================
+
+Instalar (só na primeira vez)
+- Dê dois cliques em instalar.bat. Não precisa instalar nada antes: ele baixa um Python
+  só para o Enxuto IA (o oficial do python.org, na pasta python), o pywebview e o conversor
+  para formatos antigos, confere cada arquivo antes de usar e cria o atalho "Enxuto IA" na
+  Área de Trabalho e no Menu Iniciar. Precisa de internet só durante a instalação.
+  Ao terminar, o Enxuto IA abre sozinho.
+
+Usar
+- Abra pelo atalho. O Enxuto IA abre como um programa, sem navegador.
+- Se o atalho sumir, rode o instalar.bat de novo: é rápido e não apaga nada.
+
+Como funciona
+- O Enxuto IA usa o WebView2, o mesmo motor do Microsoft Edge, que já vem no Windows 10 e 11.
+- Um servidor só deste computador (127.0.0.1) entrega a página. Nada fica acessível pela
+  rede e nenhum vídeo é enviado para a internet.
+- Atualizações: o app avisa quando há versão nova e só instala quando você confirma.
+  Ele confere os arquivos baixados antes de trocar; a versão anterior fica guardada
+  em versoes-anteriores/. O arquivo arquivos-do-app.txt lista os arquivos do programa:
+  a atualização só troca ou apaga o que está nele.
+- Mensagens de erro ficam em logs\enxuto.log.
+
+Desenvolvido por RLA.dev · Apoie: https://link.mercadopago.com.br/rladevapps
