@@ -1,10 +1,10 @@
 {
-  "versao": "1.7.1",
-  "arquivo": "Enxuto-1.7.1.html",
-  "sha256": "af1798ff8b4b4c4ea875a62d9dd416ffa0d09ecc192df6d0bd60001a6c127920",
-  "tamanho": 1227061,
+  "versao": "1.7.2",
+  "arquivo": "Enxuto-1.7.2.html",
+  "sha256": "caae4f3b1a0b2fd0ab6044d826f46075bae1e96b8c65bde4fbcb896ddca129a8",
+  "tamanho": 1229077,
   "novidades": [
-    "Ícone novo, no mesmo padrão dos outros apps da RLA.dev: no topo da página, na aba do navegador e no atalho da janela."
+    "Ícone novo: uma tela de vídeo com o botão de play, no padrão dos outros apps da RLA.dev."
   ],
   "data": "2026-10-19"
 }
