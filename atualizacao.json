@@ -1,8 +1,8 @@
 {
-  "versao": "1.8.0",
-  "arquivo": "Enxuto-1.8.0.html",
-  "sha256": "403430ed29307ead3790bc5bab80639f4f5226c00cda8a3281a665505c7f27ed",
-  "tamanho": 1234445,
+  "versao": "1.8.1",
+  "arquivo": "Enxuto-1.8.1.html",
+  "sha256": "357a6d971da76ac9419e5655778bd079df9cd1dd2347feb971c0f47c3747345a",
+  "tamanho": 1234712,
   "novidades": [
     "Ícone novo também no atalho e na barra de tarefas do Enxuto em janela (antes aparecia o ícone do Python).",
     "A atualização da janela agora troca também os arquivos do programa, conferindo cada um, e reabre o Enxuto sozinha quando precisa.",
@@ -13,9 +13,9 @@
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.8.0.html",
-        "sha256": "403430ed29307ead3790bc5bab80639f4f5226c00cda8a3281a665505c7f27ed",
-        "tamanho": 1234445
+        "origem": "versoes/Enxuto-1.8.1.html",
+        "sha256": "357a6d971da76ac9419e5655778bd079df9cd1dd2347feb971c0f47c3747345a",
+        "tamanho": 1234712
       },
       {
         "caminho": "Enxuto.bat",
@@ -37,9 +37,9 @@
       },
       {
         "caminho": "atualizacao.py",
-        "origem": "janela/1.8.0/atualizacao.py",
-        "sha256": "b700314727bd21e602e9f83173595385bb41c7b971056a12090e17b12f4c0df9",
-        "tamanho": 9411
+        "origem": "janela/1.8.1/atualizacao.py",
+        "sha256": "4558c2cb222a7c838ae3822fa62730512d8c4a06bcb06c9eb6a4894ea7e4c75a",
+        "tamanho": 9579
       },
       {
         "caminho": "criar-atalhos.ps1",
