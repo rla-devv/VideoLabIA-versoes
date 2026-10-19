@@ -1,19 +1,20 @@
 {
-  "versao": "1.8.2",
-  "arquivo": "Enxuto-1.8.2.html",
-  "sha256": "27e73d5d044958390dd8aa803903303903fcdf81aacd3267eb9b31c516a91e41",
-  "tamanho": 1234668,
+  "versao": "1.9.0",
+  "arquivo": "Enxuto-1.9.0.html",
+  "sha256": "7906a7c54a315be7f69f1a129b8591c6550c7548a04645627db7b91bf074ff9b",
+  "tamanho": 1237094,
   "novidades": [
-    "Textos mais simples: o Enxuto instalado é o jeito padrão de usar, e o pacote de instalação agora se chama Enxuto.zip."
+    "Visual mais enxuto: textos, botões e cartões menores, com as mesmas informações.",
+    "“Apoie o projeto” e “Buscar atualização” abrem numa janela por cima da página. Quando há versão nova, o botão de atualização avisa com um ponto laranja."
   ],
   "data": "2026-10-19",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.8.2.html",
-        "sha256": "27e73d5d044958390dd8aa803903303903fcdf81aacd3267eb9b31c516a91e41",
-        "tamanho": 1234668
+        "origem": "versoes/Enxuto-1.9.0.html",
+        "sha256": "7906a7c54a315be7f69f1a129b8591c6550c7548a04645627db7b91bf074ff9b",
+        "tamanho": 1237094
       },
       {
         "caminho": "Enxuto.bat",
