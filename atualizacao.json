@@ -1,20 +1,19 @@
 {
-  "versao": "1.14.0",
-  "arquivo": "Enxuto-1.14.0.html",
-  "sha256": "7ddeda945e1d215e83cb5956204968eaddf4c73b8c09d0790f04285a01754db7",
-  "tamanho": 1247056,
+  "versao": "1.15.0",
+  "arquivo": "Enxuto-1.15.0.html",
+  "sha256": "ee9c528954be01cc15fe831c52debbfcacbd79ee8cf6c049bcd7ee69f180367b",
+  "tamanho": 1252589,
   "novidades": [
-    "Juntar vídeos ficou mais completo: escolha a ordem com as setas de cada vídeo, use o botão “Juntar os vídeos” e cada vídeo entra com toda a sua edição (texto, áreas escondidas, cor, legenda, volume, velocidade e mais).",
-    "Formatos antigos (AVI, WMV…) também podem ser juntados, sem converter antes."
+    "Novo: Cortar silêncios. No editor, em “Trechos”, o Enxuto IA encontra as pausas sem fala e as remove sozinho. Você escolhe a pausa mínima, confere na prévia e pode desfazer. Ótimo para reuniões e aulas."
   ],
   "data": "2026-10-19",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.14.0.html",
-        "sha256": "7ddeda945e1d215e83cb5956204968eaddf4c73b8c09d0790f04285a01754db7",
-        "tamanho": 1247056
+        "origem": "versoes/Enxuto-1.15.0.html",
+        "sha256": "ee9c528954be01cc15fe831c52debbfcacbd79ee8cf6c049bcd7ee69f180367b",
+        "tamanho": 1252589
       },
       {
         "caminho": "Instalar Enxuto IA.bat",
