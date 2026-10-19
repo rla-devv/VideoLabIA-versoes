@@ -1,0 +1,11 @@
+{
+  "versao": "1.6.0",
+  "arquivo": "Enxuto-1.6.0.html",
+  "sha256": "1b5ae507ac7b816d5fb663c9c965fc3a16deb54a71b71730f9ffce8a8f92001c",
+  "tamanho": 1207835,
+  "novidades": [
+    "Atualização mais fácil: o app consulta sozinho se há versão nova (ao abrir e a cada 15 minutos), avisa no topo e instala quando você confirmar, gravando por cima do arquivo que você usa.",
+    "Antes de instalar, o app confere que o arquivo baixado é exatamente o publicado. Se algo não bater, nada é alterado."
+  ],
+  "data": "2026-10-19"
+}
