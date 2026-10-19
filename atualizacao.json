@@ -1,25 +1,25 @@
 {
-  "versao": "1.13.2",
-  "arquivo": "Enxuto-1.13.2.html",
-  "sha256": "f00cb42156c7ac097282814bcf483021ac273c0f5fe01b60c696e8c706528e2d",
+  "versao": "1.13.3",
+  "arquivo": "Enxuto-1.13.3.html",
+  "sha256": "7d2819ab8d8bf5da92846360a7a77ce2bd18e0e2d567393ed60127a17d4ebf6b",
   "tamanho": 1240804,
   "novidades": [
-    "Instalador mais claro: mostra no topo que a internet é usada só durante a instalação e, sem internet, avisa na hora em vez de parar no meio."
+    "Novo atalho “Abrir o Enxuto IA” dentro da pasta do programa, para quem abrir a pasta saber em que clicar. Quem já tem o Enxuto IA instalado ganha esse atalho ao abrir."
   ],
   "data": "2026-10-19",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.13.2.html",
-        "sha256": "f00cb42156c7ac097282814bcf483021ac273c0f5fe01b60c696e8c706528e2d",
+        "origem": "versoes/Enxuto-1.13.3.html",
+        "sha256": "7d2819ab8d8bf5da92846360a7a77ce2bd18e0e2d567393ed60127a17d4ebf6b",
         "tamanho": 1240804
       },
       {
         "caminho": "LEIA-ME.txt",
-        "origem": "programa/1.11.0/LEIA-ME.txt",
-        "sha256": "58d0f768a89b2f87cb04f76ba9674ffc679d1801d1fc66e61ed1267b976d4330",
-        "tamanho": 1348
+        "origem": "programa/1.13.3/LEIA-ME.txt",
+        "sha256": "ea7dcb353f11385487b72ab53dab0a44368b3fb7c6623dc390de24022dc39e6c",
+        "tamanho": 1456
       },
       {
         "caminho": "enxuto.ico",
@@ -29,15 +29,15 @@
       },
       {
         "caminho": "enxuto.pyw",
-        "origem": "programa/1.12.0/enxuto.pyw",
-        "sha256": "7ec1a1644c40a00794564b0dc306660c558071097e674298109cfec4a9d6eff7",
-        "tamanho": 33560
+        "origem": "programa/1.13.3/enxuto.pyw",
+        "sha256": "118be4459c540b2f69102da732d7747efe2d4eccddf6ec67d98cc7e20972a8ce",
+        "tamanho": 34846
       },
       {
         "caminho": "instalar.bat",
-        "origem": "programa/1.13.2/instalar.bat",
-        "sha256": "6674d2240ae92be9645009ccfbd21465a285bba11998c9e5223db8e523d24d78",
-        "tamanho": 4439
+        "origem": "programa/1.13.3/instalar.bat",
+        "sha256": "d062a0b68cdc4385bc865d4dc5c48bf14193399ae8a55bd0d9d2c9c03ffc6d1b",
+        "tamanho": 4483
       }
     ]
   }
