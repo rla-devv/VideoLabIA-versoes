@@ -1,18 +1,18 @@
 {
-  "versao": "1.13.1",
-  "arquivo": "Enxuto-1.13.1.html",
-  "sha256": "d58ba5fa9520785e8f2177d69bf1cdf3bc4a34183591732ead3d137dbfabf11d",
+  "versao": "1.13.2",
+  "arquivo": "Enxuto-1.13.2.html",
+  "sha256": "f00cb42156c7ac097282814bcf483021ac273c0f5fe01b60c696e8c706528e2d",
   "tamanho": 1240804,
   "novidades": [
-    "Cabeçalho mais claro: o Enxuto IA converte, comprime e otimiza vídeos diretamente no seu computador."
+    "Instalador mais claro: mostra no topo que a internet é usada só durante a instalação e, sem internet, avisa na hora em vez de parar no meio."
   ],
   "data": "2026-10-19",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.13.1.html",
-        "sha256": "d58ba5fa9520785e8f2177d69bf1cdf3bc4a34183591732ead3d137dbfabf11d",
+        "origem": "versoes/Enxuto-1.13.2.html",
+        "sha256": "f00cb42156c7ac097282814bcf483021ac273c0f5fe01b60c696e8c706528e2d",
         "tamanho": 1240804
       },
       {
@@ -35,9 +35,9 @@
       },
       {
         "caminho": "instalar.bat",
-        "origem": "programa/1.12.0/instalar.bat",
-        "sha256": "086f1497e63c9c62fce78fe5a03aebd81be5bffa6be0e95ab1d073891b740413",
-        "tamanho": 3293
+        "origem": "programa/1.13.2/instalar.bat",
+        "sha256": "6674d2240ae92be9645009ccfbd21465a285bba11998c9e5223db8e523d24d78",
+        "tamanho": 4439
       }
     ]
   }
