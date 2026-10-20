@@ -1,7 +1,7 @@
 {
-  "versao": "1.25.0",
-  "arquivo": "Enxuto-1.25.0.html",
-  "sha256": "131142338fb9d7ca49fc9728daa11a0854191b9230ad3405add8d34f515f208f",
+  "versao": "1.25.1",
+  "arquivo": "Enxuto-1.25.1.html",
+  "sha256": "ee1d4c3ed2f2f404bf375d686edd7e8a067f31588023aa704a39c4f2ef6e62ea",
   "tamanho": 1318743,
   "novidades": [
     "O Enxuto IA agora se chama Vídeo Lab, um nome que diz melhor o que ele faz: converter, comprimir e editar vídeos. Nada muda no funcionamento, seus ajustes continuam guardados, e os atalhos passam a se chamar “Vídeo Lab”."
@@ -11,8 +11,8 @@
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.25.0.html",
-        "sha256": "131142338fb9d7ca49fc9728daa11a0854191b9230ad3405add8d34f515f208f",
+        "origem": "versoes/Enxuto-1.25.1.html",
+        "sha256": "ee1d4c3ed2f2f404bf375d686edd7e8a067f31588023aa704a39c4f2ef6e62ea",
         "tamanho": 1318743
       },
       {
@@ -26,12 +26,6 @@
         "origem": "programa/1.25.0/LEIA-ME.txt",
         "sha256": "c371847388294503bae9569f208a5fec16decb2111fee7ca8225f8dd714cffad",
         "tamanho": 1485
-      },
-      {
-        "caminho": "logs/videolab.log",
-        "origem": "programa/1.25.0/logs/videolab.log",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "tamanho": 0
       },
       {
         "caminho": "videolab.ico",
