@@ -1,19 +1,19 @@
 {
-  "versao": "1.24.0",
-  "arquivo": "Enxuto-1.24.0.html",
-  "sha256": "1b0b2a5a328ddaa6e0ba5080ef8d04f3907cebf70ffe1d1972cc8cd237dd98b0",
-  "tamanho": 1318652,
+  "versao": "1.24.1",
+  "arquivo": "Enxuto-1.24.1.html",
+  "sha256": "a44150cabd49d2c1e91297d5e0506a9bfcade601534c073afb6758d4f599b26f",
+  "tamanho": 1318600,
   "novidades": [
-    "Novo: Enquadramento que segue o rosto. Ao transformar um vídeo deitado em vertical (9:16, para Reels e TikTok), o recorte acompanha a pessoa em vez de ficar parado no centro. O destino “Reels e TikTok” liga isso sozinho; em “Editar” › Imagem dá para conferir e desligar."
+    "Texto do “Apoie o projeto” atualizado. Todas as funcionalidades continuam gratuitas."
   ],
   "data": "2026-10-20",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.24.0.html",
-        "sha256": "1b0b2a5a328ddaa6e0ba5080ef8d04f3907cebf70ffe1d1972cc8cd237dd98b0",
-        "tamanho": 1318652
+        "origem": "versoes/Enxuto-1.24.1.html",
+        "sha256": "a44150cabd49d2c1e91297d5e0506a9bfcade601534c073afb6758d4f599b26f",
+        "tamanho": 1318600
       },
       {
         "caminho": "Instalar Enxuto IA.bat",
