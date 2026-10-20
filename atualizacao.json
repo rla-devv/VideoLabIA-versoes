@@ -1,19 +1,20 @@
 {
-  "versao": "1.32.0",
-  "arquivo": "Enxuto-1.32.0.html",
-  "sha256": "f58dcd62d2ec76cc8a59588f109cc158305d84bb649157502f4bf6371edbb621",
-  "tamanho": 1358465,
+  "versao": "1.33.0",
+  "arquivo": "Enxuto-1.33.0.html",
+  "sha256": "a3e629bb74820f49ecef56a6a8d2040b26216ddbf59ebad8259560c5581e2e7f",
+  "tamanho": 1364985,
   "novidades": [
-    "Novo: Gravar a tela ou a câmera. Logo abaixo de “Escolha seus vídeos”, grave a tela (com o microfone e o som do computador) ou a câmera, sem outro programa. Ao parar, a gravação entra na lista, pronta para cortar, editar e compactar."
+    "Novo: Desfoque. Em “Esconder áreas” e “Esconder rostos”, além de tarja e mosaico, agora dá para borrar a área.",
+    "Novo: Seguir o objeto. Marque a área em volta de algo que se mexe (placa de carro, crachá, pessoa) e clique em “Seguir o objeto”: a área acompanha o movimento até o fim do vídeo."
   ],
   "data": "2026-10-20",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.32.0.html",
-        "sha256": "f58dcd62d2ec76cc8a59588f109cc158305d84bb649157502f4bf6371edbb621",
-        "tamanho": 1358465
+        "origem": "versoes/Enxuto-1.33.0.html",
+        "sha256": "a3e629bb74820f49ecef56a6a8d2040b26216ddbf59ebad8259560c5581e2e7f",
+        "tamanho": 1364985
       },
       {
         "caminho": "Instalar Vídeo Lab IA.bat",
