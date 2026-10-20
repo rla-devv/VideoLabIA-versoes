@@ -1,20 +1,19 @@
 {
-  "versao": "1.23.0",
-  "arquivo": "Enxuto-1.23.0.html",
-  "sha256": "02855349212bb5bdb706c34af7723e9344228a0361a01f96c227c489e2a7b232",
-  "tamanho": 1310672,
+  "versao": "1.24.0",
+  "arquivo": "Enxuto-1.24.0.html",
+  "sha256": "1b0b2a5a328ddaa6e0ba5080ef8d04f3907cebf70ffe1d1972cc8cd237dd98b0",
+  "tamanho": 1318652,
   "novidades": [
-    "Novo: Transcrição e busca. No editor, em “Cortar”, o Enxuto IA escreve tudo o que foi falado, com o horário de cada frase. Busque uma palavra para achar o momento, remova frases do vídeo pelo texto e baixe a transcrição em .txt (ótimo para atas de reunião e aulas). Tudo no seu computador.",
-    "Correção: um trecho removido bem no começo ou no fim do vídeo agora é cortado de verdade na conversão."
+    "Novo: Enquadramento que segue o rosto. Ao transformar um vídeo deitado em vertical (9:16, para Reels e TikTok), o recorte acompanha a pessoa em vez de ficar parado no centro. O destino “Reels e TikTok” liga isso sozinho; em “Editar” › Imagem dá para conferir e desligar."
   ],
   "data": "2026-10-20",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.23.0.html",
-        "sha256": "02855349212bb5bdb706c34af7723e9344228a0361a01f96c227c489e2a7b232",
-        "tamanho": 1310672
+        "origem": "versoes/Enxuto-1.24.0.html",
+        "sha256": "1b0b2a5a328ddaa6e0ba5080ef8d04f3907cebf70ffe1d1972cc8cd237dd98b0",
+        "tamanho": 1318652
       },
       {
         "caminho": "Instalar Enxuto IA.bat",
