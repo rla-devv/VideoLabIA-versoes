@@ -1,19 +1,19 @@
 {
-  "versao": "1.34.0",
-  "arquivo": "Enxuto-1.34.0.html",
-  "sha256": "af93002229ca159c897e0d4d2272d64b76dd8a8659f8fc7ba267ac028f669625",
-  "tamanho": 1366651,
+  "versao": "1.34.1",
+  "arquivo": "Enxuto-1.34.1.html",
+  "sha256": "3c838599c4c214c11907eb031ffe64d87633446744dc554754a04cc4ca63ad36",
+  "tamanho": 1369446,
   "novidades": [
-    "Visual novo: o Vídeo Lab IA agora usa as cores azuis da RLA.dev, nos temas claro e escuro. Nada muda no funcionamento."
+    "A janela de atualização ganhou um visual novo, mais claro: mostra a versão nova, a que você usa e as novidades."
   ],
   "data": "2026-10-20",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.34.0.html",
-        "sha256": "af93002229ca159c897e0d4d2272d64b76dd8a8659f8fc7ba267ac028f669625",
-        "tamanho": 1366651
+        "origem": "versoes/Enxuto-1.34.1.html",
+        "sha256": "3c838599c4c214c11907eb031ffe64d87633446744dc554754a04cc4ca63ad36",
+        "tamanho": 1369446
       },
       {
         "caminho": "Instalar Vídeo Lab IA.bat",
