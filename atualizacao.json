@@ -1,19 +1,19 @@
 {
-  "versao": "1.30.0",
-  "arquivo": "Enxuto-1.30.0.html",
-  "sha256": "825285275145ed50bec60b0090a09fa4e378769453c3e0397bbf89a044ddd85b",
-  "tamanho": 1343108,
+  "versao": "1.31.0",
+  "arquivo": "Enxuto-1.31.0.html",
+  "sha256": "34027531fa1bb2eaf2a0f3a21386837acb181aa84ae06ab49a68ac158f83cc73",
+  "tamanho": 1350751,
   "novidades": [
-    "Novo: Música de fundo. Em “Editar” › Som e tempo, escolha uma música do computador: ela toca por baixo do vídeo e abaixa sozinha quando alguém fala. Dá para ajustar o volume e ouvir 8 segundos antes de converter."
+    "Novo: Bipe em palavras. Em “Editar” › Som e tempo, escreva as palavras que não podem aparecer (palavrões, nomes, números de documento): o Vídeo Lab IA as encontra pela fala e cobre com um bipe ou com silêncio, também nas legendas. Tudo no seu computador."
   ],
   "data": "2026-10-20",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.30.0.html",
-        "sha256": "825285275145ed50bec60b0090a09fa4e378769453c3e0397bbf89a044ddd85b",
-        "tamanho": 1343108
+        "origem": "versoes/Enxuto-1.31.0.html",
+        "sha256": "34027531fa1bb2eaf2a0f3a21386837acb181aa84ae06ab49a68ac158f83cc73",
+        "tamanho": 1350751
       },
       {
         "caminho": "Instalar Vídeo Lab IA.bat",
