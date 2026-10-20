@@ -1,19 +1,20 @@
 {
-  "versao": "1.26.1",
-  "arquivo": "Enxuto-1.26.1.html",
-  "sha256": "825245bfce09e2a8f5bdae99c86f31cee15605d766c41ae0bba0407405798b47",
-  "tamanho": 1319765,
+  "versao": "1.27.0",
+  "arquivo": "Enxuto-1.27.0.html",
+  "sha256": "6b62fcf480409a657493bdd883221e815d117f0f76e3bbc96345f2b8dff7acb2",
+  "tamanho": 1325256,
   "novidades": [
-    "Correção: no “Tamanho alvo”, quando o espaço é pouco, o som agora ocupa menos e, se o vídeo for muito detalhado, a resolução diminui um pouco sozinha, para o arquivo caber no tamanho pedido."
+    "Novo: câmera lenta (0,5× e 0,75×) em “Velocidade”.",
+    "Novo: Ao contrário e repetição. O vídeo pode andar de trás para frente, ir e voltar (efeito bumerangue) ou se repetir 2, 3 ou 5 vezes. Em “Editar” › Som e tempo."
   ],
   "data": "2026-10-20",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.26.1.html",
-        "sha256": "825245bfce09e2a8f5bdae99c86f31cee15605d766c41ae0bba0407405798b47",
-        "tamanho": 1319765
+        "origem": "versoes/Enxuto-1.27.0.html",
+        "sha256": "6b62fcf480409a657493bdd883221e815d117f0f76e3bbc96345f2b8dff7acb2",
+        "tamanho": 1325256
       },
       {
         "caminho": "Instalar Vídeo Lab IA.bat",
