@@ -1,19 +1,20 @@
 {
-  "versao": "1.22.0",
-  "arquivo": "Enxuto-1.22.0.html",
-  "sha256": "1a12bedcc629d548011a29f079aedc931947365c77da97fee280af3c90d60977",
-  "tamanho": 1305029,
+  "versao": "1.23.0",
+  "arquivo": "Enxuto-1.23.0.html",
+  "sha256": "02855349212bb5bdb706c34af7723e9344228a0361a01f96c227c489e2a7b232",
+  "tamanho": 1310672,
   "novidades": [
-    "Novo: Copiar para os outros vídeos. No editor, um botão copia giro, áreas escondidas, rostos, cor, texto, logo, volume, redução de ruído, velocidade e divisão em partes para todos os outros vídeos da lista. Cortes e legendas continuam de cada vídeo; os rostos de cada um são procurados ao processar."
+    "Novo: Transcrição e busca. No editor, em “Cortar”, o Enxuto IA escreve tudo o que foi falado, com o horário de cada frase. Busque uma palavra para achar o momento, remova frases do vídeo pelo texto e baixe a transcrição em .txt (ótimo para atas de reunião e aulas). Tudo no seu computador.",
+    "Correção: um trecho removido bem no começo ou no fim do vídeo agora é cortado de verdade na conversão."
   ],
   "data": "2026-10-20",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.22.0.html",
-        "sha256": "1a12bedcc629d548011a29f079aedc931947365c77da97fee280af3c90d60977",
-        "tamanho": 1305029
+        "origem": "versoes/Enxuto-1.23.0.html",
+        "sha256": "02855349212bb5bdb706c34af7723e9344228a0361a01f96c227c489e2a7b232",
+        "tamanho": 1310672
       },
       {
         "caminho": "Instalar Enxuto IA.bat",
