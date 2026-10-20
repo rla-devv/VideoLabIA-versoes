@@ -1,19 +1,19 @@
 {
-  "versao": "1.26.0",
-  "arquivo": "Enxuto-1.26.0.html",
-  "sha256": "d185243ac0a4a135683345e16e59295e03d489688bf4d81bb2abf295c98039b7",
-  "tamanho": 1318889,
+  "versao": "1.26.1",
+  "arquivo": "Enxuto-1.26.1.html",
+  "sha256": "825245bfce09e2a8f5bdae99c86f31cee15605d766c41ae0bba0407405798b47",
+  "tamanho": 1319765,
   "novidades": [
-    "Novo nome: Vídeo Lab IA (antes Enxuto IA e Vídeo Lab). Nada muda no funcionamento, seus ajustes continuam guardados, e os atalhos passam a se chamar “Vídeo Lab IA”."
+    "Correção: no “Tamanho alvo”, quando o espaço é pouco, o som agora ocupa menos e, se o vídeo for muito detalhado, a resolução diminui um pouco sozinha, para o arquivo caber no tamanho pedido."
   ],
   "data": "2026-10-20",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.26.0.html",
-        "sha256": "d185243ac0a4a135683345e16e59295e03d489688bf4d81bb2abf295c98039b7",
-        "tamanho": 1318889
+        "origem": "versoes/Enxuto-1.26.1.html",
+        "sha256": "825245bfce09e2a8f5bdae99c86f31cee15605d766c41ae0bba0407405798b47",
+        "tamanho": 1319765
       },
       {
         "caminho": "Instalar Vídeo Lab IA.bat",
