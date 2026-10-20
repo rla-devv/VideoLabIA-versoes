@@ -1,19 +1,19 @@
 {
-  "versao": "1.33.1",
-  "arquivo": "Enxuto-1.33.1.html",
-  "sha256": "d0d028cfc1c90261da1e6bfaad7515db634174822f01c55acde3d8a8509f0657",
-  "tamanho": 1364996,
+  "versao": "1.33.2",
+  "arquivo": "Enxuto-1.33.2.html",
+  "sha256": "ad70d8f7b9cd5fa7063651d95b3bf343c21142fba756132218524a24ee5875b8",
+  "tamanho": 1366265,
   "novidades": [
-    "Ajuste: o arquivo do Vídeo Lab IA para usar sem instalar agora também é publicado com o nome novo, “Vídeo Lab IA.html”."
+    "Correções e melhorias."
   ],
   "data": "2026-10-20",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.33.1.html",
-        "sha256": "d0d028cfc1c90261da1e6bfaad7515db634174822f01c55acde3d8a8509f0657",
-        "tamanho": 1364996
+        "origem": "versoes/Enxuto-1.33.2.html",
+        "sha256": "ad70d8f7b9cd5fa7063651d95b3bf343c21142fba756132218524a24ee5875b8",
+        "tamanho": 1366265
       },
       {
         "caminho": "Instalar Vídeo Lab IA.bat",
