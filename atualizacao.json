@@ -1,19 +1,19 @@
 {
-  "versao": "1.31.0",
-  "arquivo": "Enxuto-1.31.0.html",
-  "sha256": "34027531fa1bb2eaf2a0f3a21386837acb181aa84ae06ab49a68ac158f83cc73",
-  "tamanho": 1350751,
+  "versao": "1.32.0",
+  "arquivo": "Enxuto-1.32.0.html",
+  "sha256": "f58dcd62d2ec76cc8a59588f109cc158305d84bb649157502f4bf6371edbb621",
+  "tamanho": 1358465,
   "novidades": [
-    "Novo: Bipe em palavras. Em “Editar” › Som e tempo, escreva as palavras que não podem aparecer (palavrões, nomes, números de documento): o Vídeo Lab IA as encontra pela fala e cobre com um bipe ou com silêncio, também nas legendas. Tudo no seu computador."
+    "Novo: Gravar a tela ou a câmera. Logo abaixo de “Escolha seus vídeos”, grave a tela (com o microfone e o som do computador) ou a câmera, sem outro programa. Ao parar, a gravação entra na lista, pronta para cortar, editar e compactar."
   ],
   "data": "2026-10-20",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.31.0.html",
-        "sha256": "34027531fa1bb2eaf2a0f3a21386837acb181aa84ae06ab49a68ac158f83cc73",
-        "tamanho": 1350751
+        "origem": "versoes/Enxuto-1.32.0.html",
+        "sha256": "f58dcd62d2ec76cc8a59588f109cc158305d84bb649157502f4bf6371edbb621",
+        "tamanho": 1358465
       },
       {
         "caminho": "Instalar Vídeo Lab IA.bat",
