@@ -1,19 +1,19 @@
 {
-  "versao": "1.33.2",
-  "arquivo": "Enxuto-1.33.2.html",
-  "sha256": "ad70d8f7b9cd5fa7063651d95b3bf343c21142fba756132218524a24ee5875b8",
-  "tamanho": 1366265,
+  "versao": "1.33.3",
+  "arquivo": "Enxuto-1.33.3.html",
+  "sha256": "df7cf4ed65908c59a1c293089b849036432415d77eea89dcd8e99877fc8673db",
+  "tamanho": 1366630,
   "novidades": [
-    "Correções e melhorias."
+    "O Vídeo Lab IA agora abre no tema escuro. Se preferir o claro, é só trocar no botão de tema: a escolha fica guardada."
   ],
   "data": "2026-10-20",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.33.2.html",
-        "sha256": "ad70d8f7b9cd5fa7063651d95b3bf343c21142fba756132218524a24ee5875b8",
-        "tamanho": 1366265
+        "origem": "versoes/Enxuto-1.33.3.html",
+        "sha256": "df7cf4ed65908c59a1c293089b849036432415d77eea89dcd8e99877fc8673db",
+        "tamanho": 1366630
       },
       {
         "caminho": "Instalar Vídeo Lab IA.bat",
@@ -35,14 +35,14 @@
       },
       {
         "caminho": "videolab.pyw",
-        "origem": "programa/1.26.0/videolab.pyw",
-        "sha256": "63afb69abe68c15f1a4284ce6bae6a96554b11325cd8caa24bd543d5c4774c06",
+        "origem": "programa/1.33.3/videolab.pyw",
+        "sha256": "88f465addbb290d9d635e3e70d28051d10be915e11772743d3df672bf2cc6df9",
         "tamanho": 36441
       },
       {
         "caminho": "enxuto.pyw",
-        "origem": "programa/1.26.0/videolab.pyw",
-        "sha256": "63afb69abe68c15f1a4284ce6bae6a96554b11325cd8caa24bd543d5c4774c06",
+        "origem": "programa/1.33.3/videolab.pyw",
+        "sha256": "88f465addbb290d9d635e3e70d28051d10be915e11772743d3df672bf2cc6df9",
         "tamanho": 36441
       }
     ]
