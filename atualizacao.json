@@ -1,19 +1,19 @@
 {
-  "versao": "1.29.0",
-  "arquivo": "Enxuto-1.29.0.html",
-  "sha256": "9bbabdce7a92abe509d1962177aaf4b7600c17041b5f7d79c10d516c31b0e1a7",
-  "tamanho": 1337639,
+  "versao": "1.30.0",
+  "arquivo": "Enxuto-1.30.0.html",
+  "sha256": "825285275145ed50bec60b0090a09fa4e378769453c3e0397bbf89a044ddd85b",
+  "tamanho": 1343108,
   "novidades": [
-    "Novo: Cortar início e fim parados. Em “Editar” › Cortar, o Vídeo Lab IA encontra sozinho onde o vídeo começa e termina de verdade, tirando a tela preta, a imagem parada e o silêncio das pontas (como o “esperando os outros entrarem” das reuniões). Dá para desfazer."
+    "Novo: Música de fundo. Em “Editar” › Som e tempo, escolha uma música do computador: ela toca por baixo do vídeo e abaixa sozinha quando alguém fala. Dá para ajustar o volume e ouvir 8 segundos antes de converter."
   ],
   "data": "2026-10-20",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.29.0.html",
-        "sha256": "9bbabdce7a92abe509d1962177aaf4b7600c17041b5f7d79c10d516c31b0e1a7",
-        "tamanho": 1337639
+        "origem": "versoes/Enxuto-1.30.0.html",
+        "sha256": "825285275145ed50bec60b0090a09fa4e378769453c3e0397bbf89a044ddd85b",
+        "tamanho": 1343108
       },
       {
         "caminho": "Instalar Vídeo Lab IA.bat",
