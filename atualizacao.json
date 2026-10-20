@@ -1,43 +1,55 @@
 {
-  "versao": "1.24.2",
-  "arquivo": "Enxuto-1.24.2.html",
-  "sha256": "8f50ab0c6bdae09944bf70b16d1f02642e87ec4a185fe28f4da545d8c32255c4",
-  "tamanho": 1318617,
+  "versao": "1.25.0",
+  "arquivo": "Enxuto-1.25.0.html",
+  "sha256": "131142338fb9d7ca49fc9728daa11a0854191b9230ad3405add8d34f515f208f",
+  "tamanho": 1318743,
   "novidades": [
-    "Texto do apoio ao projeto atualizado também no aviso que aparece quando o vídeo fica pronto."
+    "O Enxuto IA agora se chama Vídeo Lab, um nome que diz melhor o que ele faz: converter, comprimir e editar vídeos. Nada muda no funcionamento, seus ajustes continuam guardados, e os atalhos passam a se chamar “Vídeo Lab”."
   ],
   "data": "2026-10-20",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.24.2.html",
-        "sha256": "8f50ab0c6bdae09944bf70b16d1f02642e87ec4a185fe28f4da545d8c32255c4",
-        "tamanho": 1318617
+        "origem": "versoes/Enxuto-1.25.0.html",
+        "sha256": "131142338fb9d7ca49fc9728daa11a0854191b9230ad3405add8d34f515f208f",
+        "tamanho": 1318743
       },
       {
-        "caminho": "Instalar Enxuto IA.bat",
-        "origem": "programa/1.13.7/Instalar-Enxuto-IA.bat",
-        "sha256": "a9dca722fa9138dc3076a7a7ef6383b2c3f3dfc53da7a9f468521630ece9e53e",
-        "tamanho": 5517
+        "caminho": "Instalar Vídeo Lab.bat",
+        "origem": "programa/1.25.0/Instalar-Video-Lab.bat",
+        "sha256": "ea3a3625cb49973c71c726eb9ae84e85edb9aa72e2f218b9536f64aa5d20570c",
+        "tamanho": 5677
       },
       {
         "caminho": "LEIA-ME.txt",
-        "origem": "programa/1.13.7/LEIA-ME.txt",
-        "sha256": "cf372a7fccf8b4f69b159b2e54efd7b254ee0c6f181cf04b10a097a4ae0b035f",
-        "tamanho": 1470
+        "origem": "programa/1.25.0/LEIA-ME.txt",
+        "sha256": "c371847388294503bae9569f208a5fec16decb2111fee7ca8225f8dd714cffad",
+        "tamanho": 1485
       },
       {
-        "caminho": "enxuto.ico",
+        "caminho": "logs/videolab.log",
+        "origem": "programa/1.25.0/logs/videolab.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tamanho": 0
+      },
+      {
+        "caminho": "videolab.ico",
         "origem": "janela/1.8.0/assets/enxuto-v2.ico",
         "sha256": "69d88b580e67e1092300441300934dbec1c32537dc09dac7de66ba7c7ac3ba92",
         "tamanho": 78047
       },
       {
+        "caminho": "videolab.pyw",
+        "origem": "programa/1.25.0/videolab.pyw",
+        "sha256": "4983167058ed1c9851bfba30acfd593c2365f5a14678754aa5196d148f6b3968",
+        "tamanho": 36299
+      },
+      {
         "caminho": "enxuto.pyw",
-        "origem": "programa/1.13.7/enxuto.pyw",
-        "sha256": "87ac4a83b6dd353b1878b3d23dc2646933b7b08cc68f32e8b70ed9ef2bbadc62",
-        "tamanho": 35300
+        "origem": "programa/1.25.0/videolab.pyw",
+        "sha256": "4983167058ed1c9851bfba30acfd593c2365f5a14678754aa5196d148f6b3968",
+        "tamanho": 36299
       }
     ]
   }
