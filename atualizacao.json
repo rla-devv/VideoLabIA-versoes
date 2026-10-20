@@ -1,19 +1,19 @@
 {
-  "versao": "1.24.1",
-  "arquivo": "Enxuto-1.24.1.html",
-  "sha256": "a44150cabd49d2c1e91297d5e0506a9bfcade601534c073afb6758d4f599b26f",
-  "tamanho": 1318600,
+  "versao": "1.24.2",
+  "arquivo": "Enxuto-1.24.2.html",
+  "sha256": "8f50ab0c6bdae09944bf70b16d1f02642e87ec4a185fe28f4da545d8c32255c4",
+  "tamanho": 1318617,
   "novidades": [
-    "Texto do “Apoie o projeto” atualizado. Todas as funcionalidades continuam gratuitas."
+    "Texto do apoio ao projeto atualizado também no aviso que aparece quando o vídeo fica pronto."
   ],
   "data": "2026-10-20",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.24.1.html",
-        "sha256": "a44150cabd49d2c1e91297d5e0506a9bfcade601534c073afb6758d4f599b26f",
-        "tamanho": 1318600
+        "origem": "versoes/Enxuto-1.24.2.html",
+        "sha256": "8f50ab0c6bdae09944bf70b16d1f02642e87ec4a185fe28f4da545d8c32255c4",
+        "tamanho": 1318617
       },
       {
         "caminho": "Instalar Enxuto IA.bat",
