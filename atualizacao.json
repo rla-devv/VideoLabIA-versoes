@@ -1,20 +1,19 @@
 {
-  "versao": "1.27.0",
-  "arquivo": "Enxuto-1.27.0.html",
-  "sha256": "6b62fcf480409a657493bdd883221e815d117f0f76e3bbc96345f2b8dff7acb2",
-  "tamanho": 1325256,
+  "versao": "1.28.0",
+  "arquivo": "Enxuto-1.28.0.html",
+  "sha256": "8cfbb862a9efac7c575a59c3249bca7fd61d415f496ef0d54f9ae88507ebaecc",
+  "tamanho": 1331484,
   "novidades": [
-    "Novo: câmera lenta (0,5× e 0,75×) em “Velocidade”.",
-    "Novo: Ao contrário e repetição. O vídeo pode andar de trás para frente, ir e voltar (efeito bumerangue) ou se repetir 2, 3 ou 5 vezes. Em “Editar” › Som e tempo."
+    "Novo: Capa (miniatura). Em “Editar” › Partes e foto, escolha o momento do vídeo, escreva um título e salve a capa no tamanho certo para YouTube, quadrado (Instagram e WhatsApp) ou vertical (Reels e TikTok)."
   ],
   "data": "2026-10-20",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.27.0.html",
-        "sha256": "6b62fcf480409a657493bdd883221e815d117f0f76e3bbc96345f2b8dff7acb2",
-        "tamanho": 1325256
+        "origem": "versoes/Enxuto-1.28.0.html",
+        "sha256": "8cfbb862a9efac7c575a59c3249bca7fd61d415f496ef0d54f9ae88507ebaecc",
+        "tamanho": 1331484
       },
       {
         "caminho": "Instalar Vídeo Lab IA.bat",
