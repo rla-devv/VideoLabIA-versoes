@@ -1,19 +1,19 @@
 {
-  "versao": "1.21.0",
-  "arquivo": "Enxuto-1.21.0.html",
-  "sha256": "64e4cc9e17db850a854c30f7331acb72076b9513ebbcfb7889693502cc883621",
-  "tamanho": 1301144,
+  "versao": "1.21.1",
+  "arquivo": "Enxuto-1.21.1.html",
+  "sha256": "1693bd2d720dd989e3c1c18fe08efbc8711faa45320b99621451ff51e4488453",
+  "tamanho": 1301200,
   "novidades": [
-    "Novo: Esconder rostos automaticamente. No editor, em “Imagem”, o Enxuto IA encontra os rostos no vídeo e os cobre com mosaico ou tarja, acompanhando quem se mexe. A busca é feita no seu computador; na primeira vez, baixa o detector de rostos (uma vez só). Confira na prévia antes de enviar."
+    "Correção: o aviso das legendas automáticas agora diz “1 legenda criada” em vez de “1 legendas criadas”."
   ],
-  "data": "2026-10-19",
+  "data": "2026-10-20",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.21.0.html",
-        "sha256": "64e4cc9e17db850a854c30f7331acb72076b9513ebbcfb7889693502cc883621",
-        "tamanho": 1301144
+        "origem": "versoes/Enxuto-1.21.1.html",
+        "sha256": "1693bd2d720dd989e3c1c18fe08efbc8711faa45320b99621451ff51e4488453",
+        "tamanho": 1301200
       },
       {
         "caminho": "Instalar Enxuto IA.bat",
