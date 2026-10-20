@@ -1,19 +1,19 @@
 {
-  "versao": "1.21.1",
-  "arquivo": "Enxuto-1.21.1.html",
-  "sha256": "1693bd2d720dd989e3c1c18fe08efbc8711faa45320b99621451ff51e4488453",
-  "tamanho": 1301200,
+  "versao": "1.22.0",
+  "arquivo": "Enxuto-1.22.0.html",
+  "sha256": "1a12bedcc629d548011a29f079aedc931947365c77da97fee280af3c90d60977",
+  "tamanho": 1305029,
   "novidades": [
-    "Correção: o aviso das legendas automáticas agora diz “1 legenda criada” em vez de “1 legendas criadas”."
+    "Novo: Copiar para os outros vídeos. No editor, um botão copia giro, áreas escondidas, rostos, cor, texto, logo, volume, redução de ruído, velocidade e divisão em partes para todos os outros vídeos da lista. Cortes e legendas continuam de cada vídeo; os rostos de cada um são procurados ao processar."
   ],
   "data": "2026-10-20",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.21.1.html",
-        "sha256": "1693bd2d720dd989e3c1c18fe08efbc8711faa45320b99621451ff51e4488453",
-        "tamanho": 1301200
+        "origem": "versoes/Enxuto-1.22.0.html",
+        "sha256": "1a12bedcc629d548011a29f079aedc931947365c77da97fee280af3c90d60977",
+        "tamanho": 1305029
       },
       {
         "caminho": "Instalar Enxuto IA.bat",
