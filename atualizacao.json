@@ -1,18 +1,18 @@
 {
-  "versao": "1.35.5",
-  "arquivo": "Enxuto-1.35.5.html",
-  "sha256": "0e17335b0a56db4f2c7375858675e85841af63c292a568d657157805ffb7927b",
+  "versao": "1.35.6",
+  "arquivo": "Enxuto-1.35.6.html",
+  "sha256": "b49d1fb1d21c3baebb98b640ee1e1da375dad7b2b7d86354eb4f72a17db38b73",
   "tamanho": 1392072,
   "novidades": [
-    "Instalar ficou mais fácil: se você abrir o instalador direto de dentro do .zip, sem extrair, ele cria a pasta do Vídeo Lab IA ao lado do .zip (por exemplo, nos Downloads) e segue a instalação."
+    "Correções e melhorias."
   ],
   "data": "2026-10-21",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.35.5.html",
-        "sha256": "0e17335b0a56db4f2c7375858675e85841af63c292a568d657157805ffb7927b",
+        "origem": "versoes/Enxuto-1.35.6.html",
+        "sha256": "b49d1fb1d21c3baebb98b640ee1e1da375dad7b2b7d86354eb4f72a17db38b73",
         "tamanho": 1392072
       },
       {
@@ -35,15 +35,15 @@
       },
       {
         "caminho": "videolab.pyw",
-        "origem": "programa/1.35.3/videolab.pyw",
-        "sha256": "2e02023cfee03698efea9541223401dc0d0260de90c3f3a7e56558f9f608849a",
-        "tamanho": 39165
+        "origem": "programa/1.35.6/videolab.pyw",
+        "sha256": "6abb0f745b0cb2747b5e28d89edb34b953919a4205e89d1b49255e39ac849b92",
+        "tamanho": 40370
       },
       {
         "caminho": "enxuto.pyw",
-        "origem": "programa/1.35.3/videolab.pyw",
-        "sha256": "2e02023cfee03698efea9541223401dc0d0260de90c3f3a7e56558f9f608849a",
-        "tamanho": 39165
+        "origem": "programa/1.35.6/videolab.pyw",
+        "sha256": "6abb0f745b0cb2747b5e28d89edb34b953919a4205e89d1b49255e39ac849b92",
+        "tamanho": 40370
       }
     ]
   }
