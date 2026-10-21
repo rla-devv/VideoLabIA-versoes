@@ -1,18 +1,18 @@
 {
-  "versao": "1.35.2",
-  "arquivo": "Enxuto-1.35.2.html",
-  "sha256": "3a3f7ffe5ef9ef0b95a33335b0c85bc6f8c70f27977fa131d2c89bf5b0913807",
+  "versao": "1.35.3",
+  "arquivo": "Enxuto-1.35.3.html",
+  "sha256": "c22bc68d9b3f336fab3d66fa263e904628c33640bbac95555e60be3a2a307f70",
   "tamanho": 1392072,
   "novidades": [
-    "O Vídeo Lab IA instalado agora abre sempre maximizado, ocupando a tela toda: logo depois da instalação, pelo atalho e quando reabre depois de uma atualização."
+    "O Vídeo Lab IA instalado abre sempre maximizado, ocupando a tela toda, em qualquer abertura. Quando abre pelo navegador (Edge, Chrome ou Brave), também abre numa janela maximizada."
   ],
   "data": "2026-10-21",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.35.2.html",
-        "sha256": "3a3f7ffe5ef9ef0b95a33335b0c85bc6f8c70f27977fa131d2c89bf5b0913807",
+        "origem": "versoes/Enxuto-1.35.3.html",
+        "sha256": "c22bc68d9b3f336fab3d66fa263e904628c33640bbac95555e60be3a2a307f70",
         "tamanho": 1392072
       },
       {
@@ -35,15 +35,15 @@
       },
       {
         "caminho": "videolab.pyw",
-        "origem": "programa/1.35.2/videolab.pyw",
-        "sha256": "df07fe54310817da7cefb36a666bf5212dad7c975d177d355d7be68009998788",
-        "tamanho": 36577
+        "origem": "programa/1.35.3/videolab.pyw",
+        "sha256": "2e02023cfee03698efea9541223401dc0d0260de90c3f3a7e56558f9f608849a",
+        "tamanho": 39165
       },
       {
         "caminho": "enxuto.pyw",
-        "origem": "programa/1.35.2/videolab.pyw",
-        "sha256": "df07fe54310817da7cefb36a666bf5212dad7c975d177d355d7be68009998788",
-        "tamanho": 36577
+        "origem": "programa/1.35.3/videolab.pyw",
+        "sha256": "2e02023cfee03698efea9541223401dc0d0260de90c3f3a7e56558f9f608849a",
+        "tamanho": 39165
       }
     ]
   }
