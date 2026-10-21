@@ -1,8 +1,8 @@
 {
-  "versao": "1.35.9",
-  "arquivo": "Enxuto-1.35.9.html",
-  "sha256": "39837cbe78f4c138fd1c5a8e1ef6f1ad776c141cb44c19e0a540e6c3b4be0a54",
-  "tamanho": 1392084,
+  "versao": "1.35.10",
+  "arquivo": "Enxuto-1.35.10.html",
+  "sha256": "0aa544793722645334ad5c60178ca504b880c33b4e25323bf52ef0d57b54a01b",
+  "tamanho": 1392252,
   "novidades": [
     "Correções e melhorias."
   ],
@@ -11,9 +11,9 @@
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.35.9.html",
-        "sha256": "39837cbe78f4c138fd1c5a8e1ef6f1ad776c141cb44c19e0a540e6c3b4be0a54",
-        "tamanho": 1392084
+        "origem": "versoes/Enxuto-1.35.10.html",
+        "sha256": "0aa544793722645334ad5c60178ca504b880c33b4e25323bf52ef0d57b54a01b",
+        "tamanho": 1392252
       },
       {
         "caminho": "Instalar Vídeo Lab IA.bat",
