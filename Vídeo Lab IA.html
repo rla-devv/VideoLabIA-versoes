@@ -12,7 +12,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
 <style>
-/* Layout: barra com marca e tema; abertura curta; painel de ajustes à esquerda e fila de vídeos à direita; uma coluna no celular. */
+/* Layout: barra com marca e tema; abertura e catálogo de ferramentas na tela inicial; fila de vídeos e coluna de ajustes na
+   tela de trabalho; editor em tela cheia (ferramentas | prévia | ajustes da ferramenta); uma coluna no celular. */
 :root {
   --bg: #f2f5fa;
   --bg-glow: #dce7fb;
@@ -153,7 +154,8 @@ h1 {
   font-family: var(--f-display); font-weight: 780; font-size: clamp(1.7rem, 3.6vw, 2.5rem);
   letter-spacing: -0.035em; line-height: 1.02; margin: 0;
 }
-h1 em { display: block; font-style: normal; color: var(--accent); }
+.hero h1 { max-width: 14ch; text-wrap: balance; }
+.lede b { color: var(--ink); }
 .lede { margin: 0; color: var(--muted); font-size: 0.92rem; text-wrap: pretty; }
 /* Um banner só, clicável: abre a explicação de privacidade */
 .chips { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 4px 14px; margin-top: 4px; justify-self: start;
@@ -292,18 +294,48 @@ input[type="number"]:focus { outline: none; border-color: var(--accent); }
 .grid[data-stage="empty"] { grid-template-columns: minmax(0, 1fr); }
 .grid[data-stage="empty"] .panel, .grid[data-stage="empty"] #files-head, .grid[data-stage="empty"] .queue, .grid[data-stage="empty"] #glossary { display: none; }
 .grid[data-stage="work"] #start-screen { display: none; }
-.start { display: grid; gap: 16px; max-width: 760px; width: 100%; margin: 0 auto; }
+.start { display: grid; gap: 18px; width: 100%; }
+/* tela inicial: escolher o vídeo (ou gravar) e, logo abaixo, o catálogo com todas as ferramentas */
+.start-row { display: flex; gap: 14px; align-items: stretch; }
+.start-row .drop { flex: 1 1 auto; }
+.rec-card { flex: 0 0 250px; display: grid; align-content: center; justify-items: start; gap: 6px; padding: 18px 20px; text-align: left;
+  border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); box-shadow: var(--shadow); }
+.rec-card:hover { border-color: #e03131; }
+.rec-card .rec-ico { width: 38px; height: 38px; border-radius: 12px; display: grid; place-items: center; background: color-mix(in srgb, #e03131 14%, var(--surface)); }
+.rec-card .rec-ico svg { width: 20px; height: 20px; color: #e03131; }
+.rec-card b { font-family: var(--f-display); font-size: 1rem; }
+.rec-card small { color: var(--muted); font-size: 0.78rem; font-weight: 500; line-height: 1.4; }
+@media (max-width: 720px) { .start-row { flex-direction: column; } .rec-card { flex-basis: auto; grid-template-columns: auto 1fr; align-items: center; column-gap: 12px; } .rec-card .rec-ico { grid-row: span 2; } }
+.intent { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; margin: -6px 0 0; padding: 9px 14px; border-radius: 12px; background: var(--accent-soft); font-size: 0.88rem; }
+.intent b { color: var(--accent); }
+.catalog { display: grid; gap: 14px; margin-top: 6px; }
+.cat-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 16px; }
+.cat-head h2 { margin: 0; font-family: var(--f-display); font-size: 1.35rem; font-weight: 750; letter-spacing: -0.02em; }
+.cat-head p { margin: 0; color: var(--muted); font-size: 0.86rem; }
+.cat-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; align-items: start; }
+@media (max-width: 1020px) { .cat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .cat-grid { grid-template-columns: minmax(0, 1fr); } }
+.cat-group { display: grid; gap: 1px; align-content: start; padding: 14px 8px 8px; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); box-shadow: var(--shadow); }
+.cat-group h3 { display: flex; align-items: center; gap: 10px; margin: 0 8px 8px; font: 720 1rem/1.2 var(--f-display); letter-spacing: -0.01em; }
+.cat-group h3 small { margin-left: auto; font: 600 0.74rem var(--f-body); color: var(--muted); }
+.gi { flex: none; width: 32px; height: 32px; border-radius: 10px; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); }
+.gi svg { width: 18px; height: 18px; }
+/* o grupo de inteligência artificial é o destaque da página */
+.cat-group.ai { border-color: color-mix(in srgb, var(--accent) 60%, var(--line)); background: linear-gradient(170deg, color-mix(in srgb, var(--accent) 16%, var(--surface)), var(--surface) 62%); }
+.cat-group.ai .gi { background: var(--accent); color: var(--accent-ink); }
+.cat-tool { display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 0 10px; align-items: center; width: 100%; padding: 7px 8px; border: 0; border-radius: 10px;
+  background: none; text-align: left; font: inherit; color: var(--ink); box-shadow: none; }
+.cat-tool:hover { background: var(--accent-soft); }
+.cat-tool svg { grid-row: span 2; width: 18px; height: 18px; color: var(--accent); }
+.cat-tool b { font-weight: 650; font-size: 0.88rem; }
+.cat-tool small { grid-column: 2; color: var(--muted); font-size: 0.76rem; font-weight: 500; line-height: 1.35; }
+.cat-tool[hidden] { display: none; }
 .drop.drop-big { grid-template-columns: minmax(0, 1fr); justify-items: center; text-align: center; gap: 9px; padding: 28px 20px; border-width: 2.5px; box-shadow: var(--shadow); }
 .drop.drop-big .drop-ico { width: 48px; height: 48px; border-radius: 15px; }
 .drop.drop-big .drop-ico svg { width: 24px; height: 24px; }
 .drop.drop-big strong { font-size: 1.18rem; }
 .drop.drop-big .drop-btn { padding: 9px 24px; font-size: 0.9rem; box-shadow: var(--shadow); }
 .drop.drop-big p { font-size: 0.76rem; max-width: 52ch; }
-.how-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
-.how-steps li { display: flex; gap: 10px; align-items: flex-start; }
-.how-steps b { font-size: 0.84rem; }
-.how-steps p { margin: 1px 0 0; font-size: 0.76rem; color: var(--muted); line-height: 1.45; }
-@media (max-width: 720px) { .how-steps { grid-template-columns: minmax(0, 1fr); } }
 .files-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
 .files-head h2 { margin: 0; font-family: var(--f-display); font-size: 1.05rem; }
 .files-count { color: var(--muted); font-weight: 600; font-size: 1rem; }
@@ -353,6 +385,8 @@ input[type="number"]:focus { outline: none; border-color: var(--accent); }
   .grid[data-stage="work"] .go-btn { grid-column: 1; padding: 12px 16px; }
   .grid[data-stage="work"] .go-more { grid-column: 2; flex-direction: column; gap: 2px; }
   .grid[data-stage="work"] .go-more .link { padding: 4px 6px; font-size: 0.85rem; }
+  .grid[data-stage="work"] .out-dir, .grid[data-stage="work"] .notify { grid-column: 1 / -1; }
+  .grid[data-stage="work"] .out-dir-hint { display: none; }
 }
 .toolbar .sum { font-family: var(--f-mono); font-size: 0.83rem; color: var(--muted); }
 button {
@@ -448,10 +482,6 @@ button.link:hover { color: var(--ink); }
 .ed-seg { position: relative; height: 8px; border-radius: 99px; background: color-mix(in srgb, var(--muted) 25%, transparent); overflow: hidden; }
 .ed-seg .keep { position: absolute; top: 0; bottom: 0; background: var(--accent); }
 .ed-seg .cut { position: absolute; top: 0; bottom: 0; background: repeating-linear-gradient(135deg, var(--bad) 0 4px, transparent 4px 8px); }
-.ed-tabs { display: flex; flex-wrap: wrap; gap: 4px; border-bottom: 1px solid var(--line); }
-.ed-tabs button { border: 0; border-bottom: 2px solid transparent; border-radius: 0; background: none; padding: 8px 12px; color: var(--muted); }
-.ed-tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
-.ed-panel { display: grid; gap: 10px; }
 .tool { display: grid; gap: 6px; padding: 12px 14px; border-radius: 12px; background: var(--surface); border: 1px solid var(--line); }
 .tool-head { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; justify-content: space-between; }
 .tool-head h4 { margin: 0; font-size: 0.95rem; }
@@ -501,8 +531,6 @@ label.inline { display: inline-flex; gap: 6px; align-items: center; font-size: 0
 .tag { display: inline-flex; align-items: center; gap: 5px; font-size: 0.78rem; font-weight: 600; padding: 3px 10px; border-radius: 99px;
   background: var(--accent-soft); color: var(--accent); }
 .tag svg { width: 13px; height: 13px; }
-.editor { display: grid; gap: 14px; padding: 14px; border-radius: 12px; background: var(--sunken); }
-.ed-preview { position: relative; aspect-ratio: 16 / 9; max-width: 100%; border-radius: 10px; overflow: hidden; background: #000; display: grid; place-items: center; }
 .ed-preview video { max-width: 100%; max-height: 100%; transition: transform .25s; }
 .ed-crop { position: absolute; border: 2px solid var(--accent); box-shadow: 0 0 0 9999px rgb(0 0 0 / 0.45); border-radius: 2px; pointer-events: none; }
 .ed-row { display: grid; grid-template-columns: 52px minmax(0, 1fr) 64px; gap: 10px; align-items: center; font-size: 0.85rem; }
@@ -510,10 +538,6 @@ label.inline { display: inline-flex; gap: 6px; align-items: center; font-size: 0
 .ed-row input[type="range"] { width: 100%; accent-color: var(--accent); }
 .ed-seg { position: relative; height: 6px; border-radius: 99px; background: color-mix(in srgb, var(--muted) 30%, transparent); }
 .ed-seg span { position: absolute; top: 0; bottom: 0; border-radius: 99px; background: var(--accent); }
-.ed-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; }
-.ed-actions .grp { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
-.ed-actions button { padding: 8px 12px; }
-.ed-actions .copy-info { flex-basis: 100%; margin: 0; }
 .icon-btn { display: inline-flex; align-items: center; gap: 6px; }
 .icon-btn svg { width: 16px; height: 16px; }
 .rot-label { font: 600 0.82rem var(--f-mono); color: var(--muted); min-width: 34px; text-align: center; }
@@ -561,6 +585,77 @@ label.inline { display: inline-flex; gap: 6px; align-items: center; font-size: 0
 .glossary dd { margin: 2px 0 0; font-size: 0.86rem; color: var(--muted); line-height: 1.5; }
 .lowq { display: grid; gap: 8px; justify-items: start; padding: 12px 14px; border-radius: 12px; background: color-mix(in srgb, var(--warn) 10%, transparent); }
 button.small { padding: 6px 11px; font-size: 0.8rem; }
+
+/* área de trabalho: a abertura sai para dar espaço aos vídeos */
+body[data-stage="work"] .hero { display: block; }
+body[data-stage="work"] .hero > :not(.browsers) { display: none; }
+body[data-stage="work"] .hero:not(:has(.browsers:not([hidden]))) { display: none; }
+
+/* cartão do vídeo: atalhos para as ferramentas mais usadas */
+.quick { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.quick > span { font-size: 0.78rem; color: var(--muted); margin-right: 2px; }
+.quick button { display: inline-flex; align-items: center; gap: 6px; padding: 5px 11px; border-radius: 99px; font-size: 0.8rem; font-weight: 600; }
+.quick button svg { width: 15px; height: 15px; color: var(--accent); }
+.quick button:hover { border-color: var(--accent); }
+.card .actions { justify-content: space-between; }
+
+/* editor em tela cheia: ferramentas à esquerda, prévia no centro, ajustes da ferramenta à direita */
+body.studio-open { overflow: hidden; }
+.studio { position: fixed; inset: 0; z-index: 45; background: var(--bg); }
+.studio .editor { height: 100dvh; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr); gap: 0; padding: 0; border-radius: 0; background: var(--bg); }
+.ed-top { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; padding: 10px max(16px, env(safe-area-inset-right, 0px)) 10px max(16px, env(safe-area-inset-left, 0px));
+  border-bottom: 1px solid var(--line); background: var(--surface); }
+.ed-back svg { transform: rotate(180deg); }
+.ed-title { flex: 1 1 220px; display: grid; min-width: 0; }
+.ed-title b { font-family: var(--f-display); font-size: 1.05rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ed-title small { color: var(--muted); font-size: 0.8rem; }
+.ed-title small b { font: 600 0.8rem var(--f-mono); color: var(--ink); }
+.ed-top .grp { gap: 4px; }
+.ed-top .copy-info { flex-basis: 100%; margin: 0; }
+.ed-body { display: grid; grid-template-columns: 236px minmax(0, 1fr) minmax(340px, 410px); grid-template-areas: "rail stage side"; min-height: 0; }
+.ed-rail { grid-area: rail; overflow: auto; padding: 8px 8px 16px; border-right: 1px solid var(--line); background: var(--surface); }
+.ed-rail h5 { margin: 12px 10px 4px; font-size: 0.74rem; font-weight: 700; color: var(--muted); }
+.ed-rail button { display: flex; align-items: center; gap: 9px; width: 100%; padding: 7px 10px; border: 0; border-radius: 9px; background: none; box-shadow: none;
+  text-align: left; font: 600 0.84rem var(--f-body); color: var(--ink); }
+.ed-rail button svg { flex: none; width: 17px; height: 17px; color: var(--muted); }
+.ed-rail button:hover { background: var(--sunken); }
+.ed-rail button[aria-current="true"] { background: var(--accent-soft); box-shadow: inset 3px 0 0 var(--accent); }
+.ed-rail button[aria-current="true"] svg { color: var(--accent); }
+.ed-rail .ia { font: 700 0.62rem var(--f-body); padding: 1px 6px; border-radius: 99px; background: var(--accent-soft); color: var(--accent); }
+.ed-rail button[aria-current="true"] .ia { background: var(--accent); color: var(--accent-ink); }
+/* bolinha: a ferramenta está em uso neste vídeo */
+.ed-rail button.on::after { content: ''; flex: none; margin-left: auto; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+.ed-stage { grid-area: stage; overflow: auto; padding: 16px 20px 24px; display: grid; align-content: start; gap: 10px; }
+.ed-stage .ed-preview { min-height: 200px; }
+.ed-hint { margin: 0; font-size: 0.78rem; color: var(--muted); }
+.ed-applied { display: grid; gap: 6px; padding-top: 8px; border-top: 1px solid var(--line); }
+.ed-applied h5 { margin: 0; font-size: 0.8rem; font-weight: 700; }
+.ed-side { grid-area: side; overflow: auto; padding: 18px 18px 28px; border-left: 1px solid var(--line); background: var(--surface); display: grid; align-content: start; gap: 14px; }
+.ed-side .tool { display: none; padding: 0; border: 0; border-radius: 0; background: none; gap: 8px; }
+.ed-side .tool.on { display: grid; }
+.ed-side .tool-head { display: grid; justify-content: start; gap: 6px; }
+.ed-side .tool-head h4 { font: 750 1.25rem/1.15 var(--f-display); letter-spacing: -0.015em; }
+.ed-side .tool-head .speed { justify-self: start; }
+.ed-side .tool-what { font-size: 0.9rem; }
+.ed-side .tool-body { gap: 10px; margin-top: 8px; padding-top: 14px; border-top: 1px solid var(--line); }
+.ed-side .ed-speed-note { font-size: 0.74rem; }
+@media (max-width: 1180px) {
+  .ed-body { grid-template-columns: minmax(0, 1fr) minmax(320px, 380px); grid-template-rows: auto minmax(0, 1fr); grid-template-areas: "rail rail" "stage side"; }
+  .ed-rail { display: flex; gap: 4px; overflow-x: auto; overflow-y: hidden; padding: 8px 12px; border-right: 0; border-bottom: 1px solid var(--line); scrollbar-width: thin; }
+  .ed-rail h5 { display: none; }
+  .ed-rail button { width: auto; flex: none; white-space: nowrap; }
+  .ed-rail button[aria-current="true"] { box-shadow: inset 0 -3px 0 var(--accent); }
+}
+@media (max-width: 820px) {
+  .studio { overflow: auto; }
+  .studio .editor { height: auto; min-height: 100dvh; grid-template-rows: auto auto; }
+  .ed-top { position: sticky; top: 0; z-index: 2; }
+  .ed-body { display: block; }
+  .ed-rail { position: sticky; top: var(--ed-top-h, 58px); z-index: 1; }
+  .ed-stage, .ed-side { overflow: visible; }
+  .ed-stage { padding: 12px 16px; }
+  .ed-side { border-left: 0; border-top: 1px solid var(--line); padding: 16px; scroll-margin-top: 130px; }
+}
 </style>
 
 <div class="wrap">
@@ -569,7 +664,7 @@ button.small { padding: 6px 11px; font-size: 0.8rem; }
       <img class="logo" src="data:image/png;base64,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" alt="" width="44" height="44">
       <span class="brand-text">
         <span class="brand-name">Vídeo Lab IA <span class="brand-tag">- Conversão, compressão e otimização de vídeos diretamente no seu <span id="brand-onde">navegador</span>.</span></span>
-        <span class="brand-by"><span class="by-full">Desenvolvido por RLA.dev · </span>versão <span id="app-version">1.34.1</span><button class="support-pill" id="support-btn" type="button" aria-haspopup="dialog" aria-label="Apoie o projeto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.5 6.6 4.5c2.1 0 3.5 1.2 4.4 2.6.9-1.4 2.3-2.6 4.4-2.6 3.6 0 5.4 3.8 3.8 6.9C19 15.6 12 20 12 20z"/></svg><span>Apoie o projeto</span></button></span>
+        <span class="brand-by"><span class="by-full">Desenvolvido por RLA.dev · </span>versão <span id="app-version">1.35.0</span><button class="support-pill" id="support-btn" type="button" aria-haspopup="dialog" aria-label="Apoie o projeto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.5 6.6 4.5c2.1 0 3.5 1.2 4.4 2.6.9-1.4 2.3-2.6 4.4-2.6 3.6 0 5.4 3.8 3.8 6.9C19 15.6 12 20 12 20z"/></svg><span>Apoie o projeto</span></button></span>
       </span>
     </div>
     <div class="top-actions">
@@ -635,8 +730,8 @@ button.small { padding: 6px 11px; font-size: 0.8rem; }
   </dialog>
 
   <header class="hero">
-    <h1>Vídeos mais leves, <em>imagem intacta.</em></h1>
-    <p class="lede">Comprima, converta e prepare seus vídeos para qualquer lugar mantendo a imagem o mais fiel possível. Escolha os ajustes, solte os arquivos e baixe o resultado.</p>
+    <h1>Converta, corte, legende e melhore seus vídeos.</h1>
+    <p class="lede">São <b id="tool-count">mais de 30</b> ferramentas num lugar só: diminuir o tamanho, mudar o formato, cortar, juntar, legendas automáticas, esconder rostos, música e muito mais. A inteligência artificial roda no seu próprio computador.</p>
     <button type="button" class="chips" id="privacy-btn" aria-haspopup="dialog" title="Clique para ver como o Vídeo Lab IA protege seus arquivos">
       <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Roda no seu navegador</span>
       <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Nenhum arquivo é enviado para fora do seu computador</span>
@@ -660,6 +755,7 @@ button.small { padding: 6px 11px; font-size: 0.8rem; }
 
     <section class="main">
       <div class="start" id="start-screen">
+      <div class="start-row">
       <div class="drop drop-big" id="drop" tabindex="0" role="button" aria-label="Escolher vídeos">
         <span class="drop-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V4M7.5 8.5L12 4l4.5 4.5"/><path d="M4 14v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/></svg></span>
         <strong>Escolha seus vídeos</strong>
@@ -667,12 +763,13 @@ button.small { padding: 6px 11px; font-size: 0.8rem; }
         <p>ou arraste para qualquer lugar da página · MP4, MOV, MKV, WebM, AVI, WMV, FLV, MPG e outros</p>
         <input type="file" id="file" accept="video/*,.mkv,.mov,.mp4,.webm,.m4v,.avi,.wmv,.asf,.flv,.f4v,.mpg,.mpeg,.vob,.ts,.mts,.m2ts,.3gp,.ogv,.divx,.rm,.rmvb" multiple hidden>
       </div>
-      <div class="rec-row" hidden><button type="button" class="icon-btn rec-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4" fill="currentColor"/></svg>Gravar a tela ou a câmera</button></div>
-        <ol class="how-steps">
-          <li><span class="step">1</span><div><b>Escolha o vídeo</b><p>Ele fica no seu computador. Nada é enviado para a internet.</p></div></li>
-          <li><span class="step">2</span><div><b>Ajuste</b><p>O Vídeo Lab IA analisa o vídeo e já sugere o melhor. Mude o formato, o tamanho ou edite, se quiser.</p></div></li>
-          <li><span class="step">3</span><div><b>Processe e baixe</b><p>Compare com o original e salve o arquivo.</p></div></li>
-        </ol>
+      <button type="button" class="rec-card rec-open" hidden><span class="rec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4" fill="currentColor"/></svg></span><b>Gravar a tela ou a câmera</b><small>Grava aqui mesmo, com som, e o vídeo já entra na lista para editar.</small></button>
+      </div>
+      <p class="intent" id="intent" hidden></p>
+      <section class="catalog" aria-labelledby="cat-title">
+        <div class="cat-head"><h2 id="cat-title">O que dá para fazer</h2><p>Clique numa ferramenta: você escolhe o vídeo e ele já abre nela.</p></div>
+        <div class="cat-grid" id="catalog"></div>
+      </section>
       </div>
 
       <div class="files-head" id="files-head">
@@ -813,7 +910,7 @@ button.small { padding: 6px 11px; font-size: 0.8rem; }
       <div class="edit-cta">
         <button type="button" class="adv edit-btn" id="edit-btn" disabled>
           <svg class="adv-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.5 7.5L20 18M8.5 16.5L20 6"/></svg>
-          <span class="adv-sum-title">Editar vídeo</span><span class="adv-sum-sub" id="edit-sub">Libera quando houver vídeo: cortar, esconder áreas, texto, legendas e mais</span>
+          <span class="adv-sum-title">Abrir o editor</span><span class="adv-sum-sub" id="edit-sub">Libera quando houver vídeo: cortar, esconder áreas, texto, legendas e mais</span>
           <svg class="adv-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
         </button>
         <div class="edit-pick" id="edit-pick" hidden></div>
@@ -882,6 +979,8 @@ button.small { padding: 6px 11px; font-size: 0.8rem; }
     </aside>
   </div>
 </div>
+
+<div class="studio" id="studio" hidden role="dialog" aria-modal="true" aria-label="Editor de vídeo"></div>
 
 <script type="module">
 const $ = (s, el = document) => el.querySelector(s);
@@ -1394,6 +1493,7 @@ async function analyze(it) {
     it.edit = defaultEdit(it.info);
     if (destNow() === 'reels' && !it.info.legacy) it.edit.follow = { on: true, list: null, pending: true };   // vertical segue o rosto
     it.status = 'ready';
+    useIntent(it);
   } catch (err) {
     console.error(err);
     it.status = 'error';
@@ -1763,8 +1863,7 @@ function updateEditCta() {
 }
 function openEditFor(it) {
   $('#edit-pick').hidden = true;
-  if (!it.editorOpen) { it.editorOpen = true; render(it); }
-  it.el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  it.editorOpen = true; render(it);
 }
 $('#edit-btn').addEventListener('click', () => {
   const list = editableItems();
@@ -1780,7 +1879,7 @@ function updateToolbar() {
   updateEditCta();
   $('#clear').hidden = items.length === 0;
   // Tela inicial (só escolher o vídeo) → área de trabalho (vídeos + ajustes + Processar), como nos grandes conversores.
-  $('#grid').dataset.stage = items.length ? 'work' : 'empty';
+  $('#grid').dataset.stage = document.body.dataset.stage = items.length ? 'work' : 'empty';
   $('#files-count').textContent = items.length ? `(${items.length})` : '';
   const s = settings();
   const ready = items.filter(i => i.status === 'ready');
@@ -1910,6 +2009,14 @@ function render(it) {
   slot.append(it.thumbEl);
 }
 
+// Atalhos do cartão: abrem o editor direto na ferramenta.
+function quickHTML(it, s) {
+  const img = s.output !== 'audio', snd = it.info.hasAudio;
+  const ok = { autosubs: snd && !it.info.legacy && it.info.aCanDecode !== false, silence: snd, music: snd, faces: img, overlay: img };
+  return `<div class="quick" role="group" aria-label="Ir direto para"><span>Ir direto para</span>${QUICK.filter(id => ok[id] ?? true)
+    .map(id => `<button type="button" data-act="edit" data-tool="${id}">${svgI(TI[id])}${ED_NAME[id]}</button>`).join('')}</div>`;
+}
+
 function renderInner(it) {
   const name = esc(it.file.name);
   const ord = `<span class="ord"><button type="button" data-act="up" title="Mover para cima" aria-label="Mover ${name} para cima">${ICON.up}</button><button type="button" data-act="down" title="Mover para baixo" aria-label="Mover ${name} para baixo">${ICON.down}</button></span>`;
@@ -1939,8 +2046,7 @@ function renderInner(it) {
       (it.info.legacy ? `<p class="note">${it.info.legacyReason === 'audio'
         ? `O som deste arquivo está num formato (${esc(codecName(it.info.aCodec))}) que o navegador não sabe tocar. Antes, o app converte só o som com um conversor extra (download de 32 MB, só na primeira vez). A imagem não é mexida nessa etapa, então é rápido.`
         : 'Este é um formato antigo que o navegador não abre sozinho. O app usa um conversor extra (download de 32 MB, só na primeira vez) e por isso demora mais que o normal.'}</p>` : '') +
-      `<div class="actions"><button class="icon-btn" data-act="edit">${ICON.cut}${it.editorOpen ? 'Fechar edição' : 'Editar'}</button><button class="link" data-act="remove">Remover</button></div>
-       <div class="editor-slot"></div>`;
+      `<div class="actions"><button class="icon-btn primary" data-act="edit">${ICON.cut}Abrir o editor</button><button class="link" data-act="remove">Remover</button></div>${quickHTML(it, s)}`;
     bind(it);
     if (it.editorOpen && it.status === 'ready') openEditor(it);
     return;
@@ -2030,7 +2136,7 @@ function bind(it) {
     }
     if (a === 'save') saveResult(it, Number(b.dataset.i));
     if (a === 'compare') { it.compareOpen = !it.compareOpen; render(it); }
-    if (a === 'edit') { it.editorOpen = !it.editorOpen; if (!it.editorOpen) { it.editorEl?.querySelector('video')?.pause(); it.editorEl = null; } render(it); }
+    if (a === 'edit') { if (b.dataset.tool) it.edTool = b.dataset.tool; it.editorOpen = true; render(it); }
     if (a === 'reco') {
       const el = document.querySelector(`input[name="res"][value="${b.dataset.res}"]`);
       el.checked = true; el.dispatchEvent(new Event('input', { bubbles: true }));
@@ -3036,6 +3142,93 @@ function splitParts(it, p) {
 }
 function partsCount(it, p) { return splitParts(it, p).length; }
 
+
+/* ---------- catálogo das ferramentas (tela inicial, cartão do vídeo e editor) ---------- */
+const svgI = d => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+const TI = {
+  trim: '<circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.5 7.5L20 18M8.5 16.5L20 6"/>',
+  cuts: '<rect x="2" y="7" width="7" height="10" rx="1.5"/><rect x="15" y="7" width="7" height="10" rx="1.5"/><path d="M11 9l2 6M13 9l-2 6"/>',
+  deadends: '<rect x="7" y="6" width="10" height="12" rx="1.5"/><path d="M2 12h3M19 12h3"/>',
+  silence: '<path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M17 9l4 6M21 9l-4 6"/>',
+  transcript: '<path d="M4 6h12M4 10h9M4 14h5"/><circle cx="16" cy="16" r="3"/><path d="M18.2 18.2L21 21"/>',
+  rotate: '<path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/>',
+  blur: '<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/>',
+  faces: '<circle cx="12" cy="12" r="9"/><path d="M9 10h.01M15 10h.01M8.5 15c1 1 2.2 1.5 3.5 1.5s2.5-.5 3.5-1.5"/>',
+  follow: '<rect x="7" y="2" width="10" height="20" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 17c.8-2 2-3 3.5-3s2.7 1 3.5 3"/>',
+  color: '<circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/>',
+  overlay: '<path d="M5 7V5h14v2M12 5v14M9 19h6"/>',
+  autosubs: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 12h4M13 12h4M7 15.5h10"/>',
+  subs: '<path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M8 13h8M8 17h5"/>',
+  volume: '<path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16.5 9a4 4 0 0 1 0 6M19 6.5a8 8 0 0 1 0 11"/>',
+  denoise: '<path d="M2 12h3l2-5 3 10 3-8 2 5 2-2h5"/>',
+  music: '<path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/>',
+  bleep: '<path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.4A8 8 0 1 1 21 12z"/><path d="M12 8.5v7M9 10.2l6 3.6M15 10.2l-6 3.6"/>',
+  speed: '<path d="M4 18a8 8 0 1 1 16 0"/><path d="M12 18l4-6"/>',
+  loop: '<path d="M17 2l3 3-3 3"/><path d="M4 11V9a4 4 0 0 1 4-4h12"/><path d="M7 22l-3-3 3-3"/><path d="M20 13v2a4 4 0 0 1-4 4H4"/>',
+  fade: '<path d="M2 19L8 6h8l6 13"/>',
+  split: '<rect x="2" y="6" width="8" height="12" rx="1.5"/><rect x="14" y="6" width="8" height="12" rx="1.5"/><path d="M12 3v2M12 9v2M12 13v2M12 19v2"/>',
+  photo: '<path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/>',
+  cover: '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 15h10M7 11.5h6"/>',
+  compress: '<path d="M4 14h6v6M20 10h-6V4M14 10l7-7M3 21l7-7"/>',
+  target: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/>',
+  format: '<path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M3 13h8M8 10l3 3-3 3"/>',
+  send: '<path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/>',
+  audio: '<path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3zM3 19a2 2 0 0 0 2 2h1v-6H3z"/>',
+  gif: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9.5l5 2.5-5 2.5z"/>',
+  aspect: '<rect x="8" y="3" width="8" height="18" rx="1.5"/><rect x="3" y="8" width="18" height="8" rx="1.5"/>',
+  join: '<rect x="2" y="7" width="8" height="10" rx="1.5"/><rect x="14" y="7" width="8" height="10" rx="1.5"/><path d="M10 12h4"/>',
+  rec: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4" fill="currentColor"/>',
+  spark: '<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 15l.7 2.3L22 18l-2.3.7L19 21l-.7-2.3L16 18l2.3-.7z"/>',
+  image: '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/>',
+  clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+};
+// Ferramentas do editor, na ordem da barra lateral. IA = reconhecimento de voz ou de rostos, no próprio computador.
+const ED_GROUPS = [
+  ['Cortar', ['trim', 'cuts', 'deadends', 'silence', 'transcript']],
+  ['Imagem', ['rotate', 'blur', 'faces', 'follow', 'color']],
+  ['Texto e legendas', ['overlay', 'autosubs', 'subs']],
+  ['Som', ['volume', 'denoise', 'music', 'bleep']],
+  ['Tempo', ['speed', 'loop', 'fade']],
+  ['Salvar também', ['split', 'photo', 'cover']],
+];
+const ED_NAME = { trim: 'Início e fim', cuts: 'Tirar trechos do meio', deadends: 'Pular a espera', silence: 'Cortar silêncios', transcript: 'Transcrição e busca',
+  rotate: 'Girar e espelhar', blur: 'Esconder áreas', faces: 'Esconder rostos', follow: 'Seguir o rosto', color: 'Brilho e cor',
+  overlay: 'Texto ou logo', autosubs: 'Legendas automáticas', subs: 'Legendas de arquivo',
+  volume: 'Volume', denoise: 'Reduzir ruído', music: 'Música de fundo', bleep: 'Bipe em palavras',
+  speed: 'Velocidade', loop: 'Ao contrário e repetição', fade: 'Início e fim suaves',
+  split: 'Dividir em partes', photo: 'Capturar foto', cover: 'Capa (miniatura)' };
+const ED_IA = new Set(['transcript', 'faces', 'follow', 'autosubs', 'bleep']);
+// A ferramenta está em uso neste vídeo? (bolinha na barra lateral)
+function toolOn(id, it) {
+  const e = it.edit, D = it.info.duration;
+  switch (id) {
+    case 'trim': return e.start > 0.05 || e.end < D - 0.05;
+    case 'cuts': return e.cuts.some(c => !c.auto && !c.text);
+    case 'deadends': return !!it.deadPrev;
+    case 'silence': return e.cuts.some(c => c.auto);
+    case 'transcript': return e.cuts.some(c => c.text);
+    case 'rotate': return !!(e.rotate || e.flip);
+    case 'blur': return e.blurs.length > 0;
+    case 'faces': return !!e.faces?.on;
+    case 'follow': return !!e.follow?.on;
+    case 'color': return colorFilter(e.color) !== 'none';
+    case 'overlay': return !!(e.overlay.text.trim() || e.overlay.logo);
+    case 'autosubs': return e.subs.name === ASR_NAME && e.subs.cues.length > 0;
+    case 'subs': return e.subs.name !== ASR_NAME && e.subs.cues.length > 0;
+    case 'volume': return !!(e.volume.gain || e.volume.level);
+    case 'denoise': return !!e.denoise;
+    case 'music': return !!e.music?.buffer;
+    case 'bleep': return !!e.bleeps?.length;
+    case 'speed': return (e.speed || 1) !== 1;
+    case 'loop': return !!(e.reverse || (e.loop || 1) > 1);
+    case 'fade': return !!e.fade;
+    case 'split': return e.split.mode !== 'none';
+  }
+  return false;
+}
+// Atalhos no cartão do vídeo: as ferramentas mais procuradas.
+const QUICK = ['trim', 'autosubs', 'silence', 'faces', 'overlay', 'music'];
+
 /* ---------- editor de vídeo ---------- */
 // Cada ferramenta diz o que faz, suas características e quanto muda o tempo de conversão.
 const SPEED = {
@@ -3126,7 +3319,7 @@ function editorTabsHTML(it, s) {
 
   const cut = [
     toolHTML('trim', 'Início e fim', 'Escolhe de onde até onde o vídeo vai. Tudo antes do início e depois do fim é descartado.',
-      ['Use a barra abaixo da prévia ou os controles.', 'O corte é preciso, no quadro exato.'],
+      ['Use os controles abaixo; a prévia mostra cada ponto.', 'O corte é preciso, no quadro exato.'],
       speedBadge('faster', 'processa só o trecho escolhido'),
       `<div class="ed-row"><span>Início</span><input type="range" class="r-start" min="0" max="${D}" step="0.1" value="${e.start}" aria-label="Início do trecho"><b class="t-start"></b></div>
        <div class="ed-row"><span>Fim</span><input type="range" class="r-end" min="0" max="${D}" step="0.1" value="${e.end}" aria-label="Fim do trecho"><b class="t-end"></b></div>`),
@@ -3143,7 +3336,7 @@ function editorTabsHTML(it, s) {
     toolHTML('silence', 'Cortar silêncios', 'Encontra as pausas sem fala (espera para começar, silêncio entre falas, alguém saiu da sala) e remove sozinho. Ótimo para reuniões e aulas.',
       ['Escolha a pausa mínima: pausas mais curtas que isso ficam. O app deixa uma pequena folga antes e depois de cada fala.',
        'O nível de silêncio é medido no próprio vídeo, então funciona com ruído de fundo, ar-condicionado ou ventilador.',
-       'As pausas encontradas entram na lista acima como trechos removidos: confira na prévia e desfaça as que quiser.'],
+       'As pausas encontradas viram trechos removidos (veja em “Tirar trechos do meio”): confira na prévia e desfaça as que quiser.'],
       speedBadge('faster', SILENCE_SPEED),
       !hasA || info.legacy || info.aCanDecode === false
         ? `<p class="note">${!hasA ? 'Este vídeo não tem som.' : 'O navegador não consegue ler o som deste arquivo direto. Converta antes para MP4 e use a ferramenta no arquivo novo.'}</p>`
@@ -3300,37 +3493,73 @@ function editorTabsHTML(it, s) {
   return { cut, img, snd, out };
 }
 
+// O editor abre em tela cheia, por cima da lista; só um vídeo é editado por vez.
+function studioState() {
+  const open = !!$('#studio .editor');
+  $('#studio').hidden = !open;
+  document.body.classList.toggle('studio-open', open);
+}
+function closeEditor(it) {
+  it.editorOpen = false;
+  if (it.editorEl) { it.editorEl.querySelector('video')?.pause(); it.editorEl.remove(); }
+  it.editorEl = null;
+  studioState();
+}
+document.addEventListener('keydown', ev => {
+  if (ev.key === 'Escape' && !$('#studio').hidden && !document.querySelector('dialog[open]')) { ev.preventDefault(); $('#studio [data-e=close]')?.click(); }
+});
 function openEditor(it) {
-  const slot = $('.editor-slot', it.el);
-  if (it.editorEl) { slot.append(it.editorEl); it.editorSync?.(); return; }
+  const studio = $('#studio');
+  items.forEach(o => { if (o !== it && o.editorOpen) { closeEditor(o); render(o); } });
+  if (it.editorEl) { if (!it.editorEl.isConnected) studio.append(it.editorEl); studioState(); it.editorSync?.(); return; }
   const s = settings();
   const e = it.edit, info = it.info, D = info.duration;
-  const tabs = editorTabsHTML(it, s);
+  const tabs = editorTabsHTML(it, s), all = tabs.cut + tabs.img + tabs.snd + tabs.out;
+  const has = id => all.includes(`data-tool="${id}"`);
+  const rail = ED_GROUPS.map(([g, ids]) => {
+    const list = ids.filter(has);
+    return list.length ? `<h5>${g}</h5>` + list.map(id => `<button type="button" data-go="${id}" aria-current="false">${svgI(TI[id])}<span>${ED_NAME[id]}</span>${ED_IA.has(id) ? '<span class="ia">IA</span>' : ''}</button>`).join('') : '';
+  }).join('');
   const wrap = document.createElement('div');
   wrap.className = 'editor';
   wrap.innerHTML = `
-    <div class="ed-preview"><canvas class="ed-canvas"></canvas><video muted playsinline preload="auto" src="${it.thumbUrl}" hidden></video>
-      ${info.legacy && info.legacyReason !== 'audio' ? '<p class="ed-noprev">Prévia indisponível para este formato antigo. As ferramentas funcionam normalmente.</p>' : ''}</div>
-    <div class="ed-time"><button class="icon-btn small" data-e="play" aria-label="Reproduzir ou pausar">${ICON.play}</button>
-      <input type="range" class="r-pos" min="0" max="${D}" step="0.05" value="${e.start}" aria-label="Posição na prévia"><b class="t-pos"></b></div>
-    <div class="ed-seg"><span class="keep"></span></div>
-    <div class="ed-tabs" role="tablist">
-      <button role="tab" data-tab="cut" aria-selected="true">Cortar</button>
-      <button role="tab" data-tab="img" aria-selected="false">Imagem</button>
-      <button role="tab" data-tab="snd" aria-selected="false">Som e tempo</button>
-      <button role="tab" data-tab="out" aria-selected="false">Partes e foto</button>
-    </div>
-    <p class="note ed-speed-note">Os tempos indicados em cada ferramenta foram medidos num computador sem placa de vídeo dedicada e se somam quando você usa várias. Em computadores com placa de vídeo, os efeitos de imagem costumam pesar menos.</p>
-    <div class="ed-panel" data-panel="cut">${tabs.cut}</div>
-    <div class="ed-panel" data-panel="img" hidden>${tabs.img}</div>
-    <div class="ed-panel" data-panel="snd" hidden>${tabs.snd}</div>
-    <div class="ed-panel" data-panel="out" hidden>${tabs.out}</div>
-    <div class="ed-actions"><p class="note">Duração final: <b class="t-dur"></b></p>
+    <div class="ed-top">
+      <button type="button" class="icon-btn small ed-back" data-e="close" aria-label="Voltar para a lista">${svgI('<path d="M9 6l6 6-6 6"/>')}Voltar</button>
+      <div class="ed-title"><b>${esc(it.file.name)}</b><small>Duração final: <b class="t-dur"></b></small></div>
       <div class="grp"><button class="link" data-e="copy-all" ${copyTargets(it).length ? '' : 'hidden'}>Copiar para os outros vídeos</button><button class="link" data-e="reset">Desfazer tudo</button><button class="primary" data-e="close">Pronto</button></div>
-      <p class="note copy-info" hidden></p></div>`;
+      <p class="note copy-info" hidden></p>
+    </div>
+    <div class="ed-body">
+      <nav class="ed-rail" aria-label="Ferramentas do editor">${rail}</nav>
+      <div class="ed-stage">
+        <div class="ed-preview"><canvas class="ed-canvas"></canvas><video muted playsinline preload="auto" src="${it.thumbUrl}" hidden></video>
+          ${info.legacy && info.legacyReason !== 'audio' ? '<p class="ed-noprev">Prévia indisponível para este formato antigo. As ferramentas funcionam normalmente.</p>' : ''}</div>
+        <div class="ed-time"><button class="icon-btn small" data-e="play" aria-label="Reproduzir ou pausar">${ICON.play}</button>
+          <input type="range" class="r-pos" min="0" max="${D}" step="0.05" value="${e.start}" aria-label="Posição na prévia"><b class="t-pos"></b></div>
+        <div class="ed-seg"><span class="keep"></span></div>
+        <p class="ed-hint">Clique na imagem para tocar ou pausar. A barra mostra o que fica no vídeo (azul) e o que sai (listrado).</p>
+        <div class="ed-applied"><h5>Edições neste vídeo</h5><div class="ed-tags"></div></div>
+      </div>
+      <div class="ed-side">${all}
+        <p class="note ed-speed-note">Os tempos indicados em cada ferramenta foram medidos num computador sem placa de vídeo dedicada e se somam quando você usa várias. Em computadores com placa de vídeo, os efeitos de imagem costumam pesar menos.</p>
+      </div>
+    </div>`;
   it.editorEl = wrap;
-  slot.append(wrap);
+  studio.append(wrap);
+  studioState();
   const q = sel => wrap.querySelector(sel);
+  // Barra lateral: mostra só a ferramenta escolhida.
+  function selectTool(id, byUser) {
+    if (!q(`.ed-side .tool[data-tool="${id}"]`)) id = q('.ed-side .tool')?.dataset.tool;
+    it.edTool = id;
+    wrap.querySelectorAll('.ed-side .tool').forEach(t => t.classList.toggle('on', t.dataset.tool === id));
+    wrap.querySelectorAll('[data-go]').forEach(b => b.setAttribute('aria-current', String(b.dataset.go === id)));
+    q('.ed-side').scrollTop = 0;
+    if (byUser && innerWidth <= 820) q('.ed-side').scrollIntoView({ block: 'start', behavior: 'smooth' });
+  }
+  wrap.querySelectorAll('[data-go]').forEach(b => b.addEventListener('click', () => selectTool(b.dataset.go, true)));
+  selectTool(it.edTool || 'trim');
+  q('[data-go][aria-current="true"]')?.scrollIntoView({ block: 'nearest', inline: 'nearest' });
   const v = q('video'), cv = q('.ed-canvas'), pos = q('.r-pos');
   let pending = { a: null, b: null }, drawing = false, dragStart = null, dragRect = null, raf = 0;
   const changed = () => { render(it); updateToolbar(); sync(); };
@@ -3341,7 +3570,7 @@ function openEditor(it) {
     const s2 = settings();
     const side = e.rotate % 180 !== 0;
     const fw = side ? info.height : info.width, fh = side ? info.width : info.height;
-    const boxW = q('.ed-preview').clientWidth || 600, maxH = Math.min(420, window.innerHeight * 0.5);
+    const boxW = q('.ed-preview').clientWidth || 600, maxH = innerWidth > 820 ? Math.max(220, innerHeight - 300) : innerHeight * 0.42;
     const k = Math.min(boxW / fw, maxH / fh);
     const W = Math.max(2, Math.round(fw * k)), H = Math.max(2, Math.round(fh * k));
     if (cv.width !== W || cv.height !== H) { cv.width = W; cv.height = H; }
@@ -3419,15 +3648,11 @@ function openEditor(it) {
       si.textContent = e.split.mode === 'none' ? '' : n > 1 ? `Vai gerar ${n} partes de cerca de ${fmtTime(tl.outDur / n)} cada.` : 'O vídeo já cabe em uma parte só.';
       q('.split-time').hidden = e.split.mode !== 'time'; q('.split-size').hidden = e.split.mode !== 'size';
     }
+    wrap.querySelectorAll('[data-go]').forEach(b => b.classList.toggle('on', toolOn(b.dataset.go, it)));
+    q('.ed-tags').innerHTML = editTagsHTML(it) || '<p class="note">Nenhuma ainda. Escolha uma ferramenta na lista.</p>';
     drawPreview();
   }
   it.editorSync = sync;
-
-  // abas
-  wrap.querySelectorAll('[data-tab]').forEach(b => b.addEventListener('click', () => {
-    wrap.querySelectorAll('[data-tab]').forEach(x => x.setAttribute('aria-selected', String(x === b)));
-    wrap.querySelectorAll('[data-panel]').forEach(p => p.hidden = p.dataset.panel !== b.dataset.tab);
-  }));
 
   // posição da prévia
   pos.addEventListener('input', () => { v.currentTime = Number(pos.value); });
@@ -3591,7 +3816,7 @@ function openEditor(it) {
           const n = cues.length, tempo = fmtTime((performance.now() - t0) / 1000);
           show(!n ? 'Não encontrei fala neste vídeo.' : burn
             ? `${n} legenda${n > 1 ? 's' : ''} criada${n > 1 ? 's' : ''} em ${tempo}. Confira o texto abaixo; as correções valem na hora.`
-            : `${n} frase${n > 1 ? 's' : ''} transcrita${n > 1 ? 's' : ''} em ${tempo}. Para gravar como legenda, use “Legendas automáticas” na aba Imagem.`);
+            : `${n} frase${n > 1 ? 's' : ''} transcrita${n > 1 ? 's' : ''} em ${tempo}. Para gravar como legenda, use “Legendas automáticas”, na lista de ferramentas.`);
         })
         .catch(err => { console.error(err); show('Não consegui gerar as legendas. Verifique a internet (ela só é usada para baixar o modelo, uma vez) e tente de novo.'); })
         .finally(() => { it.asrBusy = false; if (it.editorEl === wrap) rebuild(); else render(it); });
@@ -3732,14 +3957,14 @@ function openEditor(it) {
       return;
     }
     if (a === 'reset') { it.edit = Object.assign(e, defaultEdit(info)); rebuild(); return; }
-    if (a === 'close') { it.editorOpen = false; it.editorEl = null; v.pause(); render(it); updateToolbar(); return; }
+    if (a === 'close') { closeEditor(it); render(it); updateToolbar(); return; }
     changed();
   });
-  // Reconstrói o editor mantendo a aba e a posição da prévia.
+  // Reconstrói o editor mantendo a ferramenta escolhida e a posição da prévia.
   function rebuild() {
-    const tab = wrap.querySelector('[aria-selected="true"]')?.dataset.tab, t = v.currentTime;
+    const t = v.currentTime, sc = q('.ed-side').scrollTop;
     wrap.remove(); it.editorEl = null; openEditor(it);
-    it.editorEl.querySelector(`[data-tab="${tab}"]`)?.click();
+    it.editorEl.querySelector('.ed-side').scrollTop = sc;
     const nv = it.editorEl.querySelector('video'); nv.addEventListener('loadeddata', () => { nv.currentTime = t; }, { once: true });
     render(it); updateToolbar();
   }
@@ -4475,7 +4700,7 @@ async function runQueue(only) {
   await outDirReady();
   const s = settings();
   const pending = (only || items).filter(i => i.status === 'ready' && !plansFor(i, s).some(p => p.error));
-  pending.forEach(i => { i.status = 'queued'; i.editorOpen = false; i.editorEl?.querySelector('video')?.pause(); i.editorEl = null; render(i); });
+  pending.forEach(i => { i.status = 'queued'; closeEditor(i); render(i); });
   updateToolbar();
   let lock = null;
   try { lock = await navigator.wakeLock?.request('screen'); } catch {}
@@ -4788,7 +5013,7 @@ async function zipStore(name, blob) {
 // - "instalar" = baixar o pacote, conferir SHA-256, tamanho e a versão escrita dentro dele, e gravar
 //   por cima do arquivo aberto numa janela "Salvar" do navegador (a gravação só vale no fim, nunca fica pela metade);
 // - nada baixado é executado pela página: a versão nova só roda quando a página é recarregada.
-const APP_VERSION = '1.34.1';
+const APP_VERSION = '1.35.0';
 const REPO_VERSOES = window.__ENXUTO_REPO_VERSOES || 'https://raw.githubusercontent.com/rla-devv/enxuto-versoes/main/';
 const PAGINA_VERSOES = 'https://github.com/rla-devv/enxuto-versoes';
 const UPDATE_EVERY = 15 * 60e3;   // quem deixa a página aberta também fica sabendo
@@ -5091,6 +5316,84 @@ if (isOfflineFile || desktopApp) {
   const mobile = navigator.userAgentData?.mobile ?? /Android|iPhone|iPad|Mobile/.test(ua);
   const chromeOrEdge = /Google Chrome|Microsoft Edge/.test(brands) || (/Chrome\/|Edg\//.test(ua) && !/OPR\/|Firefox/.test(ua));
   if (chromeOrEdge && !mobile) $('.hero .browsers')?.remove();
+}
+
+/* ---------- tela inicial: catálogo de ferramentas ---------- */
+// Cada ferramenta é um atalho: ajusta o que precisa, pede o vídeo e, quando ele fica pronto, abre o editor nela.
+const CATALOG = [
+  ['Com inteligência artificial', 'spark', 'ai', [
+    ['autosubs', 'Legendas automáticas', 'Escuta o vídeo e escreve as legendas.', { tool: 'autosubs' }],
+    ['transcript', 'Transcrever e buscar', 'Tudo o que foi falado, com horário. Corte pelo texto.', { tool: 'transcript' }],
+    ['faces', 'Esconder rostos', 'Encontra os rostos e cobre sozinho, em todo o vídeo.', { tool: 'faces' }],
+    ['follow', 'Vertical que segue o rosto', 'Para Reels e TikTok, sem cortar quem fala.', { tool: 'follow', dest: 'reels' }],
+    ['bleep', 'Bipe em palavras', 'Cobre palavrões ou nomes com um bipe.', { tool: 'bleep' }],
+  ]],
+  ['Diminuir e converter', 'compress', '', [
+    ['compress', 'Diminuir o tamanho', 'Arquivo bem menor, com a imagem preservada.', {}],
+    ['target', 'Caber num limite de MB', 'Você diz o tamanho e o app acerta.', { set: { level: 'target' } }],
+    ['format', 'Mudar o formato', 'MP4, WebM, MOV, MKV, AVI e WMV.', {}],
+    ['send', 'Pronto para enviar', 'WhatsApp, e-mail, YouTube, Reels e TikTok.', {}],
+    ['audio', 'Tirar só o áudio', 'MP3 ou M4A, sem perda quando dá.', { set: { output: 'audio' } }],
+    ['gif', 'GIF animado', 'Um trecho curto que toca sozinho, em loop.', { set: { output: 'gif' } }],
+  ]],
+  ['Cortar e montar', 'trim', '', [
+    ['trim', 'Cortar início e fim', 'Escolha de onde até onde o vídeo vai.', { tool: 'trim' }],
+    ['cuts', 'Tirar trechos do meio', 'Intervalos, conversas paralelas, erros.', { tool: 'cuts' }],
+    ['silence', 'Cortar silêncios', 'Remove as pausas sem fala sozinho.', { tool: 'silence' }],
+    ['deadends', 'Pular a espera', 'Tira a tela parada do começo e do fim.', { tool: 'deadends' }],
+    ['join', 'Juntar vídeos', 'Vários arquivos viram um só.', { join: true }],
+    ['split', 'Dividir em partes', 'Por duração ou por tamanho.', { tool: 'split' }],
+  ]],
+  ['Imagem', 'image', '', [
+    ['blur', 'Esconder ou borrar áreas', 'Placas, telas e objetos, até em movimento.', { tool: 'blur' }],
+    ['overlay', 'Texto ou logo', 'Nome da escola, data, marca d’água.', { tool: 'overlay' }],
+    ['aspect', 'Vertical ou quadrado', '9:16, 1:1 e 4:5 para redes sociais.', { adv: true }],
+    ['rotate', 'Girar e espelhar', 'Arruma o vídeo gravado de lado.', { tool: 'rotate' }],
+    ['color', 'Brilho e cor', 'Clareia vídeo escuro e realça as cores.', { tool: 'color' }],
+    ['subs', 'Legendas de arquivo', 'Grava na imagem um .srt ou .vtt.', { tool: 'subs' }],
+  ]],
+  ['Som e tempo', 'volume', '', [
+    ['denoise', 'Reduzir ruído', 'Tira chiado, ventilador e ar-condicionado.', { tool: 'denoise' }],
+    ['volume', 'Volume', 'Aumenta e equilibra vozes baixas.', { tool: 'volume' }],
+    ['music', 'Música de fundo', 'Abaixa sozinha quando alguém fala.', { tool: 'music' }],
+    ['speed', 'Câmera lenta ou acelerado', 'De 0,25× a 2×.', { tool: 'speed' }],
+    ['loop', 'Ao contrário e repetição', 'Vai e volta, ou repete várias vezes.', { tool: 'loop' }],
+    ['fade', 'Início e fim suaves', 'A imagem e o som entram e saem aos poucos.', { tool: 'fade' }],
+  ]],
+  ['Fotos e gravação', 'photo', '', [
+    ['photo', 'Capturar foto', 'Salva um quadro do vídeo em JPG.', { tool: 'photo' }],
+    ['cover', 'Capa (miniatura)', 'Com título, para YouTube e WhatsApp.', { tool: 'cover' }],
+    ['rec', 'Gravar a tela ou a câmera', 'Aula, apresentação ou recado.', { rec: true }],
+  ]],
+];
+let intent = null;
+function setIntent(x) {
+  intent = x;
+  const el = $('#intent');
+  el.hidden = !x;
+  if (x) {
+    el.innerHTML = `<span>Ferramenta escolhida: <b>${esc(x.name)}</b>. Agora escolha o vídeo.</span><button type="button" class="link" id="intent-x">Cancelar</button>`;
+    $('#intent-x').addEventListener('click', () => setIntent(null));
+  }
+}
+$('#catalog').innerHTML = CATALOG.map(([g, ico, cls, list]) => `<div class="cat-group ${cls}"><h3><span class="gi">${svgI(TI[ico])}</span>${g}<small>${list.length}</small></h3>
+  ${list.map(([k, name, desc, act]) => `<button type="button" class="cat-tool${act.rec ? ' rec-open' : ''}" data-cat="${k}"${act.rec ? ' hidden' : ''}>${svgI(TI[k])}<b>${name}</b><small>${desc}</small></button>`).join('')}</div>`).join('');
+$('#tool-count').textContent = CATALOG.reduce((n, g) => n + g[3].length, 0);
+$('#catalog').addEventListener('click', ev => {
+  const b = ev.target.closest('[data-cat]');
+  if (!b || b.classList.contains('rec-open')) return;
+  const [, name, , act] = CATALOG.flatMap(g => g[3]).find(t => t[0] === b.dataset.cat);
+  if (act.dest) applyDest(act.dest);
+  if (act.set) { for (const [k, v] of Object.entries(act.set)) radio(k, v); settingsChanged(); }
+  setIntent(act.tool || act.adv ? { name, tool: act.tool, adv: act.adv } : null);
+  fileInput.click();
+});
+// Quando o vídeo escolhido pela ferramenta fica pronto, abre direto nela.
+function useIntent(it) {
+  if (!intent || it.status !== 'ready') return;
+  const x = intent; setIntent(null);
+  if (x.tool) { it.edTool = x.tool; it.editorOpen = true; }
+  if (x.adv) setTimeout(() => $('#adv').click(), 300);
 }
 
 /* ---------- gravar a tela ou a câmera ---------- */
