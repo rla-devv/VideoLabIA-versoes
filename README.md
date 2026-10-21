@@ -1,12 +1,12 @@
 # Vídeo Lab IA — versões
 
 Versões prontas do **Vídeo Lab IA** (antes chamado Enxuto IA): conversão, compressão e edição de vídeos diretamente no
-seu computador. Desenvolvido por RLA.dev. Versão atual: **1.35.6**.
+seu computador. Desenvolvido por RLA.dev. Versão atual: **1.35.7**.
 
-- [`Vídeo Lab IA.zip`](https://github.com/rla-devv/enxuto-versoes/raw/main/V%C3%ADdeo%20Lab%20IA.zip) — para instalar no
+- [`Vídeo Lab IA.zip`](https://github.com/rla-devv/VideoLabIA-versoes/raw/main/V%C3%ADdeo%20Lab%20IA.zip) — para instalar no
   Windows: descompacte ("Extrair tudo") e dê dois cliques em "Instalar Vídeo Lab IA" (não precisa ter o Python: ele baixa
   um só para o app). As atualizações chegam depois pelo aviso dentro do app.
-- [`Vídeo Lab IA.html`](https://github.com/rla-devv/enxuto-versoes/raw/main/V%C3%ADdeo%20Lab%20IA.html) — o app num arquivo
+- [`Vídeo Lab IA.html`](https://github.com/rla-devv/VideoLabIA-versoes/raw/main/V%C3%ADdeo%20Lab%20IA.html) — o app num arquivo
   só, para usar sem instalar: abra no Google Chrome ou no Microsoft Edge. Ele também avisa quando há versão nova.
 - `atualizacao.json` — a versão mais recente: número, novidades e cada arquivo com SHA-256 e tamanho. É o que o aviso de
   atualização consulta.

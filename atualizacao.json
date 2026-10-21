@@ -1,8 +1,8 @@
 {
-  "versao": "1.35.6",
-  "arquivo": "Enxuto-1.35.6.html",
-  "sha256": "b49d1fb1d21c3baebb98b640ee1e1da375dad7b2b7d86354eb4f72a17db38b73",
-  "tamanho": 1392072,
+  "versao": "1.35.7",
+  "arquivo": "Enxuto-1.35.7.html",
+  "sha256": "203bf30ee3ecb110ac11fe6457127ee23347aea0667d830422e612d53b7e3c78",
+  "tamanho": 1392084,
   "novidades": [
     "Correções e melhorias."
   ],
@@ -11,15 +11,15 @@
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.35.6.html",
-        "sha256": "b49d1fb1d21c3baebb98b640ee1e1da375dad7b2b7d86354eb4f72a17db38b73",
-        "tamanho": 1392072
+        "origem": "versoes/Enxuto-1.35.7.html",
+        "sha256": "203bf30ee3ecb110ac11fe6457127ee23347aea0667d830422e612d53b7e3c78",
+        "tamanho": 1392084
       },
       {
         "caminho": "Instalar Vídeo Lab IA.bat",
-        "origem": "programa/1.35.5/Instalar-Video-Lab-IA.bat",
-        "sha256": "df9c77aae44e80514964804cacdbed94cdfe6c0cb60663bb3c916ab18079ca2f",
-        "tamanho": 7764
+        "origem": "programa/1.35.7/Instalar-Video-Lab-IA.bat",
+        "sha256": "ff9b303e36da499624b2af2d6383fdc616a81aecbea2e062f6581535da395755",
+        "tamanho": 7768
       },
       {
         "caminho": "LEIA-ME.txt",
@@ -35,15 +35,15 @@
       },
       {
         "caminho": "videolab.pyw",
-        "origem": "programa/1.35.6/videolab.pyw",
-        "sha256": "6abb0f745b0cb2747b5e28d89edb34b953919a4205e89d1b49255e39ac849b92",
-        "tamanho": 40370
+        "origem": "programa/1.35.7/videolab.pyw",
+        "sha256": "06d766229f9a9f060d7c30cc3b2179725978b0671b3c86d9a6f4a083c9e21d71",
+        "tamanho": 40374
       },
       {
         "caminho": "enxuto.pyw",
-        "origem": "programa/1.35.6/videolab.pyw",
-        "sha256": "6abb0f745b0cb2747b5e28d89edb34b953919a4205e89d1b49255e39ac849b92",
-        "tamanho": 40370
+        "origem": "programa/1.35.7/videolab.pyw",
+        "sha256": "06d766229f9a9f060d7c30cc3b2179725978b0671b3c86d9a6f4a083c9e21d71",
+        "tamanho": 40374
       }
     ]
   }
