@@ -1,25 +1,25 @@
 {
-  "versao": "1.35.3",
-  "arquivo": "Enxuto-1.35.3.html",
-  "sha256": "c22bc68d9b3f336fab3d66fa263e904628c33640bbac95555e60be3a2a307f70",
+  "versao": "1.35.4",
+  "arquivo": "Enxuto-1.35.4.html",
+  "sha256": "b7ba90e16beef3c23e953f6031e72164549e6da3bc008e0bdbd7f3dcb77c3e7f",
   "tamanho": 1392072,
   "novidades": [
-    "O Vídeo Lab IA instalado abre sempre maximizado, ocupando a tela toda, em qualquer abertura. Quando abre pelo navegador (Edge, Chrome ou Brave), também abre numa janela maximizada."
+    "Instalar ficou mais fácil: se você abrir o instalador direto de dentro do .zip, sem extrair, ele cria a pasta do Vídeo Lab IA sozinho e segue a instalação."
   ],
   "data": "2026-10-21",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.35.3.html",
-        "sha256": "c22bc68d9b3f336fab3d66fa263e904628c33640bbac95555e60be3a2a307f70",
+        "origem": "versoes/Enxuto-1.35.4.html",
+        "sha256": "b7ba90e16beef3c23e953f6031e72164549e6da3bc008e0bdbd7f3dcb77c3e7f",
         "tamanho": 1392072
       },
       {
         "caminho": "Instalar Vídeo Lab IA.bat",
-        "origem": "programa/1.26.0/Instalar-Video-Lab-IA.bat",
-        "sha256": "2459072d96c1b021b0d10c79e7f753bd660a9e388d54a58b7676201cf0d360ce",
-        "tamanho": 5722
+        "origem": "programa/1.35.4/Instalar-Video-Lab-IA.bat",
+        "sha256": "6613ca531be54af8d7572b9337863d25d0db274926b78b9a1e7f3fb2ba10b3c1",
+        "tamanho": 6244
       },
       {
         "caminho": "LEIA-ME.txt",
