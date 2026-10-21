@@ -1,7 +1,7 @@
 {
-  "versao": "1.35.8",
-  "arquivo": "Enxuto-1.35.8.html",
-  "sha256": "77bc2629030326a7e0076f24a6d39e41abad0f5c4bfe74a3bb4d31a218b67ad4",
+  "versao": "1.35.9",
+  "arquivo": "Enxuto-1.35.9.html",
+  "sha256": "39837cbe78f4c138fd1c5a8e1ef6f1ad776c141cb44c19e0a540e6c3b4be0a54",
   "tamanho": 1392084,
   "novidades": [
     "Correções e melhorias."
@@ -11,8 +11,8 @@
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.35.8.html",
-        "sha256": "77bc2629030326a7e0076f24a6d39e41abad0f5c4bfe74a3bb4d31a218b67ad4",
+        "origem": "versoes/Enxuto-1.35.9.html",
+        "sha256": "39837cbe78f4c138fd1c5a8e1ef6f1ad776c141cb44c19e0a540e6c3b4be0a54",
         "tamanho": 1392084
       },
       {
@@ -35,15 +35,15 @@
       },
       {
         "caminho": "videolab.pyw",
-        "origem": "programa/1.35.7/videolab.pyw",
-        "sha256": "06d766229f9a9f060d7c30cc3b2179725978b0671b3c86d9a6f4a083c9e21d71",
-        "tamanho": 40374
+        "origem": "programa/1.35.9/videolab.pyw",
+        "sha256": "0428535f7e103528f16642d72de7cb6aaa7c348f00fa22390171514e6afb6b84",
+        "tamanho": 40561
       },
       {
         "caminho": "enxuto.pyw",
-        "origem": "programa/1.35.7/videolab.pyw",
-        "sha256": "06d766229f9a9f060d7c30cc3b2179725978b0671b3c86d9a6f4a083c9e21d71",
-        "tamanho": 40374
+        "origem": "programa/1.35.9/videolab.pyw",
+        "sha256": "0428535f7e103528f16642d72de7cb6aaa7c348f00fa22390171514e6afb6b84",
+        "tamanho": 40561
       }
     ]
   }
