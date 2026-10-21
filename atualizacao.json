@@ -1,21 +1,19 @@
 {
-  "versao": "1.35.0",
-  "arquivo": "Enxuto-1.35.0.html",
-  "sha256": "4c64e2cf485567635a3a69140dbd002e5aff4e9c6a4039d543885fb014ffbf51",
-  "tamanho": 1391557,
+  "versao": "1.35.1",
+  "arquivo": "Enxuto-1.35.1.html",
+  "sha256": "da1375960813e4784ef6b5d0d35a758055a4f1b9585a9ef1264ee37a52d0d7cf",
+  "tamanho": 1392072,
   "novidades": [
-    "Visual novo e mais prático: a tela inicial mostra todas as ferramentas, separadas por grupo. Clique numa delas, escolha o vídeo e ele já abre nela.",
-    "O editor agora ocupa a tela inteira: a lista de ferramentas fica à esquerda, a prévia grande no meio e os ajustes à direita. Uma bolinha mostra o que já está em uso.",
-    "Cada vídeo da lista tem atalhos para as ferramentas mais usadas, como legendas automáticas, cortar silêncios e esconder rostos."
+    "Agora dá para processar direto do editor, pelo botão no topo, sem precisar voltar para a lista."
   ],
   "data": "2026-10-21",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.35.0.html",
-        "sha256": "4c64e2cf485567635a3a69140dbd002e5aff4e9c6a4039d543885fb014ffbf51",
-        "tamanho": 1391557
+        "origem": "versoes/Enxuto-1.35.1.html",
+        "sha256": "da1375960813e4784ef6b5d0d35a758055a4f1b9585a9ef1264ee37a52d0d7cf",
+        "tamanho": 1392072
       },
       {
         "caminho": "Instalar Vídeo Lab IA.bat",

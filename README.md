@@ -1,7 +1,7 @@
 # Vídeo Lab IA — versões
 
 Versões prontas do **Vídeo Lab IA** (antes chamado Enxuto IA): conversão, compressão e edição de vídeos diretamente no
-seu computador. Desenvolvido por RLA.dev. Versão atual: **1.35.0**.
+seu computador. Desenvolvido por RLA.dev. Versão atual: **1.35.1**.
 
 - [`Vídeo Lab IA.zip`](https://github.com/rla-devv/enxuto-versoes/raw/main/V%C3%ADdeo%20Lab%20IA.zip) — para instalar no
   Windows: descompacte ("Extrair tudo") e dê dois cliques em "Instalar Vídeo Lab IA" (não precisa ter o Python: ele baixa
