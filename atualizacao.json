@@ -1,8 +1,8 @@
 {
-  "versao": "1.35.10",
-  "arquivo": "Enxuto-1.35.10.html",
-  "sha256": "0aa544793722645334ad5c60178ca504b880c33b4e25323bf52ef0d57b54a01b",
-  "tamanho": 1392252,
+  "versao": "1.35.11",
+  "arquivo": "Enxuto-1.35.11.html",
+  "sha256": "8ac2a77b101f2ae60aaa21b6541f01394f0b902f33fb71fbfea0225b1d7bb9d7",
+  "tamanho": 1395121,
   "novidades": [
     "Correções e melhorias."
   ],
@@ -11,9 +11,9 @@
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.35.10.html",
-        "sha256": "0aa544793722645334ad5c60178ca504b880c33b4e25323bf52ef0d57b54a01b",
-        "tamanho": 1392252
+        "origem": "versoes/Enxuto-1.35.11.html",
+        "sha256": "8ac2a77b101f2ae60aaa21b6541f01394f0b902f33fb71fbfea0225b1d7bb9d7",
+        "tamanho": 1395121
       },
       {
         "caminho": "Instalar Vídeo Lab IA.bat",
@@ -35,15 +35,15 @@
       },
       {
         "caminho": "videolab.pyw",
-        "origem": "programa/1.35.9/videolab.pyw",
-        "sha256": "0428535f7e103528f16642d72de7cb6aaa7c348f00fa22390171514e6afb6b84",
-        "tamanho": 40561
+        "origem": "programa/1.35.11/videolab.pyw",
+        "sha256": "4c25eaaf2588c3423f200c94f245df89abae896e2c858ac4050fdcd5683faaa3",
+        "tamanho": 43858
       },
       {
         "caminho": "enxuto.pyw",
-        "origem": "programa/1.35.9/videolab.pyw",
-        "sha256": "0428535f7e103528f16642d72de7cb6aaa7c348f00fa22390171514e6afb6b84",
-        "tamanho": 40561
+        "origem": "programa/1.35.11/videolab.pyw",
+        "sha256": "4c25eaaf2588c3423f200c94f245df89abae896e2c858ac4050fdcd5683faaa3",
+        "tamanho": 43858
       }
     ]
   }
