@@ -1,25 +1,25 @@
 {
-  "versao": "1.35.13",
-  "arquivo": "Enxuto-1.35.13.html",
-  "sha256": "ee63566f6b83d70c97b7fe9641d61dfb768fc9d037eb9ed386fb681cce5ff2f7",
+  "versao": "1.35.14",
+  "arquivo": "Enxuto-1.35.14.html",
+  "sha256": "d02861cc381c7808a92f87be46cff5f33bea78bf25b81e8e44d52e4ef8edc021",
   "tamanho": 1396165,
   "novidades": [
-    "Limpeza na pasta do Vídeo Lab IA: saem os arquivos e pastas com o nome antigo do app. O tema e os ajustes continuam guardados."
+    "Correções e melhorias de segurança no Vídeo Lab IA instalado."
   ],
   "data": "2026-10-22",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.35.13.html",
-        "sha256": "ee63566f6b83d70c97b7fe9641d61dfb768fc9d037eb9ed386fb681cce5ff2f7",
+        "origem": "versoes/Enxuto-1.35.14.html",
+        "sha256": "d02861cc381c7808a92f87be46cff5f33bea78bf25b81e8e44d52e4ef8edc021",
         "tamanho": 1396165
       },
       {
         "caminho": "Instalar Vídeo Lab IA.bat",
-        "origem": "programa/1.35.12/Instalar-Video-Lab-IA.bat",
-        "sha256": "4d3030dda9bf7b649fb5eab8bd6ded4495222f00ee523eb62c3b5afe78346c98",
-        "tamanho": 8359
+        "origem": "programa/1.35.14/Instalar-Video-Lab-IA.bat",
+        "sha256": "7f98e85d3816aeb470a34eb364555e8f3473511e0cc91b51aae2a3134eb40fc7",
+        "tamanho": 8570
       },
       {
         "caminho": "LEIA-ME.txt",
@@ -35,15 +35,15 @@
       },
       {
         "caminho": "videolab.pyw",
-        "origem": "programa/1.35.13/videolab.pyw",
-        "sha256": "4f39ebe5ed12dab1f407c19c3935df697b6cec3582073a53ecf40104344fc89e",
-        "tamanho": 48001
+        "origem": "programa/1.35.14/videolab.pyw",
+        "sha256": "fba4c662bb710b036e0e3c6354d04610e9a22cf2b639bbb9ad10bb8533e75f64",
+        "tamanho": 49220
       },
       {
         "caminho": "enxuto.pyw",
-        "origem": "programa/1.35.13/videolab.pyw",
-        "sha256": "4f39ebe5ed12dab1f407c19c3935df697b6cec3582073a53ecf40104344fc89e",
-        "tamanho": 48001
+        "origem": "programa/1.35.14/videolab.pyw",
+        "sha256": "fba4c662bb710b036e0e3c6354d04610e9a22cf2b639bbb9ad10bb8533e75f64",
+        "tamanho": 49220
       }
     ]
   }
