@@ -1,18 +1,18 @@
 {
-  "versao": "1.35.12",
-  "arquivo": "Enxuto-1.35.12.html",
-  "sha256": "67820dc7bff95fc10e475bf75b0e6caaf0a7c67bf0233da36592e4a5da763c15",
+  "versao": "1.35.13",
+  "arquivo": "Enxuto-1.35.13.html",
+  "sha256": "ee63566f6b83d70c97b7fe9641d61dfb768fc9d037eb9ed386fb681cce5ff2f7",
   "tamanho": 1396165,
   "novidades": [
-    "Correções e melhorias."
+    "Limpeza na pasta do Vídeo Lab IA: saem os arquivos e pastas com o nome antigo do app. O tema e os ajustes continuam guardados."
   ],
   "data": "2026-10-22",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.35.12.html",
-        "sha256": "67820dc7bff95fc10e475bf75b0e6caaf0a7c67bf0233da36592e4a5da763c15",
+        "origem": "versoes/Enxuto-1.35.13.html",
+        "sha256": "ee63566f6b83d70c97b7fe9641d61dfb768fc9d037eb9ed386fb681cce5ff2f7",
         "tamanho": 1396165
       },
       {
@@ -35,15 +35,15 @@
       },
       {
         "caminho": "videolab.pyw",
-        "origem": "programa/1.35.12/videolab.pyw",
-        "sha256": "cae344622090d5d8a90e737f6f2d5e7cb5d03980586826816cadb8768dedb842",
-        "tamanho": 45485
+        "origem": "programa/1.35.13/videolab.pyw",
+        "sha256": "4f39ebe5ed12dab1f407c19c3935df697b6cec3582073a53ecf40104344fc89e",
+        "tamanho": 48001
       },
       {
         "caminho": "enxuto.pyw",
-        "origem": "programa/1.35.12/videolab.pyw",
-        "sha256": "cae344622090d5d8a90e737f6f2d5e7cb5d03980586826816cadb8768dedb842",
-        "tamanho": 45485
+        "origem": "programa/1.35.13/videolab.pyw",
+        "sha256": "4f39ebe5ed12dab1f407c19c3935df697b6cec3582073a53ecf40104344fc89e",
+        "tamanho": 48001
       }
     ]
   }
