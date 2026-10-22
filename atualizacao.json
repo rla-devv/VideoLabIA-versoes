@@ -1,25 +1,25 @@
 {
-  "versao": "1.35.11",
-  "arquivo": "Enxuto-1.35.11.html",
-  "sha256": "8ac2a77b101f2ae60aaa21b6541f01394f0b902f33fb71fbfea0225b1d7bb9d7",
-  "tamanho": 1395121,
+  "versao": "1.35.12",
+  "arquivo": "Enxuto-1.35.12.html",
+  "sha256": "67820dc7bff95fc10e475bf75b0e6caaf0a7c67bf0233da36592e4a5da763c15",
+  "tamanho": 1396165,
   "novidades": [
     "Correções e melhorias."
   ],
-  "data": "2026-10-21",
+  "data": "2026-10-22",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.35.11.html",
-        "sha256": "8ac2a77b101f2ae60aaa21b6541f01394f0b902f33fb71fbfea0225b1d7bb9d7",
-        "tamanho": 1395121
+        "origem": "versoes/Enxuto-1.35.12.html",
+        "sha256": "67820dc7bff95fc10e475bf75b0e6caaf0a7c67bf0233da36592e4a5da763c15",
+        "tamanho": 1396165
       },
       {
         "caminho": "Instalar Vídeo Lab IA.bat",
-        "origem": "programa/1.35.8/Instalar-Video-Lab-IA.bat",
-        "sha256": "2210e03ebd302f6405f34ffb0810c5d6a9d93f6d28660ecd68aada957a65eab2",
-        "tamanho": 8075
+        "origem": "programa/1.35.12/Instalar-Video-Lab-IA.bat",
+        "sha256": "4d3030dda9bf7b649fb5eab8bd6ded4495222f00ee523eb62c3b5afe78346c98",
+        "tamanho": 8359
       },
       {
         "caminho": "LEIA-ME.txt",
@@ -35,15 +35,15 @@
       },
       {
         "caminho": "videolab.pyw",
-        "origem": "programa/1.35.11/videolab.pyw",
-        "sha256": "4c25eaaf2588c3423f200c94f245df89abae896e2c858ac4050fdcd5683faaa3",
-        "tamanho": 43858
+        "origem": "programa/1.35.12/videolab.pyw",
+        "sha256": "cae344622090d5d8a90e737f6f2d5e7cb5d03980586826816cadb8768dedb842",
+        "tamanho": 45485
       },
       {
         "caminho": "enxuto.pyw",
-        "origem": "programa/1.35.11/videolab.pyw",
-        "sha256": "4c25eaaf2588c3423f200c94f245df89abae896e2c858ac4050fdcd5683faaa3",
-        "tamanho": 43858
+        "origem": "programa/1.35.12/videolab.pyw",
+        "sha256": "cae344622090d5d8a90e737f6f2d5e7cb5d03980586826816cadb8768dedb842",
+        "tamanho": 45485
       }
     ]
   }
