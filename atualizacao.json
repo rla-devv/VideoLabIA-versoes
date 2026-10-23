@@ -1,48 +1,47 @@
 {
-  "versao": "1.35.15",
-  "arquivo": "Enxuto-1.35.15.html",
-  "sha256": "c7eef15a76e021f4c880bc6fa288b165ff241b3415cf7cc08273751cb4920e96",
-  "tamanho": 1396219,
+  "versao": "1.35.16",
+  "arquivo": "Enxuto-1.35.16.html",
+  "sha256": "870f717259492dd8ebf2776ee61538157bc4d5c6459fc83ccd98f2967e94f866",
+  "tamanho": 1396285,
   "novidades": [
-    "Cada versão agora também é publicada como Release no GitHub, de onde a instalação e as atualizações do Vídeo Lab IA instalado passam a baixar os arquivos."
+    "Correções e melhorias."
   ],
   "data": "2026-10-23",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.35.15.html",
-        "sha256": "c7eef15a76e021f4c880bc6fa288b165ff241b3415cf7cc08273751cb4920e96",
-        "tamanho": 1396219,
-        "url": "https://github.com/rla-devv/VideoLabIA-versoes/releases/download/v1.35.15/Video-Lab-IA.html"
+        "origem": "versoes/Enxuto-1.35.16.html",
+        "sha256": "870f717259492dd8ebf2776ee61538157bc4d5c6459fc83ccd98f2967e94f866",
+        "tamanho": 1396285,
+        "url": "https://github.com/rla-devv/VideoLabIA-versoes/releases/download/v1.35.16/index.html"
       },
       {
         "caminho": "Instalar Vídeo Lab IA.bat",
-        "origem": "programa/1.35.15/Instalar-Video-Lab-IA.bat",
-        "sha256": "efb7e454c4d0a9ff10206be56895882692c0e7f6590db65abd638fa7e7fa900d",
-        "tamanho": 10089,
-        "url": "https://github.com/rla-devv/VideoLabIA-versoes/releases/download/v1.35.15/Instalar-Video-Lab-IA.bat"
+        "origem": "programa/1.35.16/Instalar-Video-Lab-IA.bat",
+        "sha256": "469fc41f3f5fb86c773121fba8ff4912112ea56784c34e6a1b6eade76df6a6ad",
+        "tamanho": 9176
       },
       {
         "caminho": "LEIA-ME.txt",
         "origem": "programa/1.26.0/LEIA-ME.txt",
         "sha256": "313e31c32662faf65b659f841a73daa266b7ef8fca69ec230ee009e13b4bb195",
         "tamanho": 1518,
-        "url": "https://github.com/rla-devv/VideoLabIA-versoes/releases/download/v1.35.15/LEIA-ME.txt"
+        "url": "https://github.com/rla-devv/VideoLabIA-versoes/releases/download/v1.35.16/LEIA-ME.txt"
       },
       {
         "caminho": "videolab.ico",
         "origem": "janela/1.8.0/assets/enxuto-v2.ico",
         "sha256": "69d88b580e67e1092300441300934dbec1c32537dc09dac7de66ba7c7ac3ba92",
         "tamanho": 78047,
-        "url": "https://github.com/rla-devv/VideoLabIA-versoes/releases/download/v1.35.15/videolab.ico"
+        "url": "https://github.com/rla-devv/VideoLabIA-versoes/releases/download/v1.35.16/videolab.ico"
       },
       {
         "caminho": "videolab.pyw",
         "origem": "programa/1.35.15/videolab.pyw",
         "sha256": "37e6e26abe6aee864ee9ebf768af905e0d95a0231b7a7afe97683a6df72c3e76",
         "tamanho": 50595,
-        "url": "https://github.com/rla-devv/VideoLabIA-versoes/releases/download/v1.35.15/videolab.pyw"
+        "url": "https://github.com/rla-devv/VideoLabIA-versoes/releases/download/v1.35.16/videolab.pyw"
       },
       {
         "caminho": "enxuto.pyw",
@@ -52,13 +51,8 @@
       }
     ]
   },
-  "release": "https://github.com/rla-devv/VideoLabIA-versoes/releases/tag/v1.35.15",
-  "instalador": {
-    "url": "https://github.com/rla-devv/VideoLabIA-versoes/releases/download/v1.35.15/Video-Lab-IA.zip",
-    "sha256": "4c36057d87dda2cbd2237afd9012b560c7bc94c64f6a1bb80b49871e013c33e5",
-    "tamanho": 4066
-  },
+  "release": "https://github.com/rla-devv/VideoLabIA-versoes/releases/tag/v1.35.16",
   "bibliotecas": {
-    "proxy_tools-0.1.0-py3-none-any.whl": "https://github.com/rla-devv/VideoLabIA-versoes/releases/download/v1.35.15/proxy_tools-0.1.0-py3-none-any.whl"
+    "proxy_tools-0.1.0-py3-none-any.whl": "https://github.com/rla-devv/VideoLabIA-versoes/releases/download/v1.35.16/proxy_tools-0.1.0-py3-none-any.whl"
   }
 }

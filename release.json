@@ -1,28 +1,29 @@
 {
-  "tag": "v1.35.15",
-  "titulo": "Vídeo Lab IA 1.35.15",
-  "notas": "- Cada versão agora também é publicada como Release no GitHub, de onde a instalação e as atualizações do Vídeo Lab IA instalado passam a baixar os arquivos.\n\n**Para instalar no Windows:** baixe o `Video-Lab-IA.zip`, clique com o botão direito, \"Extrair tudo\", e dê dois cliques em \"Instalar Vídeo Lab IA\". Quem já tem o Vídeo Lab IA instalado recebe esta versão pelo aviso de atualização dentro do app.\n\nNenhum vídeo é enviado para a internet: tudo roda no seu computador.",
+  "tag": "v1.35.16",
+  "titulo": "Vídeo Lab IA 1.35.16",
+  "notas": "- Correções e melhorias.\n\n**Para instalar no Windows:** baixe o [`Vídeo Lab IA.zip`](https://github.com/rla-devv/VideoLabIA-versoes/raw/main/V%C3%ADdeo%20Lab%20IA.zip), clique com o botão direito, \"Extrair tudo\", e dê dois cliques em \"Instalar Vídeo Lab IA\". Quem já tem o Vídeo Lab IA instalado recebe esta versão pelo aviso de atualização dentro do app.\n\nNenhum vídeo é enviado para a internet: tudo roda no seu computador.",
+  "principal": "videolab.pyw",
   "arquivos": [
     {
       "origem": "Vídeo Lab IA.zip",
-      "nome": "Video-Lab-IA.zip",
-      "rotulo": "Instalar no Windows (Vídeo Lab IA 1.35.15)",
-      "sha256": "4c36057d87dda2cbd2237afd9012b560c7bc94c64f6a1bb80b49871e013c33e5",
-      "tamanho": 4066
+      "nome": "Vídeo Lab IA.zip",
+      "rotulo": "Instalador para Windows (Vídeo Lab IA 1.35.16)",
+      "sha256": "b623310140a8b40969b8cf94277d34d3533061a3762f8cabab7faf01bb5954b8",
+      "tamanho": 3782
     },
     {
-      "origem": "versoes/Enxuto-1.35.15.html",
-      "nome": "Video-Lab-IA.html",
-      "rotulo": "Vídeo Lab IA 1.35.15 (o app num arquivo só, também para usar sem instalar)",
-      "sha256": "c7eef15a76e021f4c880bc6fa288b165ff241b3415cf7cc08273751cb4920e96",
-      "tamanho": 1396219
+      "origem": "versoes/Enxuto-1.35.16.html",
+      "nome": "index.html",
+      "rotulo": "Vídeo Lab IA 1.35.16 (o app num arquivo só, também para usar sem instalar)",
+      "sha256": "870f717259492dd8ebf2776ee61538157bc4d5c6459fc83ccd98f2967e94f866",
+      "tamanho": 1396285
     },
     {
-      "origem": "programa/1.35.15/Instalar-Video-Lab-IA.bat",
-      "nome": "Instalar-Video-Lab-IA.bat",
+      "origem": "programa/1.35.16/Instalar-Video-Lab-IA.bat",
+      "nome": "Instalar Vídeo Lab IA.bat",
       "rotulo": "Instalar Vídeo Lab IA.bat",
-      "sha256": "efb7e454c4d0a9ff10206be56895882692c0e7f6590db65abd638fa7e7fa900d",
-      "tamanho": 10089
+      "sha256": "469fc41f3f5fb86c773121fba8ff4912112ea56784c34e6a1b6eade76df6a6ad",
+      "tamanho": 9176
     },
     {
       "origem": "programa/1.26.0/LEIA-ME.txt",
