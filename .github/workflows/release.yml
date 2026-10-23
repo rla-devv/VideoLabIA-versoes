@@ -1,10 +1,11 @@
-# Cria a Release de cada versão do Vídeo Lab IA quando chega a tag vX.Y.Z (enviada pelo publicar.py do código-fonte).
-# Os arquivos saem do próprio repositório, pela lista release.json do commit da tag: o instalador (.zip) e os arquivos
-# que a instalação e a atualização baixam. O GitHub conta os downloads de cada um.
+# Cria a Release de cada versão do Vídeo Lab IA (com a tag vX.Y.Z) quando o publicar.py do código-fonte envia uma versão nova:
+# o commit muda o release.json, a lista dos arquivos da Release (o instalador .zip e os arquivos que a instalação e a
+# atualização baixam). O GitHub conta os downloads de cada um. Se a Release da versão já existe, só atualiza os arquivos.
 name: Release
 on:
   push:
-    tags: ['v*']
+    branches: [main]
+    paths: ['release.json', '.github/**']
 permissions:
   contents: write
 jobs:
@@ -15,5 +16,5 @@ jobs:
       - name: Criar a Release com os arquivos da versão
         env:
           GH_TOKEN: ${{ github.token }}
-          TAG: ${{ github.ref_name }}
+          ALVO: ${{ github.sha }}
         run: python3 .github/release.py
