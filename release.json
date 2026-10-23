@@ -1,0 +1,56 @@
+{
+  "tag": "v1.35.15",
+  "titulo": "Vídeo Lab IA 1.35.15",
+  "notas": "- Cada versão agora também é publicada como Release no GitHub, de onde a instalação e as atualizações do Vídeo Lab IA instalado passam a baixar os arquivos.\n\n**Para instalar no Windows:** baixe o `Video-Lab-IA.zip`, clique com o botão direito, \"Extrair tudo\", e dê dois cliques em \"Instalar Vídeo Lab IA\". Quem já tem o Vídeo Lab IA instalado recebe esta versão pelo aviso de atualização dentro do app.\n\nNenhum vídeo é enviado para a internet: tudo roda no seu computador.",
+  "arquivos": [
+    {
+      "origem": "Vídeo Lab IA.zip",
+      "nome": "Video-Lab-IA.zip",
+      "rotulo": "Instalar no Windows (Vídeo Lab IA 1.35.15)",
+      "sha256": "4c36057d87dda2cbd2237afd9012b560c7bc94c64f6a1bb80b49871e013c33e5",
+      "tamanho": 4066
+    },
+    {
+      "origem": "versoes/Enxuto-1.35.15.html",
+      "nome": "Video-Lab-IA.html",
+      "rotulo": "Vídeo Lab IA 1.35.15 (o app num arquivo só, também para usar sem instalar)",
+      "sha256": "c7eef15a76e021f4c880bc6fa288b165ff241b3415cf7cc08273751cb4920e96",
+      "tamanho": 1396219
+    },
+    {
+      "origem": "programa/1.35.15/Instalar-Video-Lab-IA.bat",
+      "nome": "Instalar-Video-Lab-IA.bat",
+      "rotulo": "Instalar Vídeo Lab IA.bat",
+      "sha256": "efb7e454c4d0a9ff10206be56895882692c0e7f6590db65abd638fa7e7fa900d",
+      "tamanho": 10089
+    },
+    {
+      "origem": "programa/1.26.0/LEIA-ME.txt",
+      "nome": "LEIA-ME.txt",
+      "rotulo": "LEIA-ME",
+      "sha256": "313e31c32662faf65b659f841a73daa266b7ef8fca69ec230ee009e13b4bb195",
+      "tamanho": 1518
+    },
+    {
+      "origem": "janela/1.8.0/assets/enxuto-v2.ico",
+      "nome": "videolab.ico",
+      "rotulo": "Ícone",
+      "sha256": "69d88b580e67e1092300441300934dbec1c32537dc09dac7de66ba7c7ac3ba92",
+      "tamanho": 78047
+    },
+    {
+      "origem": "programa/1.35.15/videolab.pyw",
+      "nome": "videolab.pyw",
+      "rotulo": "Programa do Vídeo Lab IA instalado",
+      "sha256": "37e6e26abe6aee864ee9ebf768af905e0d95a0231b7a7afe97683a6df72c3e76",
+      "tamanho": 50595
+    },
+    {
+      "origem": "bibliotecas/proxy_tools-0.1.0-py3-none-any.whl",
+      "nome": "proxy_tools-0.1.0-py3-none-any.whl",
+      "rotulo": "Componente do Python (proxy_tools-0.1.0-py3-none-any.whl)",
+      "sha256": "5715de0f918322bba8ae5a4320af457fc5aed17b6b7d214a1438768c9cc67f8f",
+      "tamanho": 2936
+    }
+  ]
+}
