@@ -1,20 +1,26 @@
-# Cria a Release de cada versão do Vídeo Lab IA (com a tag vX.Y.Z) quando o publicar.py do código-fonte envia uma versão nova:
-# o commit muda o release.json, a lista dos arquivos da Release (o instalador .zip e os arquivos que a instalação e a
-# atualização baixam). O GitHub conta os downloads de cada um. Se a Release da versão já existe, só atualiza os arquivos.
+# Cria a Release de cada versão nova do Vídeo Lab IA, para o GitHub contar os downloads de forma anônima (o painel do site
+# RLA Lab lê essa contagem). Roda só quando o publicar.py do código-fonte publica uma versão: o commit muda o release.json,
+# a lista dos arquivos da versão (o .zip do instalador e os arquivos que a instalação e a atualização baixam).
+# Cuidados: permissão mínima (contents: write, só neste repositório, pelo GITHUB_TOKEN); nenhuma ação de terceiros (nem a
+# actions/checkout: os arquivos vêm por git fetch deste repositório público); só "gh release create". Uma Release que já
+# existe nunca é apagada nem reescrita: se a versão já tem Release, o script para sem mexer em nada.
 name: Release
 on:
   push:
     branches: [main]
-    paths: ['release.json', '.github/**']
+    paths: ['release.json']
 permissions:
   contents: write
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Criar a Release com os arquivos da versão
+      - name: Criar a Release da versão nova
         env:
           GH_TOKEN: ${{ github.token }}
           ALVO: ${{ github.sha }}
-        run: python3 .github/release.py
+        run: |
+          git init -q versao && cd versao
+          git fetch -q --depth 1 "https://github.com/${GITHUB_REPOSITORY}" "$ALVO"
+          git checkout -q FETCH_HEAD
+          python3 .github/release.py
