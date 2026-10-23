@@ -1,22 +1,22 @@
 {
-  "tag": "v1.35.16",
-  "titulo": "Vídeo Lab IA 1.35.16",
+  "tag": "v1.35.17",
+  "titulo": "Vídeo Lab IA 1.35.17",
   "notas": "- Correções e melhorias.\n\n**Para instalar no Windows:** baixe o [`Vídeo Lab IA.zip`](https://github.com/rla-devv/VideoLabIA-versoes/raw/main/V%C3%ADdeo%20Lab%20IA.zip), clique com o botão direito, \"Extrair tudo\", e dê dois cliques em \"Instalar Vídeo Lab IA\". Quem já tem o Vídeo Lab IA instalado recebe esta versão pelo aviso de atualização dentro do app.\n\nNenhum vídeo é enviado para a internet: tudo roda no seu computador.",
   "principal": "videolab.pyw",
   "arquivos": [
     {
       "origem": "Vídeo Lab IA.zip",
       "nome": "Vídeo Lab IA.zip",
-      "rotulo": "Instalador para Windows (Vídeo Lab IA 1.35.16)",
+      "rotulo": "Instalador para Windows (Vídeo Lab IA 1.35.17)",
       "sha256": "b623310140a8b40969b8cf94277d34d3533061a3762f8cabab7faf01bb5954b8",
       "tamanho": 3782
     },
     {
-      "origem": "versoes/Enxuto-1.35.16.html",
+      "origem": "versoes/Enxuto-1.35.17.html",
       "nome": "index.html",
-      "rotulo": "Vídeo Lab IA 1.35.16 (o app num arquivo só, também para usar sem instalar)",
-      "sha256": "870f717259492dd8ebf2776ee61538157bc4d5c6459fc83ccd98f2967e94f866",
-      "tamanho": 1396285
+      "rotulo": "Vídeo Lab IA 1.35.17 (o app num arquivo só, também para usar sem instalar)",
+      "sha256": "ac263590d47486431a4d9213cf55de0e6bfb86cc09ee566e9e2df775c3d02cc4",
+      "tamanho": 1569998
     },
     {
       "origem": "programa/1.35.16/Instalar-Video-Lab-IA.bat",
@@ -40,11 +40,11 @@
       "tamanho": 78047
     },
     {
-      "origem": "programa/1.35.15/videolab.pyw",
+      "origem": "programa/1.35.17/videolab.pyw",
       "nome": "videolab.pyw",
       "rotulo": "Programa do Vídeo Lab IA instalado",
-      "sha256": "37e6e26abe6aee864ee9ebf768af905e0d95a0231b7a7afe97683a6df72c3e76",
-      "tamanho": 50595
+      "sha256": "7d840dc3644b43befa336e1478f78ada2559504e2af73f1f9f1f179e38cb29d3",
+      "tamanho": 55555
     },
     {
       "origem": "bibliotecas/proxy_tools-0.1.0-py3-none-any.whl",
