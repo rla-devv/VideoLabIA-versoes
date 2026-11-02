@@ -1,20 +1,21 @@
 {
-  "versao": "1.35.17",
-  "arquivo": "Enxuto-1.35.17.html",
-  "sha256": "ac263590d47486431a4d9213cf55de0e6bfb86cc09ee566e9e2df775c3d02cc4",
-  "tamanho": 1569998,
+  "versao": "1.36.0",
+  "arquivo": "Enxuto-1.36.0.html",
+  "sha256": "927abe887dba047e89befa8e1f0aac7b99ed654e549475272fc3172c2b4cb0a3",
+  "tamanho": 1584835,
   "novidades": [
-    "Correções e melhorias."
+    "Novo: legendas animadas, palavra por palavra, com a palavra falada em destaque, como nos Reels e no TikTok. Em “Legendas automáticas”, escolha o estilo “Palavra por palavra”.",
+    "Novo: fundo. Desfoque a sala ou troque o fundo por uma cor ou uma imagem, sem tela verde: o Vídeo Lab IA separa a pessoa sozinho."
   ],
-  "data": "2026-10-23",
+  "data": "2026-11-02",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.35.17.html",
-        "sha256": "ac263590d47486431a4d9213cf55de0e6bfb86cc09ee566e9e2df775c3d02cc4",
-        "tamanho": 1569998,
-        "url": "https://github.com/rla-devv/VideoLabIA-versoes/releases/download/v1.35.17/index.html"
+        "origem": "versoes/Enxuto-1.36.0.html",
+        "sha256": "927abe887dba047e89befa8e1f0aac7b99ed654e549475272fc3172c2b4cb0a3",
+        "tamanho": 1584835,
+        "url": "https://github.com/rla-devv/VideoLabIA-versoes/releases/download/v1.36.0/index.html"
       },
       {
         "caminho": "Instalar Vídeo Lab IA.bat",
@@ -27,32 +28,32 @@
         "origem": "programa/1.26.0/LEIA-ME.txt",
         "sha256": "313e31c32662faf65b659f841a73daa266b7ef8fca69ec230ee009e13b4bb195",
         "tamanho": 1518,
-        "url": "https://github.com/rla-devv/VideoLabIA-versoes/releases/download/v1.35.17/LEIA-ME.txt"
+        "url": "https://github.com/rla-devv/VideoLabIA-versoes/releases/download/v1.36.0/LEIA-ME.txt"
       },
       {
         "caminho": "videolab.ico",
         "origem": "janela/1.8.0/assets/enxuto-v2.ico",
         "sha256": "69d88b580e67e1092300441300934dbec1c32537dc09dac7de66ba7c7ac3ba92",
         "tamanho": 78047,
-        "url": "https://github.com/rla-devv/VideoLabIA-versoes/releases/download/v1.35.17/videolab.ico"
+        "url": "https://github.com/rla-devv/VideoLabIA-versoes/releases/download/v1.36.0/videolab.ico"
       },
       {
         "caminho": "videolab.pyw",
-        "origem": "programa/1.35.17/videolab.pyw",
-        "sha256": "7d840dc3644b43befa336e1478f78ada2559504e2af73f1f9f1f179e38cb29d3",
-        "tamanho": 55555,
-        "url": "https://github.com/rla-devv/VideoLabIA-versoes/releases/download/v1.35.17/videolab.pyw"
+        "origem": "programa/1.36.0/videolab.pyw",
+        "sha256": "dcef425e3099fcf35de4dbcc718cc1362cec30a79e2f0584c49d11285c58234a",
+        "tamanho": 55823,
+        "url": "https://github.com/rla-devv/VideoLabIA-versoes/releases/download/v1.36.0/videolab.pyw"
       },
       {
         "caminho": "enxuto.pyw",
-        "origem": "programa/1.35.17/videolab.pyw",
-        "sha256": "7d840dc3644b43befa336e1478f78ada2559504e2af73f1f9f1f179e38cb29d3",
-        "tamanho": 55555
+        "origem": "programa/1.36.0/videolab.pyw",
+        "sha256": "dcef425e3099fcf35de4dbcc718cc1362cec30a79e2f0584c49d11285c58234a",
+        "tamanho": 55823
       }
     ]
   },
-  "release": "https://github.com/rla-devv/VideoLabIA-versoes/releases/tag/v1.35.17",
+  "release": "https://github.com/rla-devv/VideoLabIA-versoes/releases/tag/v1.36.0",
   "bibliotecas": {
-    "proxy_tools-0.1.0-py3-none-any.whl": "https://github.com/rla-devv/VideoLabIA-versoes/releases/download/v1.35.17/proxy_tools-0.1.0-py3-none-any.whl"
+    "proxy_tools-0.1.0-py3-none-any.whl": "https://github.com/rla-devv/VideoLabIA-versoes/releases/download/v1.36.0/proxy_tools-0.1.0-py3-none-any.whl"
   }
 }
