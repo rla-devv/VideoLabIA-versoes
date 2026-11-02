@@ -515,6 +515,12 @@ label.inline { display: inline-flex; gap: 6px; align-items: center; font-size: 0
 .tr-row mark { background: color-mix(in srgb, var(--accent) 28%, transparent); color: inherit; border-radius: 3px; }
 .t-cover, .t-bleep { width: 100%; font: inherit; padding: 7px 10px; border-radius: 9px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); }
 .cover-prev { display: block; max-width: 100%; max-height: 260px; border-radius: 8px; border: 1px solid var(--line); background: #000; }
+.cenas-lista { display: grid; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 8px; }
+.cena { display: grid; gap: 2px; font-size: 0.8rem; }
+.cena-img { padding: 0; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; aspect-ratio: 16 / 9; background: #000; cursor: pointer; }
+.cena-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cena.gone .cena-img { opacity: 0.35; }
+.cena.gone span { text-decoration: line-through; color: var(--muted); }
 .cut-list { margin: 0; padding-left: 18px; font-size: 0.84rem; display: grid; gap: 2px; }
 .gif-prev, .join-prev { max-width: 100%; border-radius: 10px; background: #000; }
 .join-ico { display: grid; place-items: center; color: var(--accent); }
@@ -664,7 +670,7 @@ body.studio-open { overflow: hidden; }
       <img class="logo" src="data:image/png;base64,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" alt="" width="44" height="44">
       <span class="brand-text">
         <span class="brand-name">Vídeo Lab IA <span class="brand-tag">- Conversão, compressão e otimização de vídeos diretamente no seu <span id="brand-onde">navegador</span>.</span></span>
-        <span class="brand-by"><span class="by-full">Desenvolvido por RLA.dev · </span>versão <span id="app-version">1.36.0</span><button class="support-pill" id="support-btn" type="button" aria-haspopup="dialog" aria-label="Apoie o projeto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.5 6.6 4.5c2.1 0 3.5 1.2 4.4 2.6.9-1.4 2.3-2.6 4.4-2.6 3.6 0 5.4 3.8 3.8 6.9C19 15.6 12 20 12 20z"/></svg><span>Apoie o projeto</span></button></span>
+        <span class="brand-by"><span class="by-full">Desenvolvido por RLA.dev · </span>versão <span id="app-version">1.37.0</span><button class="support-pill" id="support-btn" type="button" aria-haspopup="dialog" aria-label="Apoie o projeto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.5 6.6 4.5c2.1 0 3.5 1.2 4.4 2.6.9-1.4 2.3-2.6 4.4-2.6 3.6 0 5.4 3.8 3.8 6.9C19 15.6 12 20 12 20z"/></svg><span>Apoie o projeto</span></button></span>
       </span>
     </div>
     <div class="top-actions">
@@ -1943,11 +1949,13 @@ function editTagsHTML(it) {
   if (img && e.faces?.on) tags.push('Rostos escondidos');
   if (img && fundoAtivo(e)) tags.push({ blur: 'Fundo desfocado', cor: 'Fundo em cor lisa', img: 'Fundo trocado por imagem' }[e.fundo.modo]);
   if (img && s.aspect !== 'orig' && e.follow?.on) tags.push('Segue o rosto');
-  if (img && colorFilter(e.color) !== 'none') tags.push('Brilho/cor ajustados');
+  if (img && estabAtivo(e)) tags.push(`Estabilizado (${e.estab.forca})`);
+  if (img && corAtiva(e.color)) tags.push(e.color.wb ? 'Cor e luz corrigidas' : 'Brilho/cor ajustados');
   if (img && e.overlay?.text?.trim()) tags.push('Texto na imagem');
   if (img && e.overlay?.logo) tags.push('Logo');
   if (img && e.subs?.cues.length) tags.push(`${e.subs.animada ? 'Legendas animadas' : 'Legendas'} (${e.subs.cues.length})`);
-  if (e.volume?.gain || e.volume?.level) tags.push(`Volume${e.volume.gain ? ` +${e.volume.gain} dB` : ''}${e.volume.level ? ', vozes equilibradas' : ''}`);
+  if (e.somAuto) tags.push('Som melhorado (−14 LUFS)');
+  else if (e.volume?.gain || e.volume?.level) tags.push(`Volume${e.volume.gain ? ` +${e.volume.gain} dB` : ''}${e.volume.level ? ', vozes equilibradas' : ''}`);
   if ((e.speed || 1) !== 1) tags.push(`Velocidade ${String(e.speed).replace('.', ',')}×`);
   if (e.reverse) tags.push(e.reverse === 'bounce' ? 'Vai e volta' : 'Ao contrário');
   if ((e.loop || 1) > 1) tags.push(`Repete ${e.loop}×`);
@@ -1961,12 +1969,13 @@ function editTagsHTML(it) {
     if (n > 1) tags.push(`Dividido em ${n} partes`);
   }
   let mult = 1;
-  if (img && colorFilter(e.color) !== 'none') mult += 4;
+  if (img && corAtiva(e.color)) mult += COR_MULT;
   if (img && e.blurs?.length) mult += 0.6;
   if (img && (e.overlay?.text?.trim() || e.overlay?.logo)) mult += 0.6;
   if (img && e.subs?.cues.length) mult += 0.3;
   if (img && fundoAtivo(e)) mult += FUNDO_MULT(e);
-  const names = [img && fundoAtivo(e) && 'fundo trocado', img && e.blurs?.length && 'áreas escondidas', img && colorFilter(e.color) !== 'none' && 'brilho/cor', img && (e.overlay?.text?.trim() || e.overlay?.logo) && 'texto/logo', img && e.subs?.cues.length && 'legendas'].filter(Boolean);
+  if (img && estabAtivo(e)) mult += 0.3;
+  const names = [img && fundoAtivo(e) && 'fundo trocado', img && estabAtivo(e) && 'estabilização', img && e.blurs?.length && 'áreas escondidas', img && corAtiva(e.color) && 'brilho/cor', img && (e.overlay?.text?.trim() || e.overlay?.logo) && 'texto/logo', img && e.subs?.cues.length && 'legendas'].filter(Boolean);
   const slowNote = mult >= 1.5 ? `<p class="note warn slow-note">Com ${names.join(', ')}, a conversão deste vídeo deve levar cerca de ${String(Math.round(mult * 2) / 2).replace('.', ',')}× o tempo normal.</p>` : '';
   return (tags.length ? `<div class="tags">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>` : '') + slowNote;
 }
@@ -2195,18 +2204,95 @@ function makeTimeline(e) {
 }
 const outDuration = e => Math.max(0.1, makeTimeline(e).outDur);
 
-const hasPixelFx = e => !!((e.blurs && e.blurs.length) || (e.color && (e.color.b || e.color.c || e.color.s))
+const hasPixelFx = e => !!((e.blurs && e.blurs.length) || corAtiva(e.color) || estabAtivo(e)
   || (e.overlay && (e.overlay.text?.trim() || e.overlay.logo)) || (e.subs && e.subs.cues.length) || e.fade || (e.faces?.on && e.faces.list.length) || fundoAtivo(e));
-const hasAudioFx = e => !!(e.volume && (e.volume.gain || e.volume.level)) || !!e.fade || !!e.denoise || !!e.music?.buffer || !!e.bleeps?.length || (e.speed || 1) !== 1 || keepRanges(e).length > 1;
+const hasAudioFx = e => !!e.somAuto || !!(e.volume && (e.volume.gain || e.volume.level)) || !!e.fade || !!e.denoise || !!e.music?.buffer || !!e.bleeps?.length || (e.speed || 1) !== 1 || keepRanges(e).length > 1;
 const needsTimeProc = e => (e.speed || 1) !== 1 || keepRanges(e).length > 1;
 
 /* ---------- efeitos de imagem (usados na conversão, na prévia e na foto) ---------- */
 const POS = { 'se': [0, 0], 'sd': [1, 0], 'ie': [0, 1], 'id': [1, 1], 'ic': [0.5, 1] };
 const SIZE = { p: 0.035, m: 0.05, g: 0.07 };
 
+const lumTom = wb => wb ? 0.2126 * wb[0] + 0.7152 * wb[1] + 0.0722 * wb[2] : 1;
 function colorFilter(c) {
-  if (!c || !(c.b || c.c || c.s)) return 'none';
-  return `brightness(${1 + c.b / 100}) contrast(${1 + c.c / 100}) saturate(${1 + c.s / 100})`;
+  if (!c || !(c.b || c.c || c.s || c.wb)) return 'none';
+  // Com o tom corrigido, o brilho compensa o que a multiplicação por cor escurece (o tom não muda a luz).
+  return `brightness(${((1 + c.b / 100) / lumTom(c.wb)).toFixed(4)}) contrast(${1 + c.c / 100}) saturate(${1 + c.s / 100})`;
+}
+
+/* ---------- cor e luz automáticas; igualar a cor de dois vídeos ---------- */
+// O tom (tirar o amarelado ou o azulado) é um ganho por canal, aplicado multiplicando a imagem por uma cor (na placa de vídeo).
+const corAtiva = c => colorFilter(c) !== 'none';
+const COR_SPEED = 'medido com 1 min de vídeo 720p: a conversão passa de 14 s para 37 s com brilho, contraste ou cor (~2,7×) e 43 s com o tom corrigido (~3×); o ajuste automático e o igualar levam de 1 a 3 s';
+const COR_MULT = 2;
+// Primeiro o tom (antes do brilho, para as cores não estourarem em tons diferentes), depois brilho, contraste e cor,
+// redesenhando o quadro sobre ele mesmo. Só quando há tom corrigido; sem ele, o filtro vai direto no desenho do quadro.
+function aplicarTom(ctx, W, H, c) {
+  if (!c?.wb) return;
+  ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalCompositeOperation = 'multiply';
+  ctx.fillStyle = `rgb(${c.wb.map(x => Math.round(x * 255)).join(',')})`; ctx.fillRect(0, 0, W, H);
+  ctx.globalCompositeOperation = 'copy'; ctx.filter = colorFilter(c); ctx.drawImage(ctx.canvas, 0, 0);
+  ctx.restore();
+}
+// Olha 8 quadros espalhados pelo trecho escolhido (miniatura de 160 px) e mede brilho, contraste, cor e tom.
+// Com `cor`, mede como ficaria com esse ajuste.
+async function medirCor(it, cor) {
+  const e = it.edit;
+  const input = new MB.Input({ source: new MB.BlobSource(it.file), formats: MB.ALL_FORMATS });
+  try {
+    const vt = await input.getPrimaryVideoTrack();
+    const DW = await vt.getDisplayWidth(), DH = await vt.getDisplayHeight();
+    const W = 160, H = Math.max(16, Math.round(160 * DH / DW));
+    const sink = new MB.CanvasSink(vt, { width: W, height: H, fit: 'fill', rotation: vt.rotation || 0, poolSize: 1 });
+    const ts = Array.from({ length: 8 }, (_, i) => e.start + (e.end - e.start) * (i + 0.5) / 8);
+    const cv = new OffscreenCanvas(W, H), ctx = cv.getContext('2d', { willReadFrequently: true });
+    const hist = new Float64Array(256);
+    let n = 0, sum = 0, sr = 0, sg = 0, sb = 0, nm = 0, sat = 0;
+    for await (const w of sink.canvasesAtTimestamps(ts)) {
+      if (!w) continue;
+      ctx.save(); ctx.filter = cor && !cor.wb ? colorFilter(cor) : 'none'; ctx.drawImage(w.canvas, 0, 0, W, H); ctx.restore();
+      if (cor) aplicarTom(ctx, W, H, cor);
+      const d = ctx.getImageData(0, 0, W, H).data;
+      for (let i = 0; i < d.length; i += 4) {
+        const r = d[i], g = d[i + 1], b = d[i + 2], y = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+        hist[Math.min(255, y | 0)]++; n++; sum += y;
+        if (y > 25 && y < 230) { const mx = Math.max(r, g, b), mn = Math.min(r, g, b); sr += r; sg += g; sb += b; nm++; sat += mx ? (mx - mn) / mx : 0; }
+      }
+    }
+    if (!n) throw new Error('nenhum quadro');
+    const pct = q => { let a = 0; for (let i = 0; i < 256; i++) { a += hist[i]; if (a >= q * n) return i / 255; } return 1; };
+    nm = Math.max(1, nm);
+    return { y: sum / n / 255, lo: pct(0.02), hi: pct(0.98), r: sr / nm / 255 || 0.5, g: sg / nm / 255 || 0.5, b: sb / nm / 255 || 0.5, sat: sat / nm };
+  } finally { input.dispose?.(); }
+}
+const passo5 = x => Math.round(x / 5) * 5;
+// Tom com 60% da força do "cinza médio" (o normal de uma cena é ter as três cores equilibradas), no máximo 25% por
+// cor, para não estragar cenas que são coloridas de propósito (pôr do sol, mata); ganhos ≤ 1.
+function ganhosDeTom(alvo, atual) {
+  let g = [0, 1, 2].map(i => 1 + 0.6 * (alvo[i] / Math.max(0.02, atual[i]) - 1));
+  const mx = Math.max(...g); g = g.map(x => Math.round(Math.max(0.75, x / mx) * 1000) / 1000);
+  return Math.max(...g) - Math.min(...g) > 0.04 ? g : null;
+}
+function corAutomatica(st) {
+  const m = (st.r + st.g + st.b) / 3, wb = ganhosDeTom([m, m, m], [st.r, st.g, st.b]);
+  // O contraste é medido como ficaria depois do ajuste de brilho.
+  const y = st.y, spread = Math.min(1, (st.hi - st.lo) * 0.45 / Math.max(0.05, y));
+  return {
+    b: Math.abs(y - 0.45) < 0.05 ? 0 : clamp(passo5((0.45 / Math.max(0.05, y) - 1) * 75), -30, 80),
+    c: spread < 0.8 ? clamp(passo5((0.85 / Math.max(0.2, spread) - 1) * 60), 0, 30) : 0,
+    s: st.sat < 0.15 ? 20 : st.sat < 0.22 ? 10 : 0,
+    wb,
+  };
+}
+function igualarCor(meu, ref) {
+  const mM = (meu.r + meu.g + meu.b) / 3, mR = (ref.r + ref.g + ref.b) / 3;
+  const wb = ganhosDeTom([ref.r / mR, ref.g / mR, ref.b / mR], [meu.r / mM, meu.g / mM, meu.b / mM]);
+  return {
+    b: clamp(passo5((ref.y / Math.max(0.03, meu.y) - 1) * 100), -50, 80),
+    c: clamp(passo5(((ref.hi - ref.lo) / Math.max(0.1, meu.hi - meu.lo) - 1) * 100), -50, 50),
+    s: clamp(passo5((ref.sat / Math.max(0.02, meu.sat) - 1) * 100), -50, 50),
+    wb,
+  };
 }
 
 // Mapeia uma área marcada na imagem inteira (0–1) para pixels do quadro final (depois de recorte e escala).
@@ -2512,6 +2598,152 @@ async function trackObject(it, box, t0, onProg) {
   return track;
 }
 
+/* ---------- estabilizar vídeo tremido ---------- */
+// Olha todos os quadros numa versão reduzida (256 px) e mede quanto a imagem andou de um quadro para o outro, comparando
+// os perfis de claro e escuro de 3 faixas (a mediana ignora quem anda na frente da câmera). O caminho da câmera é
+// suavizado; a diferença entre o caminho real e o suave é compensada, com a imagem ampliada para não aparecer borda.
+const ESTAB_SPEED = 'medido com 1 min de vídeo 720p: medir o movimento leva 22 s, uma vez só, e a conversão passa de 15 s para 19 s (~1,3×)';
+const ESTAB = { leve: { sigma: 0.35, margem: 0.05 }, forte: { sigma: 1.5, margem: 0.09 } };
+const estabAtivo = e => !!e?.estab?.path?.length;
+function estabAt(e, t) {
+  const p = e?.estab?.path;
+  if (!p?.length) return null;
+  let lo = 0, hi = p.length - 1;
+  if (t <= p[0].t) lo = hi = 0; else if (t >= p[hi].t) lo = hi;
+  else while (lo < hi - 1) { const m = (lo + hi) >> 1; if (p[m].t <= t) lo = m; else hi = m; }
+  const a = p[lo], b = p[hi], u = b.t > a.t ? (t - a.t) / (b.t - a.t) : 0;
+  let x = a.x + (b.x - a.x) * u, y = a.y + (b.y - a.y) * u;
+  // O caminho é medido na orientação do arquivo; o giro e o espelho da edição viram o deslocamento junto.
+  const r = e.rotate || 0;
+  [x, y] = r === 90 ? [-y, x] : r === 180 ? [-x, -y] : r === 270 ? [y, -x] : [x, y];
+  if (e.flip) x = -x;
+  return { x, y, z: 1 / (1 - 2 * ESTAB[e.estab.forca].margem) };
+}
+function perfilDesloc(a, b) {   // quanto o perfil b está deslocado em relação ao a (em pixels, com fração)
+  const n = a.length, R = Math.max(3, Math.round(n * 0.08)), cost = new Float64Array(2 * R + 1);
+  for (let d = -R; d <= R; d++) {
+    let s = 0;
+    for (let i = R; i < n - R; i++) s += Math.abs(a[i] - b[i + d]);
+    cost[d + R] = s / (n - 2 * R);
+  }
+  let k = 0; for (let i = 1; i < cost.length; i++) if (cost[i] < cost[k]) k = i;
+  let frac = 0;
+  if (k > 0 && k < cost.length - 1) { const c0 = cost[k - 1], c1 = cost[k], c2 = cost[k + 1], den = c0 - 2 * c1 + c2; if (den > 0) frac = 0.5 * (c0 - c2) / den; }
+  return { d: k - R + frac, borda: k === 0 || k === cost.length - 1 };
+}
+const mediana3 = v => [...v].sort((a, b) => a - b)[1];
+async function analisarTremor(it, onProg) {
+  const e = it.edit, t0 = performance.now();
+  const input = new MB.Input({ source: new MB.BlobSource(it.file), formats: MB.ALL_FORMATS });
+  try {
+    const vt = await input.getPrimaryVideoTrack();
+    const DW = await vt.getDisplayWidth(), DH = await vt.getDisplayHeight(), k = 256 / Math.max(DW, DH);
+    const SW = Math.max(32, Math.round(DW * k)), SH = Math.max(32, Math.round(DH * k));
+    const sink = new MB.CanvasSink(vt, { width: SW, height: SH, fit: 'fill', rotation: vt.rotation || 0, poolSize: 1 });
+    const g = new Float32Array(SW * SH), ts = [], X = [0], Y = [0];
+    let prev = null, i = 0;
+    // Perfis: média de cada coluna em 3 faixas horizontais e de cada linha em 3 faixas verticais (diferença entre vizinhos,
+    // para mudanças de luz não atrapalharem).
+    const perfis = () => {
+      const cols = [0, 1, 2].map(() => new Float32Array(SW)), rows = [0, 1, 2].map(() => new Float32Array(SH));
+      for (let y = 0; y < SH; y++) { const by = Math.min(2, (3 * y / SH) | 0); for (let x = 0; x < SW; x++) { const v = g[y * SW + x], bx = Math.min(2, (3 * x / SW) | 0); cols[by][x] += v; rows[bx][y] += v; } }
+      const dif = p => { const o = new Float32Array(p.length - 1); for (let j = 0; j < o.length; j++) o[j] = p[j + 1] - p[j]; return o; };
+      return { cols: cols.map(p => dif(p.map(v => v * 3 / SH))), rows: rows.map(p => dif(p.map(v => v * 3 / SW))) };
+    };
+    const dur = Math.max(0.1, e.end - e.start);
+    for await (const w of sink.canvases(e.start, e.end)) {
+      const d = w.canvas.getContext('2d', { willReadFrequently: true }).getImageData(0, 0, SW, SH).data;
+      for (let j = 0; j < g.length; j++) g[j] = 0.3 * d[4 * j] + 0.59 * d[4 * j + 1] + 0.11 * d[4 * j + 2];
+      const pf = perfis();
+      if (prev) {
+        const hx = [0, 1, 2].map(b => perfilDesloc(prev.cols[b], pf.cols[b])), hy = [0, 1, 2].map(b => perfilDesloc(prev.rows[b], pf.rows[b]));
+        // Troca de cena ou movimento grande demais: não compensa esse passo.
+        const ok = hx.filter(h => !h.borda).length >= 2 && hy.filter(h => !h.borda).length >= 2;
+        X.push(X[X.length - 1] + (ok ? mediana3(hx.map(h => h.d)) : 0)); Y.push(Y[Y.length - 1] + (ok ? mediana3(hy.map(h => h.d)) : 0));
+      }
+      ts.push(w.timestamp); prev = pf;
+      if (++i % 30 === 0) { onProg?.(clamp((w.timestamp - e.start) / dur, 0, 1)); await new Promise(r => setTimeout(r)); }
+    }
+    return { ts, X: X.map(x => x / SW), Y: Y.map(y => y / SH), segs: (performance.now() - t0) / 1000 };
+  } finally { input.dispose?.(); }
+}
+// Caminho de correção para a força escolhida: suave (média gaussiana) − real, limitado à margem da ampliação.
+function caminhoEstab(tr, forca) {
+  const { sigma, margem } = ESTAB[forca], n = tr.ts.length;
+  if (n < 3) return [];
+  const fps = (n - 1) / Math.max(0.01, tr.ts[n - 1] - tr.ts[0]), sg = sigma * fps, R = Math.ceil(3 * sg);
+  const w = Array.from({ length: 2 * R + 1 }, (_, j) => Math.exp(-((j - R) ** 2) / (2 * sg * sg)));
+  const suave = v => v.map((_, i) => { let a = 0, b = 0; for (let j = -R; j <= R; j++) { const q = i + j; if (q < 0 || q >= n) continue; a += v[q] * w[j + R]; b += w[j + R]; } return a / b; });
+  const sx = suave(tr.X), sy = suave(tr.Y);
+  return tr.ts.map((t, i) => ({ t, x: clamp(sx[i] - tr.X[i], -margem, margem), y: clamp(sy[i] - tr.Y[i], -margem, margem) }));
+}
+
+/* ---------- detectar cenas ---------- */
+// Olha a imagem 5 vezes por segundo (miniatura de 64×36): uma troca de cena muda de uma vez as cores (histograma) e
+// o desenho da imagem. Depois, acerta o quadro exato da troca olhando os quadros entre as duas amostras.
+const CENAS_SPEED = 'a conversão não muda; procurar as cenas leva ~25 s por minuto de vídeo (medido: 1 min com 20 cenas, 25 s)';
+const CENA_PASSO = 0.2;
+async function detectarCenas(it, onProg) {
+  const D = it.info.duration, fps = it.info.fps || 30;
+  const input = new MB.Input({ source: new MB.BlobSource(it.file), formats: MB.ALL_FORMATS });
+  try {
+    const vt = await input.getPrimaryVideoTrack();
+    const W = 64, H = 36, sink = new MB.CanvasSink(vt, { width: W, height: H, fit: 'fill', rotation: vt.rotation || 0, poolSize: 1 });
+    const marca = cv => {
+      const d = cv.getContext('2d', { willReadFrequently: true }).getImageData(0, 0, W, H).data, h = new Float32Array(64), y = new Float32Array(W * H);
+      for (let i = 0, j = 0; i < d.length; i += 4, j++) { h[(d[i] >> 6) * 16 + (d[i + 1] >> 6) * 4 + (d[i + 2] >> 6)]++; y[j] = 0.3 * d[i] + 0.59 * d[i + 1] + 0.11 * d[i + 2]; }
+      for (let k = 0; k < 64; k++) h[k] /= W * H;
+      return { h, y };
+    };
+    const dist = (a, b) => { let hd = 0, ld = 0; for (let k = 0; k < 64; k++) hd += Math.abs(a.h[k] - b.h[k]); for (let k = 0; k < a.y.length; k++) ld += Math.abs(a.y[k] - b.y[k]); return { hd: hd / 2, ld: ld / a.y.length / 255 }; };
+    const ts = []; for (let t = 0; t < D - 0.05; t += CENA_PASSO) ts.push(t);
+    const tsReal = [], ds = [];
+    let prev = null, i = 0;
+    for await (const w of sink.canvasesAtTimestamps(ts)) {
+      i++;
+      if (!w) continue;
+      const m = marca(w.canvas);
+      if (prev) ds.push({ ...dist(prev, m), a: tsReal[tsReal.length - 1], b: w.timestamp });
+      tsReal.push(w.timestamp); prev = m;
+      if (i % 25 === 0) { onProg?.(0.85 * i / ts.length); await new Promise(r => setTimeout(r)); }
+    }
+    // Troca: as cores mudam muito de uma vez, bem mais que nas amostras vizinhas (movimento normal não conta).
+    const score = x => Math.max(x.hd, Math.min(1, x.ld * 2.5));
+    const cand = ds.filter((x, j) => {
+      const viz = ds.slice(Math.max(0, j - 8), j + 9).filter(o => o !== x).map(score).sort((a, b) => a - b), med = viz[viz.length >> 1] || 0;
+      return x.b > x.a && score(x) > 0.3 && (x.hd > 0.25 || x.ld > 0.12) && score(x) > 2.5 * med + 0.08;
+    });
+    // Quadro exato: entre as duas amostras, a maior mudança de um quadro para o seguinte.
+    const cortes = [];
+    for (const [ci, c] of cand.entries()) {
+      const fr = []; for (let t = c.a; t <= c.b + 1e-6; t += 1 / fps) fr.push(t);
+      let ant = null, antT = c.a, melhor = -1, tc = c.b;
+      for await (const w of sink.canvasesAtTimestamps(fr)) {
+        if (!w) continue;
+        const m = marca(w.canvas);
+        if (ant) { const sc = score(dist(ant, m)); if (sc > melhor && w.timestamp > antT) { melhor = sc; tc = w.timestamp; } }
+        ant = m; antT = w.timestamp;
+      }
+      if (!cortes.length || tc - cortes[cortes.length - 1] >= 1) cortes.push(tc);
+      onProg?.(0.85 + 0.1 * (ci + 1) / cand.length);
+    }
+    const lim = [0, ...cortes.filter(t => t > 0.5 && t < D - 0.5), D];
+    const cenas = lim.slice(0, -1).map((s, j) => ({ s, e: lim[j + 1] }));
+    // Miniatura de cada cena (160 px), no meio do primeiro segundo.
+    const ms = new MB.CanvasSink(vt, { width: 160, height: Math.max(16, Math.round(160 * it.info.height / it.info.width)), fit: 'fill', rotation: vt.rotation || 0, poolSize: 1 });
+    let j = 0;
+    for await (const w of ms.canvasesAtTimestamps(cenas.map(c => c.s + Math.min(0.5, (c.e - c.s) / 2)))) {
+      const c = cenas[j++];
+      if (!w) continue;
+      const oc = new OffscreenCanvas(w.canvas.width, w.canvas.height); oc.getContext('2d').drawImage(w.canvas, 0, 0);
+      c.thumb = URL.createObjectURL(await oc.convertToBlob({ type: 'image/jpeg', quality: 0.75 }));
+    }
+    onProg?.(1);
+    return cenas;
+  } finally { input.dispose?.(); }
+}
+const cenaRemovida = (e, c) => e.cuts.some(x => x.scene && Math.abs(x.s - c.s) < 0.01 && Math.abs(x.e - c.e) < 0.01);
+
 function rectToOut(r, g, W, H) {
   const cr = g.crop || { left: 0, top: 0, width: g.fullW, height: g.fullH };
   const kx = W / cr.width, ky = H / cr.height;
@@ -2522,9 +2754,16 @@ let mosaicCanvas = null;
 // Desenha o quadro com todos os efeitos de imagem. drawBase(ctx) desenha a imagem original já no tamanho W×H.
 function drawFrameFx(ctx, W, H, drawBase, e, g, tSrc, tOut, totalOut) {
   ctx.save();
-  ctx.filter = colorFilter(e.color);
+  if (!e.color?.wb) ctx.filter = colorFilter(e.color);
+  const es = estabAt(e, tSrc);
+  if (es) {   // estabilizar: amplia um pouco e desloca o quadro ao contrário da tremida
+    const cr = g.crop || { width: g.fullW, height: g.fullH }, z = es.z, mx = (z - 1) / (2 * z);
+    const dx = clamp(es.x * g.fullW * W / cr.width, -mx * W, mx * W), dy = clamp(es.y * g.fullH * H / cr.height, -mx * H, mx * H);
+    ctx.translate(W / 2, H / 2); ctx.scale(z, z); ctx.translate(-W / 2 + dx, -H / 2 + dy);
+  }
   drawBase(ctx);
   ctx.restore();
+  aplicarTom(ctx, W, H, e.color);
   aplicarFundo(ctx, W, H, e, tSrc);
   for (const r of e.blurs || []) hideRect(ctx, W, H, rectToOut(blurRectAt(r, e, tSrc), g, W, H), e.blurMode || 'solid');
   for (const r of faceBoxesAt(e, tSrc)) hideRect(ctx, W, H, rectToOut(r, g, W, H), e.faces.mode || 'mosaic');
@@ -2740,6 +2979,63 @@ class Denoiser {
 // A música toca em repetição por baixo do som do vídeo. Quando alguém fala, ela abaixa sozinha para 25%
 // (desce em ~0,15 s e volta em ~0,6 s, sem trancos); surge no começo e some no fim.
 const MUSIC_SPEED = 'medido: vídeo de 1 min, 14,0 s sem e 14,5 s com música';
+/* ---------- melhorar o som com um clique ---------- */
+// Junta o que um técnico de som faria numa fala gravada no celular: tira o ronco grave (abaixo de 80 Hz), reduz o
+// chiado (redução de ruído leve), equilibra as vozes e deixa no volume que YouTube, Instagram e TikTok usam (−14 LUFS,
+// medido com o mesmo filtro da norma BS.1770 que eles usam). O volume é acompanhado nos últimos ~3 s de fala; pausas
+// não contam, para o volume não subir no silêncio.
+const SOM_ALVO = -14;
+const SOM_SPEED = 'medido com 1 min de fala: 13,7 s sem e 13,6 s com a melhora (o volume final ficou em −14,9 LUFS numa gravação de −41 LUFS)';
+function biquad(b0, b1, b2, a1, a2) {
+  let x1 = 0, x2 = 0, y1 = 0, y2 = 0;
+  return x => { const y = b0 * x + b1 * x1 + b2 * x2 - a1 * y1 - a2 * y2; x2 = x1; x1 = x; y2 = y1; y1 = y; return y; };
+}
+function passaAltas(f0, Q, sr) {
+  const w = 2 * Math.PI * f0 / sr, al = Math.sin(w) / (2 * Q), c = Math.cos(w), a0 = 1 + al;
+  return biquad((1 + c) / 2 / a0, -(1 + c) / a0, (1 + c) / 2 / a0, -2 * c / a0, (1 - al) / a0);
+}
+function filtroK(sr) {   // pré-filtro da BS.1770 (prateleira de agudos + passa-altas), para qualquer taxa de amostragem
+  const f0 = 1681.974450955533, G = 3.999843853973347, Q = 0.7071752369554196;
+  const K = Math.tan(Math.PI * f0 / sr), Vh = Math.pow(10, G / 20), Vb = Math.pow(Vh, 0.4996667741545416);
+  const a0 = 1 + K / Q + K * K;
+  const sh = biquad((Vh + Vb * K / Q + K * K) / a0, 2 * (K * K - Vh) / a0, (Vh - Vb * K / Q + K * K) / a0, 2 * (K * K - 1) / a0, (1 - K / Q + K * K) / a0);
+  const hp = passaAltas(38.13547087602444, 0.5003270373238773, sr);
+  return x => hp(sh(x));
+}
+class MelhorarSom {
+  constructor(ch, sr) {
+    Object.assign(this, { ch, sr, blk: Math.round(sr * 0.1), acc: 0, n: 0, ring: [], env: 0, gDb: null, alvo: 0 });
+    this.hp = Array.from({ length: ch }, () => passaAltas(80, 0.7071, sr));
+    this.k = Array.from({ length: ch }, () => filtroK(sr));
+    this.att = Math.exp(-1 / (sr * 0.005)); this.rel = Math.exp(-1 / (sr * 0.25)); this.suave = Math.exp(-1 / (sr * 0.8));
+  }
+  push(planes) {
+    const { ch, hp, k } = this, m = planes[0].length;
+    for (let i = 0; i < m; i++) {
+      let peak = 0;
+      for (let c = 0; c < ch; c++) { const x = hp[c](planes[c][i]); planes[c][i] = x; peak = Math.max(peak, Math.abs(x)); }
+      // Equilibrar as vozes: o mesmo compressor da ferramenta Volume (3:1 acima de −26 dB).
+      this.env = peak > this.env ? this.att * this.env + (1 - this.att) * peak : this.rel * this.env + (1 - this.rel) * peak;
+      const over = 20 * Math.log10(this.env + 1e-9) + 26, gl = Math.pow(10, ((over > 0 ? -over * (2 / 3) : 0) + 8) / 20);
+      for (let c = 0; c < ch; c++) { const y = planes[c][i] * gl; planes[c][i] = y; const kk = k[c](y); this.acc += kk * kk; }
+      if (++this.n === this.blk) {
+        const ms = this.acc / this.blk, lb = -0.691 + 10 * Math.log10(ms + 1e-12);
+        if (lb > -45) {   // só blocos com som (fala ou música); pausas não mexem no volume
+          this.ring.push(ms); if (this.ring.length > 30) this.ring.shift();
+          const L = -0.691 + 10 * Math.log10(this.ring.reduce((a, b) => a + b, 0) / this.ring.length);
+          this.alvo = clamp(SOM_ALVO - L, -15, 20);
+          if (this.gDb === null) this.gDb = this.alvo;
+        }
+        this.acc = 0; this.n = 0;
+      }
+      if (this.gDb !== null) this.gDb = this.alvo + (this.gDb - this.alvo) * this.suave;
+      const g = Math.pow(10, (this.gDb ?? 0) / 20);
+      for (let c = 0; c < ch; c++) planes[c][i] *= g;
+    }
+    return planes;
+  }
+}
+
 class MusicMixer {
   constructor(m, sr, total) {
     Object.assign(this, { m, sr, total, env: 0, duck: 1 });
@@ -2824,8 +3120,9 @@ class TimeStretch {
 }
 
 function makeAudioProcess(e, tl, trimStart, w0, w1) {
-  let written = 0, stretch = null, env = 0, dn = null, mus = null;
-  const vol = e.volume || {}, gainLin = Math.pow(10, (vol.gain || 0) / 20);
+  let written = 0, stretch = null, env = 0, dn = null, mus = null, ms = null;
+  const auto = !!e.somAuto, vol = auto ? {} : e.volume || {}, gainLin = Math.pow(10, (vol.gain || 0) / 20);
+  const dnNivel = e.denoise || (auto ? 1 : 0);
   const total = tl.outDur;
   return sample => {
     const sr = sample.sampleRate, ch = sample.numberOfChannels, n = sample.numberOfFrames;
@@ -2847,7 +3144,8 @@ function makeAudioProcess(e, tl, trimStart, w0, w1) {
     }
     if (!pieces.length) return null;
     let data = planes.map(p => { const len = pieces.reduce((x, [a, b]) => x + b - a, 0), t = new Float32Array(len); let o = 0; for (const [a, b] of pieces) { t.set(p.subarray(a, b), o); o += b - a; } return t; });
-    if (e.denoise) { dn ??= new Denoiser(ch, sr, e.denoise); data = dn.push(data); if (!data[0].length) return null; }
+    if (dnNivel) { dn ??= new Denoiser(ch, sr, dnNivel); data = dn.push(data); if (!data[0].length) return null; }
+    if (auto) { ms ??= new MelhorarSom(ch, sr); data = ms.push(data); }
     if (tl.speed !== 1) { stretch ??= new TimeStretch(ch, sr, tl.speed); data = stretch.push(data); }
     const m = data[0].length;
     if (!m) return null;
@@ -2898,7 +3196,7 @@ function makeVideoProcess(e, g, tl, trimStart, w0, w1, outFps) {
       lastIdx = idx; ts = idx / outFps;
     }
     const dur = dropForSpeed ? 1 / outFps : sample.duration / tl.speed;
-    const needPx = pixel && (e.blurs?.length || e.overlay?.text?.trim() || e.overlay?.logo || colorFilter(e.color) !== 'none'
+    const needPx = pixel && (e.blurs?.length || e.overlay?.text?.trim() || e.overlay?.logo || corAtiva(e.color) || estabAtivo(e)
       || (e.fade && (tOut < e.fade || tl.outDur - tOut < e.fade)) || e.subs?.cues.some(c => tSrc >= c.s && tSrc < c.e) || faceBoxesAt(e, tSrc).length || fundoAtivo(e));
     if (follow) {
       const W = g.width, H = g.height, gF = followCrop(g, e, tSrc), k = sample.displayWidth / g.fullW, cr = gF.crop;
@@ -2920,17 +3218,19 @@ const SILENCE_SPEED = 'medido: a análise leva ~0,7 s por minuto de vídeo, e a 
 // (os 10% mais baixos) e a fala (os 10% mais altos), então funciona com ventilador, ar-condicionado ou chiado.
 // Prévia da redução de ruído: processa 8 s a partir de t e toca (para comparar com o original).
 let dnPlayer = null;
-async function previewDenoise(it, t, level, withMusic = false) {
+async function previewDenoise(it, t, level, withMusic = false, somAuto = false) {
   try { dnPlayer?.stop(); } catch {}
   const input = new MB.Input({ source: new MB.BlobSource(it.file), formats: MB.ALL_FORMATS });
   const at = await input.getPrimaryAudioTrack();
   const t0 = performance.now(), parts = [];
-  let dn = null, sr = 48000, ch = 1;
+  let dn = null, ms = null, sr = 48000, ch = 1;
+  if (somAuto) level ||= 1;
   for await (const smp of new MB.AudioSampleSink(at).samples(t, t + 8)) {
     sr = smp.sampleRate; ch = smp.numberOfChannels;
     let planes = Array.from({ length: ch }, (_, c) => { const a = new Float32Array(smp.numberOfFrames); smp.copyTo(a, { planeIndex: c, format: 'f32-planar' }); return a; });
     smp.close();
     if (level) { dn ??= new Denoiser(ch, sr, level); planes = dn.push(planes); }
+    if (somAuto && planes[0].length) { ms ??= new MelhorarSom(ch, sr); planes = ms.push(planes); }
     if (planes[0].length) parts.push(planes);
   }
   if (withMusic && it.edit.music?.buffer) {   // mistura a música como na conversão (o trecho é tratado como o meio do vídeo)
@@ -3309,6 +3609,12 @@ function splitParts(it, p) {
   const total = outDuration(it.edit);
   if (!sp || sp.mode === 'none') return [p];
   let partDur;
+  if (sp.mode === 'cenas') {   // uma parte por cena (as removidas já saíram da linha do tempo)
+    const tl = makeTimeline(it.edit), lim = [0];
+    for (const o of (sp.cenas || []).map(t => tl.toOut(t)).filter(o => o !== null).sort((a, b) => a - b)) if (o - lim[lim.length - 1] >= 0.5 && total - o >= 0.5) lim.push(o);
+    if (lim.length < 2) return [p];
+    return lim.map((o0, i) => ({ ...p, part: { o0, o1: i === lim.length - 1 ? total + 1 : lim[i + 1], idx: i + 1, n: lim.length } }));
+  }
   if (sp.mode === 'time') partDur = Math.max(10, sp.minutes * 60);
   else {
     const rate = p.kind === 'audio' ? p.aBps / 8 : p.estBytes / total;
@@ -3333,6 +3639,10 @@ const TI = {
   rotate: '<path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/>',
   blur: '<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/>',
   faces: '<circle cx="12" cy="12" r="9"/><path d="M9 10h.01M15 10h.01M8.5 15c1 1 2.2 1.5 3.5 1.5s2.5-.5 3.5-1.5"/>',
+  somauto: '<path d="M3 10h3l4-3.5v11L6 14H3z"/><path d="M14 9.5a3.5 3.5 0 0 1 0 5"/><path d="M18.5 3l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/><path d="M18 13l.6 1.6 1.6.6-1.6.6-.6 1.6-.6-1.6-1.6-.6 1.6-.6z"/>',
+  estab: '<rect x="5" y="7" width="14" height="10" rx="1.5"/><path d="M2 9v6M22 9v6"/><path d="M9 3h6M9 21h6"/><circle cx="12" cy="12" r="2"/>',
+  cenas: '<rect x="2" y="5" width="6" height="6" rx="1"/><rect x="9" y="5" width="6" height="6" rx="1"/><rect x="16" y="5" width="6" height="6" rx="1"/><path d="M2 15h20M2 19h12"/>',
+  igualar: '<circle cx="8" cy="12" r="5"/><circle cx="16" cy="12" r="5"/><path d="M12 8.5v7"/>',
   fundo: '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="12" cy="11" r="3"/><path d="M6.5 20c1-3 3-4.5 5.5-4.5s4.5 1.5 5.5 4.5"/><path d="M3 9l5-5M3 14l10-10M16 4l5 5M18 10l3 3" stroke-width="1.2"/>',
   follow: '<rect x="7" y="2" width="10" height="20" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 17c.8-2 2-3 3.5-3s2.7 1 3.5 3"/>',
   color: '<circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/>',
@@ -3365,17 +3675,17 @@ const TI = {
 };
 // Ferramentas do editor, na ordem da barra lateral. IA = reconhecimento de voz ou de rostos, no próprio computador.
 const ED_GROUPS = [
-  ['Cortar', ['trim', 'cuts', 'deadends', 'silence', 'transcript']],
-  ['Imagem', ['rotate', 'blur', 'faces', 'fundo', 'follow', 'color']],
+  ['Cortar', ['trim', 'cuts', 'cenas', 'deadends', 'silence', 'transcript']],
+  ['Imagem', ['rotate', 'estab', 'blur', 'faces', 'fundo', 'follow', 'color']],
   ['Texto e legendas', ['overlay', 'autosubs', 'subs']],
-  ['Som', ['volume', 'denoise', 'music', 'bleep']],
+  ['Som', ['somauto', 'volume', 'denoise', 'music', 'bleep']],
   ['Tempo', ['speed', 'loop', 'fade']],
   ['Salvar também', ['split', 'photo', 'cover']],
 ];
-const ED_NAME = { trim: 'Início e fim', cuts: 'Tirar trechos do meio', deadends: 'Pular a espera', silence: 'Cortar silêncios', transcript: 'Transcrição e busca',
+const ED_NAME = { trim: 'Início e fim', cuts: 'Tirar trechos do meio', cenas: 'Detectar cenas', estab: 'Estabilizar', deadends: 'Pular a espera', silence: 'Cortar silêncios', transcript: 'Transcrição e busca',
   rotate: 'Girar e espelhar', blur: 'Esconder áreas', faces: 'Esconder rostos', fundo: 'Fundo', follow: 'Seguir o rosto', color: 'Brilho e cor',
   overlay: 'Texto ou logo', autosubs: 'Legendas automáticas', subs: 'Legendas de arquivo',
-  volume: 'Volume', denoise: 'Reduzir ruído', music: 'Música de fundo', bleep: 'Bipe em palavras',
+  somauto: 'Melhorar o som', volume: 'Volume', denoise: 'Reduzir ruído', music: 'Música de fundo', bleep: 'Bipe em palavras',
   speed: 'Velocidade', loop: 'Ao contrário e repetição', fade: 'Início e fim suaves',
   split: 'Dividir em partes', photo: 'Capturar foto', cover: 'Capa (miniatura)' };
 const ED_IA = new Set(['transcript', 'faces', 'fundo', 'follow', 'autosubs', 'bleep']);
@@ -3384,7 +3694,7 @@ function toolOn(id, it) {
   const e = it.edit, D = it.info.duration;
   switch (id) {
     case 'trim': return e.start > 0.05 || e.end < D - 0.05;
-    case 'cuts': return e.cuts.some(c => !c.auto && !c.text);
+    case 'cuts': return e.cuts.some(c => !c.auto && !c.text && !c.scene);
     case 'deadends': return !!it.deadPrev;
     case 'silence': return e.cuts.some(c => c.auto);
     case 'transcript': return e.cuts.some(c => c.text);
@@ -3393,10 +3703,13 @@ function toolOn(id, it) {
     case 'faces': return !!e.faces?.on;
     case 'fundo': return fundoAtivo(e);
     case 'follow': return !!e.follow?.on;
-    case 'color': return colorFilter(e.color) !== 'none';
+    case 'color': return corAtiva(e.color);
+    case 'estab': return estabAtivo(e);
+    case 'cenas': return e.cuts.some(c => c.scene) || e.split.mode === 'cenas';
     case 'overlay': return !!(e.overlay.text.trim() || e.overlay.logo);
     case 'autosubs': return e.subs.name === ASR_NAME && e.subs.cues.length > 0;
     case 'subs': return e.subs.name !== ASR_NAME && e.subs.cues.length > 0;
+    case 'somauto': return !!e.somAuto;
     case 'volume': return !!(e.volume.gain || e.volume.level);
     case 'denoise': return !!e.denoise;
     case 'music': return !!e.music?.buffer;
@@ -3422,6 +3735,8 @@ const SPEED = {
 };
 const speedBadge = (k, extra = '') => `<span class="speed ${SPEED[k][0]}">${SPEED[k][1]}${extra ? ` · ${extra}` : ''}</span>`;
 
+// Outros vídeos da lista que servem de referência para igualar a cor.
+const corRefs = it => items.filter(i => i !== it && i.info && !i.info.legacy && i.info.hasVideo !== false && i.edit);
 function toolHTML(id, title, what, facts, speed, body) {
   return `<section class="tool" data-tool="${id}">
     <div class="tool-head"><h4>${title}</h4>${speed}</div>
@@ -3442,9 +3757,10 @@ function copiedNames(e) {
   if (e.faces?.on) n.push('esconder rostos');
   if (fundoAtivo(e)) n.push('fundo');
   if (e.follow?.on) n.push('seguir o rosto');
-  if (colorFilter(e.color) !== 'none') n.push('brilho e cor');
+  if (corAtiva(e.color)) n.push('brilho e cor');
   if (e.overlay.text.trim()) n.push('texto');
   if (e.overlay.logo) n.push('logo');
+  if (e.somAuto) n.push('som melhorado');
   if (e.volume.gain || e.volume.level) n.push('volume');
   if (e.denoise) n.push('redução de ruído');
   if (e.music?.buffer) n.push('música de fundo');
@@ -3460,8 +3776,8 @@ function copyEdits(from, list) {
   for (const it of list) {
     const t = it.edit;
     Object.assign(t, {
-      rotate: e.rotate, flip: e.flip, blurs: e.blurs.map(({ track, ...r }) => ({ ...r })), blurMode: e.blurMode, color: { ...e.color },
-      overlay: { ...e.overlay }, volume: { ...e.volume }, denoise: e.denoise || 0, speed: e.speed, fade: e.fade, split: { ...e.split },
+      rotate: e.rotate, flip: e.flip, blurs: e.blurs.map(({ track, ...r }) => ({ ...r })), blurMode: e.blurMode, color: { ...e.color, wb: e.color.wb ? [...e.color.wb] : null },
+      overlay: { ...e.overlay }, volume: { ...e.volume }, somAuto: !!e.somAuto, denoise: e.denoise || 0, speed: e.speed, fade: e.fade, split: e.split.mode === 'cenas' ? { ...e.split, mode: 'none', cenas: null } : { ...e.split },
       reverse: e.reverse || null, loop: e.loop || 1, music: e.music?.buffer ? { ...e.music } : null,
       faces: e.faces?.on ? { on: true, mode: e.faces.mode || 'mosaic', list: null, pending: true } : null,
       follow: e.follow?.on ? { on: true, list: null, pending: true } : null,
@@ -3491,9 +3807,9 @@ async function pendingFaces(it, onStage) {
 
 function defaultEdit(info) {
   return { start: 0, end: info.duration, rotate: 0, flip: false, crop: null, cuts: [], blurs: [], blurMode: 'solid', speed: 1, fade: 0,
-    volume: { gain: 0, level: false }, color: { b: 0, c: 0, s: 0 },
+    volume: { gain: 0, level: false }, somAuto: false, color: { b: 0, c: 0, s: 0 },
     overlay: { text: '', pos: 'ie', size: 'm', logo: null, logoName: '', logoPos: 'sd', logoSize: 'm' },
-    subs: { cues: [], name: '' }, split: { mode: 'none', minutes: 30, mb: 25 }, fundo: null };
+    subs: { cues: [], name: '' }, split: { mode: 'none', minutes: 30, mb: 25 }, fundo: null, estab: null };
 }
 
 function editorTabsHTML(it, s) {
@@ -3513,6 +3829,13 @@ function editorTabsHTML(it, s) {
       speedBadge('faster', DEAD_SPEED),
       `<div class="grp"><button class="small primary" data-e="dead-run">Encontrar início e fim</button>${it.deadPrev ? '<button class="link" data-e="dead-undo">Desfazer</button>' : ''}</div>
        <p class="note dead-info">${esc(it.deadInfo || '')}</p>`),
+    info.legacy ? '' : toolHTML('cenas', 'Detectar cenas', 'Encontra sozinho cada troca de cena (corte de câmera, outro lugar, outro assunto) e mostra uma miniatura de cada uma. Daí é só tirar as cenas que não quer ou salvar cada cena num arquivo.',
+      ['Olha a imagem 5 vezes por segundo e acerta o quadro exato de cada troca.', 'Clique na miniatura para ver a cena na prévia.',
+       'Trocas suaves (uma imagem se dissolvendo na outra) e cenas com menos de 1 s podem passar despercebidas.'],
+      speedBadge('none', CENAS_SPEED),
+      `<div class="grp"><button class="small primary" data-e="cenas-run" ${it.cenaBusy ? 'disabled' : ''}>${it.cenas ? 'Procurar de novo' : 'Procurar cenas'}</button>${it.cenas?.length > 1 ? `<button class="small" data-e="cenas-split">${e.split.mode === 'cenas' ? 'Não salvar separado' : 'Salvar cada cena num arquivo'}</button>` : ''}</div>
+       <p class="note cenas-info">${esc(it.cenasInfo || '')}</p>
+       ${it.cenas?.length > 1 ? `<div class="cenas-lista">${it.cenas.map((c, i) => { const fora = cenaRemovida(e, c); return `<div class="cena${fora ? ' gone' : ''}"><button type="button" class="cena-img" data-cena-ver="${i}" title="Ver na prévia">${c.thumb ? `<img src="${c.thumb}" alt="">` : ''}</button><span>${i + 1}. ${fmtTime(c.s)}–${fmtTime(c.e)}</span><button class="link" data-cena-tirar="${i}">${fora ? 'Manter' : 'Tirar'}</button></div>`; }).join('')}</div>` : ''}`),
     toolHTML('cuts', 'Remover trechos do meio', 'Tira partes do meio do vídeo, como intervalos, conversas paralelas ou a espera antes de começar. O resto é emendado.',
       ['Ande até o ponto na prévia e marque o começo e o fim de cada trecho.', 'Pode remover vários trechos.', 'Quando há trechos removidos, o som é sempre recodificado (perda mínima, imperceptível).'],
       speedBadge('small'),
@@ -3587,10 +3910,24 @@ function editorTabsHTML(it, s) {
        <p class="note follow-info">${esc(it.followInfo || (e.follow?.pending ? 'Os rostos serão procurados ao processar.' : ''))}</p>
        ${e.follow?.list ? `<label class="inline"><input type="checkbox" class="c-follow" ${e.follow.on ? 'checked' : ''}> Seguir o rosto</label>` : ''}`),
     toolHTML('color', 'Brilho, contraste e cor', 'Clareia vídeos escuros, dá mais definição ou deixa as cores mais vivas.',
-      ['O ajuste vale para o vídeo inteiro.', 'A prévia mostra o resultado.'],
-      speedBadge('slow', 'cerca de 5× mais tempo; é o efeito mais pesado'),
-      ['b', 'c', 's'].map(k => `<div class="ed-row"><span>${{ b: 'Brilho', c: 'Contraste', s: 'Cor' }[k]}</span><input type="range" class="r-color" data-k="${k}" min="-50" max="50" step="5" value="${e.color[k]}"><b class="t-color-${k}"></b></div>`).join('')
-      + `<button class="link" data-e="color-reset">Voltar ao normal</button>`),
+      ['O ajuste vale para o vídeo inteiro.', 'A prévia mostra o resultado.',
+       '“Ajuste automático”: olha 8 quadros e acerta brilho, contraste, cor e o tom (tira o amarelado ou o azulado). Depois, dá para mexer nas barras.',
+       '“Igualar”: deixa este vídeo com a luz e a cor de outro da lista. Bom para juntar gravações de celulares ou câmeras diferentes.'],
+      speedBadge('slow', COR_SPEED),
+      ['b', 'c', 's'].map(k => `<div class="ed-row"><span>${{ b: 'Brilho', c: 'Contraste', s: 'Cor' }[k]}</span><input type="range" class="r-color" data-k="${k}" min="-50" max="${k === 'b' ? 80 : 50}" step="5" value="${e.color[k]}"><b class="t-color-${k}"></b></div>`).join('')
+      + (info.legacy ? '' : `<div class="grp"><button class="small primary" data-e="color-auto">Ajuste automático</button></div>
+       ${corRefs(it).length ? `<div class="grp"><select class="s-color-ref" aria-label="Vídeo de referência">${corRefs(it).map(o => `<option value="${o.id}">${esc(o.file.name)}</option>`).join('')}</select><button class="small" data-e="color-match">Igualar a este vídeo</button></div>` : ''}`)
+      + `${e.color.wb || it.tomGuardado ? `<label class="inline"><input type="checkbox" class="c-tom" ${e.color.wb ? 'checked' : ''}> Corrigir o tom da cor</label>` : ''}
+       <p class="note color-info">${esc(it.colorInfo || '')}</p>
+       <button class="link" data-e="color-reset">Voltar ao normal</button>`),
+    info.legacy ? '' : toolHTML('estab', 'Estabilizar vídeo tremido', 'Tira a tremedeira de quem gravou com o celular na mão: o app acompanha o movimento da imagem e compensa, e o vídeo fica mais firme.',
+      ['Analisa cada quadro, no seu computador, uma vez só; depois dá para trocar entre Leve e Forte na hora.',
+       'Para compensar, a imagem é ampliada um pouco: Leve corta 5% de cada borda, Forte 9%.',
+       'Leve tira só a tremedeira e mantém os movimentos de propósito (virar a câmera para outro lado). Forte deixa a câmera quase parada, como num tripé.',
+       'Corrige o movimento para os lados e para cima e para baixo; giros da câmera e a imagem “borrada” pela tremida continuam.'],
+      speedBadge('some', ESTAB_SPEED),
+      `${segOpt('estab', [['off', 'Desligado'], ['leve', 'Leve'], ['forte', 'Forte']], e.estab?.forca || 'off')}
+       <p class="note estab-info">${esc(it.estabInfo || '')}</p>`),
     toolHTML('overlay', 'Texto ou logo na imagem', 'Coloca um texto (nome da escola, data, “Uso interno”) e/ou uma imagem de logo num canto do vídeo, do começo ao fim.',
       ['O logo pode ser PNG com fundo transparente.', 'O texto tem contorno escuro para ficar legível em qualquer fundo.'],
       speedBadge('some', 'cerca de 1,5× mais tempo'),
@@ -3622,6 +3959,12 @@ function editorTabsHTML(it, s) {
   ].join('');
 
   const snd = [
+    hasA ? toolHTML('somauto', 'Melhorar o som', 'Com um clique, deixa a fala mais limpa e no volume certo para as redes: tira o ronco grave e o chiado, equilibra as vozes e acerta o volume.',
+      ['O volume final fica no padrão de YouTube, Instagram e TikTok (−14 LUFS), sem estourar.', 'Pausas não contam: o volume não sobe no silêncio.', 'Substitui o ajuste da ferramenta Volume e liga junto a Redução de ruído (no mínimo Leve).', 'Ouça um trecho antes de converter. O som é recodificado.'],
+      speedBadge('small', SOM_SPEED),
+      `<label class="inline"><input type="checkbox" class="c-somauto" ${e.somAuto ? 'checked' : ''}> Melhorar o som</label>
+       <div class="grp"><button class="small" data-e="som-try">Ouvir 8 s melhorado</button><button class="small" data-e="dn-orig">Ouvir o original</button></div>
+       <p class="note som-info">Toca 8 segundos a partir do ponto da prévia.</p>`) : '',
     hasA ? toolHTML('volume', 'Volume e equilíbrio', 'Aumenta o volume de gravações baixas e, se quiser, equilibra as vozes: quem fala baixo fica mais alto e quem fala alto não estoura.',
       ['“Ajuste automático” usa a análise do som para chegar a um volume confortável.', 'Picos são suavizados para não distorcer.', 'O som é recodificado (perda mínima, imperceptível).'],
       speedBadge('some', 'só o som é processado'),
@@ -3669,7 +4012,7 @@ function editorTabsHTML(it, s) {
     toolHTML('split', 'Dividir em partes', 'Quebra o vídeo em vários arquivos menores, por duração ou por tamanho. Útil para limites de e-mail, WhatsApp ou upload.',
       ['Cada parte vira um arquivo separado, com seu próprio botão de download.', 'As partes têm a mesma duração; o tamanho é aproximado.', 'Funciona junto com todas as outras ferramentas.'],
       speedBadge('none', 'o tempo total é o mesmo'),
-      `${segOpt('split', [['none', 'Não dividir'], ['time', 'Por duração'], ['size', 'Por tamanho']], e.split.mode)}
+      `${segOpt('split', [['none', 'Não dividir'], ['time', 'Por duração'], ['size', 'Por tamanho'], ...(it.cenas?.length > 1 || e.split.mode === 'cenas' ? [['cenas', 'Por cena']] : [])], e.split.mode)}
        <div class="ed-row2 split-time" ${e.split.mode === 'time' ? '' : 'hidden'}><span>Cada parte com</span><input type="number" class="n-split-min" min="1" step="1" value="${e.split.minutes}"> <span class="hint">minutos</span></div>
        <div class="ed-row2 split-size" ${e.split.mode === 'size' ? '' : 'hidden'}><span>Cada parte com até</span><input type="number" class="n-split-mb" min="1" step="1" value="${e.split.mb}"> <span class="hint">MB</span></div>
        <p class="note split-info"></p>`),
@@ -3828,7 +4171,7 @@ function openEditor(it) {
     if (q('.t-start')) { q('.t-start').textContent = fmtTimeFine(e.start); q('.t-end').textContent = fmtTimeFine(e.end); }
     const rl = q('.rot-label'); if (rl) rl.textContent = e.rotate + '°';
     const cl = q('.cut-list');
-    if (cl) cl.innerHTML = e.cuts.map((c, i) => `<li>${c.auto ? 'Pausa removida' : c.text ? 'Frase removida' : 'Removido'}: ${fmtTimeFine(c.s)} a ${fmtTimeFine(c.e)} (${fmtTime(c.e - c.s)}) <button class="link" data-cut="${i}">desfazer</button></li>`).join('');
+    if (cl) cl.innerHTML = e.cuts.map((c, i) => `<li>${c.auto ? 'Pausa removida' : c.text ? 'Frase removida' : c.scene ? 'Cena removida' : 'Removido'}: ${fmtTimeFine(c.s)} a ${fmtTimeFine(c.e)} (${fmtTime(c.e - c.s)}) <button class="link" data-cut="${i}">desfazer</button></li>`).join('');
     const sil = q('.sil-info'); if (sil) sil.textContent = it.silInfo || '';
     wrap.querySelectorAll('.tr-row[data-row]').forEach(row => { const c = it.asrCues[Number(row.dataset.row)]; row.classList.toggle('gone', e.cuts.some(x => x.s <= c.s + 0.05 && x.e >= c.e - 0.05)); });
     const cp = q('.cut-pending');
@@ -3842,7 +4185,7 @@ function openEditor(it) {
     if (si) {
       const p0 = plansFor(it)[0];
       const n = p0 && !p0.error ? partsCount(it, p0) : 1;
-      si.textContent = e.split.mode === 'none' ? '' : n > 1 ? `Vai gerar ${n} partes de cerca de ${fmtTime(tl.outDur / n)} cada.` : 'O vídeo já cabe em uma parte só.';
+      si.textContent = e.split.mode === 'none' ? '' : n > 1 ? (e.split.mode === 'cenas' ? `Vai gerar ${n} partes, uma por cena.` : `Vai gerar ${n} partes de cerca de ${fmtTime(tl.outDur / n)} cada.`) : 'O vídeo já cabe em uma parte só.';
       q('.split-time').hidden = e.split.mode !== 'time'; q('.split-size').hidden = e.split.mode !== 'size';
     }
     wrap.querySelectorAll('[data-go]').forEach(b => b.classList.toggle('on', toolOn(b.dataset.go, it)));
@@ -3913,7 +4256,26 @@ function openEditor(it) {
         const el = q('.asr-info'); if (el) el.textContent = it.asrInfo;
       }
     }
-    if (name === 'split') e.split.mode = val;
+    if (name === 'split') { e.split.mode = val; if (val === 'cenas') e.split.cenas = (it.cenas || []).slice(1).map(c => c.s); }
+    if (name === 'estab') {
+      if (val === 'off') { e.estab = null; it.estabInfo = ''; const el = q('.estab-info'); if (el) el.textContent = ''; }
+      else if (it.tremor) { e.estab = { forca: val, path: caminhoEstab(it.tremor, val) }; drawPreview(); }
+      else if (!it.estabBusy) {
+        it.estabBusy = true; v.pause();
+        const show = t => { it.estabInfo = t; const el = it.editorEl?.querySelector('.estab-info'); if (el) el.textContent = t; };
+        show('Medindo o movimento da imagem… 0%');
+        analisarTremor(it, x => show(`Medindo o movimento da imagem… ${Math.round(x * 100)}%`))
+          .then(tr => {
+            it.tremor = tr;
+            const forca = it.editorEl?.querySelector(`[name="estab-${it.id}"]:checked`)?.value || val;
+            if (forca !== 'off') e.estab = { forca, path: caminhoEstab(tr, forca) };
+            const mx = Math.max(...caminhoEstab(tr, 'leve').map(p => Math.hypot(p.x, p.y))) * 100;
+            show(`Pronto: movimento medido em ${String(tr.segs.toFixed(1)).replace('.', ',')} s. ${mx < 0.4 ? 'Quase não há tremida neste vídeo.' : 'Confira na prévia, dando play.'}`);
+          })
+          .catch(err => { console.error(err); show('Não consegui analisar o movimento deste vídeo.'); e.estab = null; })
+          .finally(() => { it.estabBusy = false; changed(); drawPreview(); });
+      }
+    }
     changed();
   }));
   on('.f-logo', 'change', async ev => {
@@ -3979,6 +4341,8 @@ function openEditor(it) {
   });
   on('.r-music', 'input', ev => { e.music.vol = Number(ev.target.value) / 100; q('.t-music').textContent = ev.target.value + '%'; });
   on('.c-duck', 'change', ev => { e.music.duck = ev.target.checked; });
+  on('.c-tom', 'change', ev => { if (ev.target.checked) e.color.wb = it.tomGuardado || e.color.wb; else { it.tomGuardado = e.color.wb; e.color.wb = null; } changed(); drawPreview(); });
+  on('.c-somauto', 'change', ev => { e.somAuto = ev.target.checked; changed(); });
   on('.c-follow', 'change', ev => { e.follow.on = ev.target.checked; changed(); drawPreview(); });
   on('.c-faces', 'change', ev => { e.faces.on = ev.target.checked; changed(); drawPreview(); });
   on('.c-asr-burn', 'change', ev => { e.subs = ev.target.checked ? { cues: it.asrCues, name: ASR_NAME, animada: e.asrEstilo === 'palavra' && !!it.asrCues[0]?.words } : { cues: [], name: '' }; changed(); });
@@ -3990,6 +4354,15 @@ function openEditor(it) {
       const c = it.asrCues[Number(tc.dataset.trcut)], k = e.cuts.findIndex(x => x.text && x.s === c.s && x.e === c.e);
       if (k >= 0) e.cuts.splice(k, 1); else e.cuts.push({ s: c.s, e: c.e, text: true });
       changed(); return;
+    }
+    const cv0 = ev.target.closest('[data-cena-ver]');
+    if (cv0) { const c = it.cenas[Number(cv0.dataset.cenaVer)]; v.pause(); pos.value = c.s + 0.05; pos.dispatchEvent(new Event('input')); return; }
+    const ct = ev.target.closest('[data-cena-tirar]');
+    if (ct) {
+      const c = it.cenas[Number(ct.dataset.cenaTirar)];
+      if (cenaRemovida(e, c)) e.cuts = e.cuts.filter(x => !(x.scene && Math.abs(x.s - c.s) < 0.01 && Math.abs(x.e - c.e) < 0.01));
+      else e.cuts.push({ s: c.s, e: c.e, scene: true });
+      rebuild(); return;
     }
     const cutBtn = ev.target.closest('[data-cut]');
     if (cutBtn) { e.cuts.splice(Number(cutBtn.dataset.cut), 1); changed(); return; }
@@ -4055,11 +4428,11 @@ function openEditor(it) {
         .finally(() => { it.asrBusy = false; if (it.editorEl === wrap) rebuild(); else render(it); });
       return;
     }
-    if (a === 'dn-try' || a === 'dn-orig') {
+    if (a === 'dn-try' || a === 'dn-orig' || a === 'som-try') {
       v.pause();
-      const info = q('.dn-info'); info.textContent = 'Preparando o trecho…';
-      previewDenoise(it, v.currentTime || e.start, a === 'dn-try' ? e.denoise : 0)
-        .then(secs => { info.textContent = a === 'dn-try' ? `Tocando com a redução (${secs} s de processamento para 8 s de som).` : 'Tocando o original.'; })
+      const info = b.closest('.tool').querySelector('.dn-info, .som-info'); info.textContent = 'Preparando o trecho…';
+      previewDenoise(it, v.currentTime || e.start, a === 'dn-try' ? e.denoise : a === 'som-try' ? e.denoise : 0, false, a === 'som-try')
+        .then(secs => { info.textContent = a === 'dn-try' ? `Tocando com a redução (${secs} s de processamento para 8 s de som).` : a === 'som-try' ? `Tocando com o som melhorado (${secs} s de processamento para 8 s de som).` : 'Tocando o original.'; })
         .catch(err => { console.error(err); info.textContent = 'Não consegui tocar o trecho.'; });
       return;
     }
@@ -4147,7 +4520,60 @@ function openEditor(it) {
         .finally(() => { b.disabled = false; changed(); });
       return;
     }
-    if (a === 'color-reset') { e.color = { b: 0, c: 0, s: 0 }; rebuild(); return; }
+    if (a === 'color-auto' || a === 'color-match') {
+      if (it.corBusy) return;
+      const ref = a === 'color-match' ? items.find(i => String(i.id) === q('.s-color-ref')?.value) : null;
+      if (a === 'color-match' && !ref) return;
+      it.corBusy = true; b.disabled = true;
+      const show = t => { it.colorInfo = t; const el = it.editorEl?.querySelector('.color-info'); if (el) el.textContent = t; };
+      show(ref ? `Comparando com “${ref.file.name}”…` : 'Olhando a luz e a cor do vídeo…');
+      const t0 = performance.now();
+      (async () => {
+        const meu = await medirCor(it, null);
+        const alvo = ref ? await medirCor(ref, corAtiva(ref.edit.color) ? ref.edit.color : null) : null;
+        const c = ref ? igualarCor(meu, alvo) : corAutomatica(meu), yAlvo = ref ? alvo.y : 0.45;
+        if (!ref && !corAtiva(c)) return c;
+        // Confere o resultado e acerta o brilho mais duas vezes (contraste e tom também mexem nele).
+        for (let k = 0; k < 2; k++) {
+          const dep = await medirCor(it, c);
+          if (Math.abs(dep.y - yAlvo) < 0.025) break;
+          c.b = clamp(passo5((1 + c.b / 100) * yAlvo / Math.max(0.03, dep.y) * 100 - 100), -50, 80);
+        }
+        return c;
+      })().then(c => {
+        e.color = c; it.tomGuardado = null;
+        const secs = ((performance.now() - t0) / 1000).toFixed(1).replace('.', ',');
+        it.colorInfo = (corAtiva(c) ? (ref ? `Igualado a “${ref.file.name}”.` : `Ajustado: brilho ${c.b > 0 ? '+' : ''}${c.b}, contraste ${c.c > 0 ? '+' : ''}${c.c}, cor ${c.s > 0 ? '+' : ''}${c.s}${c.wb ? ', tom corrigido' : ''}.`)
+          : 'A luz e a cor deste vídeo já estão boas: nada foi mudado.') + ` (${secs} s)`;
+      }).catch(err => { console.error(err); it.colorInfo = 'Não consegui analisar a imagem deste vídeo.'; })
+        .finally(() => { it.corBusy = false; if (it.editorEl === wrap) rebuild(); else render(it); });
+      return;
+    }
+    if (a === 'cenas-run') {
+      if (it.cenaBusy) return;
+      it.cenaBusy = true; b.disabled = true; v.pause();
+      const show = t => { it.cenasInfo = t; const el = it.editorEl?.querySelector('.cenas-info'); if (el) el.textContent = t; };
+      show('Procurando as trocas de cena… 0%');
+      const t0 = performance.now();
+      detectarCenas(it, x => show(`Procurando as trocas de cena… ${Math.round(x * 100)}%`))
+        .then(cenas => {
+          (it.cenas || []).forEach(c => c.thumb && URL.revokeObjectURL(c.thumb));
+          it.cenas = cenas;
+          e.cuts = e.cuts.filter(c => !c.scene);
+          if (e.split.mode === 'cenas') e.split.cenas = cenas.slice(1).map(c => c.s);
+          const secs = ((performance.now() - t0) / 1000).toFixed(1).replace('.', ',');
+          it.cenasInfo = cenas.length > 1 ? `${cenas.length} cenas encontradas em ${secs} s.` : `Nenhuma troca de cena encontrada (${secs} s).`;
+        })
+        .catch(err => { console.error(err); it.cenasInfo = 'Não consegui analisar a imagem deste vídeo.'; })
+        .finally(() => { it.cenaBusy = false; if (it.editorEl === wrap) rebuild(); else render(it); });
+      return;
+    }
+    if (a === 'cenas-split') {
+      if (e.split.mode === 'cenas') e.split.mode = 'none';
+      else Object.assign(e.split, { mode: 'cenas', cenas: it.cenas.slice(1).map(c => c.s) });
+      rebuild(); return;
+    }
+    if (a === 'color-reset') { e.color = { b: 0, c: 0, s: 0 }; it.colorInfo = ''; it.tomGuardado = null; rebuild(); return; }
     if (a === 'logo-clear') { e.overlay.logo = null; e.overlay.logoName = ''; rebuild(); return; }
     if (a === 'subs-clear') { e.subs = { cues: [], name: '' }; rebuild(); return; }
     if (a === 'gain-auto') {
@@ -4318,8 +4744,8 @@ function makeResampler(chOut, srOut) {
 // e mesma configuração do codificador) e nenhum foi editado: os pacotes são copiados como estão.
 const FAST_JOIN_SPEED = 'medido: 2 min de vídeo 720p juntados em 0,7 s, contra 37 s recomprimindo (cerca de 50× mais rápido)';
 const isPlainEdit = (e, info) => !e || (e.start <= 0.05 && e.end >= info.duration - 0.05 && !e.rotate && !e.crop && !e.cuts?.length && !e.flip
-  && !e.blurs?.length && colorFilter(e.color) === 'none' && !e.overlay?.text?.trim() && !e.overlay?.logo && !e.subs?.cues.length
-  && !e.volume?.gain && !e.volume?.level && (e.speed || 1) === 1 && !e.fade && !e.denoise && !e.faces?.on && !e.follow?.on && !e.reverse && (e.loop || 1) === 1 && !e.music?.buffer && !e.bleeps?.length && !fundoAtivo(e));
+  && !e.blurs?.length && !corAtiva(e.color) && !estabAtivo(e) && !e.overlay?.text?.trim() && !e.overlay?.logo && !e.subs?.cues.length
+  && !e.volume?.gain && !e.volume?.level && !e.somAuto && (e.speed || 1) === 1 && !e.fade && !e.denoise && !e.faces?.on && !e.follow?.on && !e.reverse && (e.loop || 1) === 1 && !e.music?.buffer && !e.bleeps?.length && !fundoAtivo(e));
 const bytesHex = d => !d ? '' : [...(ArrayBuffer.isView(d) ? new Uint8Array(d.buffer, d.byteOffset, d.byteLength) : new Uint8Array(d))].map(x => x.toString(16).padStart(2, '0')).join('');
 async function copySig(it) {
   if (it.copySig !== undefined) return it.copySig;
@@ -5249,7 +5675,7 @@ async function zipStore(name, blob) {
 // - "instalar" = baixar o pacote, conferir SHA-256, tamanho e a versão escrita dentro dele, e gravar
 //   por cima do arquivo aberto numa janela "Salvar" do navegador (a gravação só vale no fim, nunca fica pela metade);
 // - nada baixado é executado pela página: a versão nova só roda quando a página é recarregada.
-const APP_VERSION = '1.36.0';
+const APP_VERSION = '1.37.0';
 const REPO_VERSOES = window.__ENXUTO_REPO_VERSOES || 'https://raw.githubusercontent.com/rla-devv/VideoLabIA-versoes/main/';
 const PAGINA_VERSOES = 'https://github.com/rla-devv/VideoLabIA-versoes';
 const UPDATE_EVERY = 15 * 60e3;   // quem deixa a página aberta também fica sabendo
@@ -5299,7 +5725,7 @@ const closeBtn = (t = 'Fechar') => `<button class="small" data-u="close">${t}</b
 function trabalhoEmAndamento() {
   if (running) return 'Há um vídeo sendo processado.';
   if (REC.rec && REC.rec.state !== 'inactive') return 'Há uma gravação em andamento.';
-  if (items.some(i => i.asrBusy || i.faceBusy || i.trackBusy)) return 'Há uma transcrição, uma busca de rostos ou um acompanhamento de objeto em andamento.';
+  if (items.some(i => i.asrBusy || i.faceBusy || i.trackBusy || i.estabBusy || i.cenaBusy || i.corBusy)) return 'Há uma transcrição, uma busca de rostos, uma análise de imagem ou um acompanhamento de objeto em andamento.';
   if (FF.ativos || items.some(i => i.status === 'analyzing' || i.content?.status === 'running')) return 'O Vídeo Lab IA ainda está analisando um vídeo.';
   return '';
 }
@@ -5639,17 +6065,21 @@ const CATALOG = [
     ['silence', 'Cortar silêncios', 'Remove as pausas sem fala sozinho.', { tool: 'silence' }],
     ['deadends', 'Pular a espera', 'Tira a tela parada do começo e do fim.', { tool: 'deadends' }],
     ['join', 'Juntar vídeos', 'Vários arquivos viram um só.', { join: true }],
-    ['split', 'Dividir em partes', 'Por duração ou por tamanho.', { tool: 'split' }],
+    ['cenas', 'Detectar cenas', 'Acha cada troca de cena: tire as que não quer ou salve cada uma.', { tool: 'cenas' }],
+    ['split', 'Dividir em partes', 'Por duração, tamanho ou cena.', { tool: 'split' }],
   ]],
   ['Imagem', 'image', '', [
     ['blur', 'Esconder ou borrar áreas', 'Placas, telas e objetos, até em movimento.', { tool: 'blur' }],
     ['overlay', 'Texto ou logo', 'Nome da escola, data, marca d’água.', { tool: 'overlay' }],
     ['aspect', 'Vertical ou quadrado', '9:16, 1:1 e 4:5 para redes sociais.', { adv: true }],
     ['rotate', 'Girar e espelhar', 'Arruma o vídeo gravado de lado.', { tool: 'rotate' }],
-    ['color', 'Brilho e cor', 'Clareia vídeo escuro e realça as cores.', { tool: 'color' }],
+    ['estab', 'Estabilizar vídeo tremido', 'Firma o vídeo gravado com o celular na mão.', { tool: 'estab' }],
+    ['color', 'Cor e luz automáticas', 'Clareia vídeo escuro e tira o tom amarelado, num clique.', { tool: 'color' }],
+    ['igualar', 'Igualar as cores', 'Vídeos de câmeras diferentes com a mesma cor, para juntar.', { tool: 'color' }],
     ['subs', 'Legendas de arquivo', 'Grava na imagem um .srt ou .vtt.', { tool: 'subs' }],
   ]],
   ['Som e tempo', 'volume', '', [
+    ['somauto', 'Melhorar o som', 'Um clique: voz limpa e no volume das redes.', { tool: 'somauto' }],
     ['denoise', 'Reduzir ruído', 'Tira chiado, ventilador e ar-condicionado.', { tool: 'denoise' }],
     ['volume', 'Volume', 'Aumenta e equilibra vozes baixas.', { tool: 'volume' }],
     ['music', 'Música de fundo', 'Abaixa sozinha quando alguém fala.', { tool: 'music' }],

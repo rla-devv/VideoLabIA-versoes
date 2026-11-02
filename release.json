@@ -1,22 +1,22 @@
 {
-  "tag": "v1.36.0",
-  "titulo": "Vídeo Lab IA 1.36.0",
-  "notas": "- Novo: legendas animadas, palavra por palavra, com a palavra falada em destaque, como nos Reels e no TikTok. Em “Legendas automáticas”, escolha o estilo “Palavra por palavra”.\n- Novo: fundo. Desfoque a sala ou troque o fundo por uma cor ou uma imagem, sem tela verde: o Vídeo Lab IA separa a pessoa sozinho.\n\n**Para instalar no Windows:** baixe o [`Vídeo Lab IA.zip`](https://github.com/rla-devv/VideoLabIA-versoes/raw/main/V%C3%ADdeo%20Lab%20IA.zip), clique com o botão direito, \"Extrair tudo\", e dê dois cliques em \"Instalar Vídeo Lab IA\". Quem já tem o Vídeo Lab IA instalado recebe esta versão pelo aviso de atualização dentro do app.\n\nNenhum vídeo é enviado para a internet: tudo roda no seu computador.",
+  "tag": "v1.37.0",
+  "titulo": "Vídeo Lab IA 1.37.0",
+  "notas": "- Novo: melhorar o som com um clique. Tira o ronco e o chiado, equilibra as vozes e deixa o volume no padrão de YouTube, Instagram e TikTok.\n- Novo: cor e luz automáticas. Clareia vídeo escuro e tira o tom amarelado ou azulado num clique. E “Igualar” deixa um vídeo com a cor de outro, bom para juntar gravações de celulares diferentes.\n- Novo: estabilizar vídeo tremido, para quem gravou com o celular na mão.\n- Novo: detectar cenas. O app acha cada troca de cena e mostra uma miniatura: tire as que não quer ou salve cada cena num arquivo.\n\n**Para instalar no Windows:** baixe o [`Vídeo Lab IA.zip`](https://github.com/rla-devv/VideoLabIA-versoes/raw/main/V%C3%ADdeo%20Lab%20IA.zip), clique com o botão direito, \"Extrair tudo\", e dê dois cliques em \"Instalar Vídeo Lab IA\". Quem já tem o Vídeo Lab IA instalado recebe esta versão pelo aviso de atualização dentro do app.\n\nNenhum vídeo é enviado para a internet: tudo roda no seu computador.",
   "principal": "videolab.pyw",
   "arquivos": [
     {
       "origem": "Vídeo Lab IA.zip",
       "nome": "Vídeo Lab IA.zip",
-      "rotulo": "Instalador para Windows (Vídeo Lab IA 1.36.0)",
+      "rotulo": "Instalador para Windows (Vídeo Lab IA 1.37.0)",
       "sha256": "b623310140a8b40969b8cf94277d34d3533061a3762f8cabab7faf01bb5954b8",
       "tamanho": 3782
     },
     {
-      "origem": "versoes/Enxuto-1.36.0.html",
+      "origem": "versoes/Enxuto-1.37.0.html",
       "nome": "index.html",
-      "rotulo": "Vídeo Lab IA 1.36.0 (o app num arquivo só, também para usar sem instalar)",
-      "sha256": "927abe887dba047e89befa8e1f0aac7b99ed654e549475272fc3172c2b4cb0a3",
-      "tamanho": 1584835
+      "rotulo": "Vídeo Lab IA 1.37.0 (o app num arquivo só, também para usar sem instalar)",
+      "sha256": "51d2fbd9510d93bc7fd51f3326934840535a597ee1468d4bf6df393249b97415",
+      "tamanho": 1617212
     },
     {
       "origem": "programa/1.35.16/Instalar-Video-Lab-IA.bat",
