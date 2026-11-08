@@ -1,20 +1,20 @@
 {
-  "versao": "1.37.2",
-  "arquivo": "Enxuto-1.37.2.html",
-  "sha256": "815211882fec3e32e722b0a5f4a8b1170bf1dd1d0ebbba428ed4b3f8da5d4866",
-  "tamanho": 1620408,
+  "versao": "1.38.0",
+  "arquivo": "Enxuto-1.38.0.html",
+  "sha256": "e8d20efe7a5247d2bdf00097b19a85373462941d7ca1ff82126aed95fc5c998b",
+  "tamanho": 1623800,
   "novidades": [
-    "Depois de mudar para a pasta C:\\rla-lab, o Vídeo Lab IA avisa se ficaram arquivos seus na pasta antiga e, se os vídeos estavam sendo salvos lá, oferece escolher outra pasta."
+    "No Vídeo Lab IA instalado, os vídeos, fotos e capas agora são salvos direto na pasta Vídeos › Vídeo Lab IA, criada sozinha, sem a janela “Salvar como”. Um arquivo novo nunca apaga outro com o mesmo nome, e o botão “Abrir a pasta” mostra onde ficou."
   ],
   "data": "2026-11-08",
   "janela": {
     "arquivos": [
       {
         "caminho": "index.html",
-        "origem": "versoes/Enxuto-1.37.2.html",
-        "sha256": "815211882fec3e32e722b0a5f4a8b1170bf1dd1d0ebbba428ed4b3f8da5d4866",
-        "tamanho": 1620408,
-        "url": "https://github.com/rla-devv/VideoLabIA-versoes/releases/download/v1.37.2/index.html"
+        "origem": "versoes/Enxuto-1.38.0.html",
+        "sha256": "e8d20efe7a5247d2bdf00097b19a85373462941d7ca1ff82126aed95fc5c998b",
+        "tamanho": 1623800,
+        "url": "https://github.com/rla-devv/VideoLabIA-versoes/releases/download/v1.38.0/index.html"
       },
       {
         "caminho": "Instalar Vídeo Lab IA.bat",
@@ -24,35 +24,35 @@
       },
       {
         "caminho": "LEIA-ME.txt",
-        "origem": "programa/1.37.1/LEIA-ME.txt",
-        "sha256": "bdb1c5bce39c4acc1597c1d9f1a581dda8871bbfcd15022e29eec3f4c3d71de4",
-        "tamanho": 1742,
-        "url": "https://github.com/rla-devv/VideoLabIA-versoes/releases/download/v1.37.2/LEIA-ME.txt"
+        "origem": "programa/1.38.0/LEIA-ME.txt",
+        "sha256": "ad5d906d673b6943852c682b848c7c2a578345abe47d88b750847d35a09a192c",
+        "tamanho": 1927,
+        "url": "https://github.com/rla-devv/VideoLabIA-versoes/releases/download/v1.38.0/LEIA-ME.txt"
       },
       {
         "caminho": "videolab.ico",
         "origem": "janela/1.8.0/assets/enxuto-v2.ico",
         "sha256": "69d88b580e67e1092300441300934dbec1c32537dc09dac7de66ba7c7ac3ba92",
         "tamanho": 78047,
-        "url": "https://github.com/rla-devv/VideoLabIA-versoes/releases/download/v1.37.2/videolab.ico"
+        "url": "https://github.com/rla-devv/VideoLabIA-versoes/releases/download/v1.38.0/videolab.ico"
       },
       {
         "caminho": "videolab.pyw",
-        "origem": "programa/1.37.2/videolab.pyw",
-        "sha256": "6a8b430de8a0478f1b56c1d659acfd4a196502df257dc08d5d5fd25a8e32f787",
-        "tamanho": 67128,
-        "url": "https://github.com/rla-devv/VideoLabIA-versoes/releases/download/v1.37.2/videolab.pyw"
+        "origem": "programa/1.38.0/videolab.pyw",
+        "sha256": "c0b978cb4945044faa18771346957181f227761f39a000d52bf517ac3fb31447",
+        "tamanho": 73376,
+        "url": "https://github.com/rla-devv/VideoLabIA-versoes/releases/download/v1.38.0/videolab.pyw"
       },
       {
         "caminho": "enxuto.pyw",
-        "origem": "programa/1.37.2/videolab.pyw",
-        "sha256": "6a8b430de8a0478f1b56c1d659acfd4a196502df257dc08d5d5fd25a8e32f787",
-        "tamanho": 67128
+        "origem": "programa/1.38.0/videolab.pyw",
+        "sha256": "c0b978cb4945044faa18771346957181f227761f39a000d52bf517ac3fb31447",
+        "tamanho": 73376
       }
     ]
   },
-  "release": "https://github.com/rla-devv/VideoLabIA-versoes/releases/tag/v1.37.2",
+  "release": "https://github.com/rla-devv/VideoLabIA-versoes/releases/tag/v1.38.0",
   "bibliotecas": {
-    "proxy_tools-0.1.0-py3-none-any.whl": "https://github.com/rla-devv/VideoLabIA-versoes/releases/download/v1.37.2/proxy_tools-0.1.0-py3-none-any.whl"
+    "proxy_tools-0.1.0-py3-none-any.whl": "https://github.com/rla-devv/VideoLabIA-versoes/releases/download/v1.38.0/proxy_tools-0.1.0-py3-none-any.whl"
   }
 }

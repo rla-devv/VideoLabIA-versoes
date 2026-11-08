@@ -1,22 +1,22 @@
 {
-  "tag": "v1.37.2",
-  "titulo": "Vídeo Lab IA 1.37.2",
-  "notas": "- Depois de mudar para a pasta C:\\rla-lab, o Vídeo Lab IA avisa se ficaram arquivos seus na pasta antiga e, se os vídeos estavam sendo salvos lá, oferece escolher outra pasta.\n\n**Para instalar no Windows:** baixe o [`Vídeo Lab IA.zip`](https://github.com/rla-devv/VideoLabIA-versoes/raw/main/V%C3%ADdeo%20Lab%20IA.zip), clique com o botão direito, \"Extrair tudo\", e dê dois cliques em \"Instalar Vídeo Lab IA\". Quem já tem o Vídeo Lab IA instalado recebe esta versão pelo aviso de atualização dentro do app.\n\nNenhum vídeo é enviado para a internet: tudo roda no seu computador.",
+  "tag": "v1.38.0",
+  "titulo": "Vídeo Lab IA 1.38.0",
+  "notas": "- No Vídeo Lab IA instalado, os vídeos, fotos e capas agora são salvos direto na pasta Vídeos › Vídeo Lab IA, criada sozinha, sem a janela “Salvar como”. Um arquivo novo nunca apaga outro com o mesmo nome, e o botão “Abrir a pasta” mostra onde ficou.\n\n**Para instalar no Windows:** baixe o [`Vídeo Lab IA.zip`](https://github.com/rla-devv/VideoLabIA-versoes/raw/main/V%C3%ADdeo%20Lab%20IA.zip), clique com o botão direito, \"Extrair tudo\", e dê dois cliques em \"Instalar Vídeo Lab IA\". Quem já tem o Vídeo Lab IA instalado recebe esta versão pelo aviso de atualização dentro do app.\n\nNenhum vídeo é enviado para a internet: tudo roda no seu computador.",
   "principal": "videolab.pyw",
   "arquivos": [
     {
       "origem": "Vídeo Lab IA.zip",
       "nome": "Vídeo Lab IA.zip",
-      "rotulo": "Instalador para Windows (Vídeo Lab IA 1.37.2)",
+      "rotulo": "Instalador para Windows (Vídeo Lab IA 1.38.0)",
       "sha256": "53e51d593e5dc244a5b7ea239ba5022f30598fc1ee2ff8293f2b2eb8935a4837",
       "tamanho": 2945
     },
     {
-      "origem": "versoes/Enxuto-1.37.2.html",
+      "origem": "versoes/Enxuto-1.38.0.html",
       "nome": "index.html",
-      "rotulo": "Vídeo Lab IA 1.37.2 (o app num arquivo só, também para usar sem instalar)",
-      "sha256": "815211882fec3e32e722b0a5f4a8b1170bf1dd1d0ebbba428ed4b3f8da5d4866",
-      "tamanho": 1620408
+      "rotulo": "Vídeo Lab IA 1.38.0 (o app num arquivo só, também para usar sem instalar)",
+      "sha256": "e8d20efe7a5247d2bdf00097b19a85373462941d7ca1ff82126aed95fc5c998b",
+      "tamanho": 1623800
     },
     {
       "origem": "programa/1.37.1/Instalar-Video-Lab-IA.bat",
@@ -26,11 +26,11 @@
       "tamanho": 7104
     },
     {
-      "origem": "programa/1.37.1/LEIA-ME.txt",
+      "origem": "programa/1.38.0/LEIA-ME.txt",
       "nome": "LEIA-ME.txt",
       "rotulo": "LEIA-ME",
-      "sha256": "bdb1c5bce39c4acc1597c1d9f1a581dda8871bbfcd15022e29eec3f4c3d71de4",
-      "tamanho": 1742
+      "sha256": "ad5d906d673b6943852c682b848c7c2a578345abe47d88b750847d35a09a192c",
+      "tamanho": 1927
     },
     {
       "origem": "janela/1.8.0/assets/enxuto-v2.ico",
@@ -40,11 +40,11 @@
       "tamanho": 78047
     },
     {
-      "origem": "programa/1.37.2/videolab.pyw",
+      "origem": "programa/1.38.0/videolab.pyw",
       "nome": "videolab.pyw",
       "rotulo": "Programa do Vídeo Lab IA instalado",
-      "sha256": "6a8b430de8a0478f1b56c1d659acfd4a196502df257dc08d5d5fd25a8e32f787",
-      "tamanho": 67128
+      "sha256": "c0b978cb4945044faa18771346957181f227761f39a000d52bf517ac3fb31447",
+      "tamanho": 73376
     },
     {
       "origem": "bibliotecas/proxy_tools-0.1.0-py3-none-any.whl",
